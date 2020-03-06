@@ -1,0 +1,1394 @@
+<!doctype html>
+<html       lang="zh-CN"      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="721724668570-nbkv1cfusk7kk4eni4pjvepaus73b13t.apps.googleusercontent.com">
+    <meta name="google-signin-scope" content="profile email">
+    <meta property="og:site_name" content="Google Developers">
+    <meta property="og:type" content="website">
+    
+          <meta name="theme-color" content="#ffffff">
+    
+    <meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="/_pwa/developers/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.cn" crossorigin>
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons">
+        <link rel="stylesheet" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers/css/app.css">
+    <noscript>
+      <link rel="stylesheet" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers/css/ce_bundle.css">
+    </noscript>
+    <link rel="shortcut icon" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers/images/favicon.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers/images/touchicon-180.png"><link rel="canonical" href="https://developers.google.cn/search/docs/guides/intro-structured-data?hl=zh-cn">      
+<title>了解结构化数据的工作原理 &nbsp;|&nbsp; 面向开发者的搜索服务 &nbsp;|&nbsp; Google Developers</title>
+
+<meta property="og:title" content="了解结构化数据的工作原理 &nbsp;|&nbsp; 面向开发者的搜索服务 &nbsp;|&nbsp; Google Developers">
+
+
+  <meta property="og:url" content="https://developers.google.cn/search/docs/guides/intro-structured-data?hl=zh-cn">
+
+  <meta property="og:image" content="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers/images/opengraph/white.png">
+  <meta property="og:image:secure_url" content="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers/images/opengraph/white.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta property="og:locale" content="zh_cn">
+  <meta name="twitter:card" content="summary_large_image">
+
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "面向开发者的搜索服务",
+      "item": "https://developers.google.cn/search"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "了解结构化数据的工作原理",
+      "item": "https://developers.google.cn/search/docs/guides/intro-structured-data"
+    }]
+  }
+  </script>
+
+
+
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  
+  
+  
+  
+
+    </head>
+  <body type="article"
+        theme="white"
+        class=""
+        
+        layout="docs"
+        block-apix                pending>
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+    <section class="devsite-wrapper"><devsite-header>
+      
+
+
+
+
+
+
+
+<div class="devsite-header--inner">
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="Open menu">
+        </button>
+        <div class="devsite-product-name-wrapper">
+          <a href="/search">
+      <div class="devsite-product-logo-container"
+       
+       >
+      <img class="devsite-product-logo"
+         alt="Google 搜索"
+         src="/site-assets/logo-google-g.svg"
+         srcset=""
+         sizes="64px">
+    </div>
+  
+  </a>
+  
+  
+  <span class="devsite-product-name">
+    <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             devsite-has-google-wordmark">
+                                  <a href="/search"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Upper Header"
+              data-value="1"
+          >
+              <svg class="devsite-google-wordmark"
+       xmlns="http://www.w3.org/2000/svg"
+       viewBox="0 0 148 48">
+    <title>Google</title>
+    <path class="devsite-google-wordmark-svg-path" d="M19.58,37.65c-9.87,0-18.17-8.04-18.17-17.91c0-9.87,8.3-17.91,18.17-17.91c5.46,0,9.35,2.14,12.27,4.94l-3.45,3.45c-2.1-1.97-4.93-3.49-8.82-3.49c-7.21,0-12.84,5.81-12.84,13.02c0,7.21,5.64,13.02,12.84,13.02c4.67,0,7.34-1.88,9.04-3.58c1.4-1.4,2.32-3.41,2.66-6.16H19.58v-4.89h16.47c0.18,0.87,0.26,1.92,0.26,3.06c0,3.67-1.01,8.21-4.24,11.44C28.93,35.9,24.91,37.65,19.58,37.65z M61.78,26.12c0,6.64-5.1,11.53-11.36,11.53s-11.36-4.89-11.36-11.53c0-6.68,5.1-11.53,11.36-11.53S61.78,19.43,61.78,26.12z M56.8,26.12c0-4.15-2.96-6.99-6.39-6.99c-3.43,0-6.39,2.84-6.39,6.99c0,4.11,2.96,6.99,6.39,6.99C53.84,33.11,56.8,30.22,56.8,26.12z M87.25,26.12c0,6.64-5.1,11.53-11.36,11.53c-6.26,0-11.36-4.89-11.36-11.53c0-6.68,5.1-11.53,11.36-11.53C82.15,14.59,87.25,19.43,87.25,26.12zM82.28,26.12c0-4.15-2.96-6.99-6.39-6.99c-3.43,0-6.39,2.84-6.39,6.99c0,4.11,2.96,6.99,6.39,6.99C79.32,33.11,82.28,30.22,82.28,26.12z M112.09,15.29v20.7c0,8.52-5.02,12.01-10.96,12.01c-5.59,0-8.95-3.76-10.22-6.81l4.41-1.83c0.79,1.88,2.71,4.1,5.81,4.1c3.8,0,6.16-2.36,6.16-6.77v-1.66h-0.18c-1.14,1.4-3.32,2.62-6.07,2.62c-5.76,0-11.05-5.02-11.05-11.49c0-6.51,5.28-11.57,11.05-11.57c2.75,0,4.93,1.22,6.07,2.58h0.18v-1.88H112.09z M107.64,26.16c0-4.06-2.71-7.03-6.16-7.03c-3.49,0-6.42,2.97-6.42,7.03c0,4.02,2.93,6.94,6.42,6.94C104.93,33.11,107.64,30.18,107.64,26.16z M120.97,3.06v33.89h-5.07V3.06H120.97z M140.89,29.92l3.93,2.62c-1.27,1.88-4.32,5.11-9.61,5.11c-6.55,0-11.28-5.07-11.28-11.53c0-6.86,4.77-11.53,10.71-11.53c5.98,0,8.91,4.76,9.87,7.34l0.52,1.31l-15.42,6.38c1.18,2.31,3.01,3.49,5.59,3.49C137.79,33.11,139.58,31.84,140.89,29.92zM128.79,25.77l10.31-4.28c-0.57-1.44-2.27-2.45-4.28-2.45C132.24,19.04,128.66,21.31,128.79,25.77z"/>
+  </svg>搜索        
+  </a>
+              </li>
+  </ul>
+  </span>
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+                       </div>
+          <devsite-search
+            enable-suggestions
+              project-name="面向开发者的搜索服务"    tenant-name="Google Developers"                >
+  <form class="devsite-search-form" action="https://developers.google.cn/s/results" method="GET">
+    <div class="devsite-search-container">
+      <div class="devsite-searchbox">
+                <input placeholder="搜索"
+          type="text"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          value=""
+          autocomplete="off"
+                    aria-label="搜索框">
+        <div class="devsite-search-image material-icons" aria-hidden="true"></div>
+      </div>
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              aria-label="Open search box"></button>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          aria-label="Close search box"></button>
+</devsite-search>
+
+        </div>
+
+        
+        <devsite-language-selector>
+  <devsite-select class="devsite-language-selector-menu">
+    <select class="devsite-language-selector-select"
+            name="language"
+            track-name="click"
+            track-type="languageSelector">
+                <option>Language</option>
+              <option value="id"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="id"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Bahasa Indonesia
+      </option>
+          <option value="de"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="de"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Deutsch
+      </option>
+          <option value="en"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="en"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        English
+      </option>
+          <option value="es"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español
+      </option>
+          <option value="es_419"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es_419"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español – América Latina
+      </option>
+          <option value="fr"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="fr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Français
+      </option>
+          <option value="it"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="it"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Italiano
+      </option>
+          <option value="pl"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="pl"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Polski
+      </option>
+          <option value="pt_br"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="pt_br"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Português – Brasil
+      </option>
+          <option value="vi"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="vi"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Tiếng Việt
+      </option>
+          <option value="tr"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="tr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Türkçe
+      </option>
+          <option value="ru"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ru"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Русский
+      </option>
+          <option value="ar"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ar"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        العربيّة
+      </option>
+          <option value="hi"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="hi"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        हिंदी
+      </option>
+          <option value="bn"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="bn"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        বাংলা
+      </option>
+          <option value="th"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="th"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        ภาษาไทย
+      </option>
+          <option value="zh_cn"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_cn"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 简体
+      </option>
+          <option value="zh_tw"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_tw"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 繁體
+      </option>
+          <option value="ja"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ja"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        日本語
+      </option>
+          <option value="ko"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ko"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        한국어
+      </option>
+        </select>
+  </devsite-select>
+</devsite-language-selector>
+
+
+        
+              </div>    </div>  </div>
+  <div class="devsite-collapsible-section
+    ">
+    <div class="devsite-header-background">
+                                  <div class="devsite-doc-set-nav-row">
+                                                      <devsite-tabs class="lower-tabs">
+    <div class="devsite-tabs-wrapper">
+                        <tab  >
+            <a href="/search"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="首页"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 首页"
+   >
+  首页
+</a>
+
+          </tab>
+                                <tab  active>
+            <a href="/search/docs/guides/get-started"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="指南"
+   aria-label="指南, selected"         data-category="Site-Wide Custom Events"
+        data-label="Tab: 指南"
+   >
+  指南
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/search/reference/overview"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="参考文档"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 参考文档"
+   >
+  参考文档
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/search/tools"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="工具"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 工具"
+   >
+  工具
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/search/help"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="帮助"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 帮助"
+   >
+  帮助
+</a>
+
+          </tab>
+                  </div>
+  </devsite-tabs>
+
+
+                            </div>
+          </div>  </div></div>
+
+  </devsite-header>      <devsite-book-nav scrollbars >
+                  
+
+
+
+
+
+<nav class="devsite-book-nav devsite-nav nocontent">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="Close navigation">
+    </button>
+    <div class="devsite-product-name-wrapper">
+          <a href="/search">
+      <div class="devsite-product-logo-container"
+       
+       >
+      <img class="devsite-product-logo"
+         alt="Google 搜索"
+         src="/site-assets/logo-google-g.svg"
+         srcset=""
+         sizes="64px">
+    </div>
+  
+  </a>
+  
+          <span class="devsite-product-name">
+        <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             devsite-has-google-wordmark">
+                                  <a href="/search"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Upper Header"
+              data-value="1"
+          >
+              <svg class="devsite-google-wordmark"
+       xmlns="http://www.w3.org/2000/svg"
+       viewBox="0 0 148 48">
+    <title>Google</title>
+    <path class="devsite-google-wordmark-svg-path" d="M19.58,37.65c-9.87,0-18.17-8.04-18.17-17.91c0-9.87,8.3-17.91,18.17-17.91c5.46,0,9.35,2.14,12.27,4.94l-3.45,3.45c-2.1-1.97-4.93-3.49-8.82-3.49c-7.21,0-12.84,5.81-12.84,13.02c0,7.21,5.64,13.02,12.84,13.02c4.67,0,7.34-1.88,9.04-3.58c1.4-1.4,2.32-3.41,2.66-6.16H19.58v-4.89h16.47c0.18,0.87,0.26,1.92,0.26,3.06c0,3.67-1.01,8.21-4.24,11.44C28.93,35.9,24.91,37.65,19.58,37.65z M61.78,26.12c0,6.64-5.1,11.53-11.36,11.53s-11.36-4.89-11.36-11.53c0-6.68,5.1-11.53,11.36-11.53S61.78,19.43,61.78,26.12z M56.8,26.12c0-4.15-2.96-6.99-6.39-6.99c-3.43,0-6.39,2.84-6.39,6.99c0,4.11,2.96,6.99,6.39,6.99C53.84,33.11,56.8,30.22,56.8,26.12z M87.25,26.12c0,6.64-5.1,11.53-11.36,11.53c-6.26,0-11.36-4.89-11.36-11.53c0-6.68,5.1-11.53,11.36-11.53C82.15,14.59,87.25,19.43,87.25,26.12zM82.28,26.12c0-4.15-2.96-6.99-6.39-6.99c-3.43,0-6.39,2.84-6.39,6.99c0,4.11,2.96,6.99,6.39,6.99C79.32,33.11,82.28,30.22,82.28,26.12z M112.09,15.29v20.7c0,8.52-5.02,12.01-10.96,12.01c-5.59,0-8.95-3.76-10.22-6.81l4.41-1.83c0.79,1.88,2.71,4.1,5.81,4.1c3.8,0,6.16-2.36,6.16-6.77v-1.66h-0.18c-1.14,1.4-3.32,2.62-6.07,2.62c-5.76,0-11.05-5.02-11.05-11.49c0-6.51,5.28-11.57,11.05-11.57c2.75,0,4.93,1.22,6.07,2.58h0.18v-1.88H112.09z M107.64,26.16c0-4.06-2.71-7.03-6.16-7.03c-3.49,0-6.42,2.97-6.42,7.03c0,4.02,2.93,6.94,6.42,6.94C104.93,33.11,107.64,30.18,107.64,26.16z M120.97,3.06v33.89h-5.07V3.06H120.97z M140.89,29.92l3.93,2.62c-1.27,1.88-4.32,5.11-9.61,5.11c-6.55,0-11.28-5.07-11.28-11.53c0-6.86,4.77-11.53,10.71-11.53c5.98,0,8.91,4.76,9.87,7.34l0.52,1.31l-15.42,6.38c1.18,2.31,3.01,3.49,5.59,3.49C137.79,33.11,139.58,31.84,140.89,29.92zM128.79,25.77l10.31-4.28c-0.57-1.44-2.27-2.45-4.28-2.45C132.24,19.04,128.66,21.31,128.79,25.77z"/>
+  </svg>搜索        
+  </a>
+              </li>
+  </ul>
+      </span>
+    
+</div>  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+              <ul class="devsite-nav-list">
+                      <li class="devsite-nav-item">
+    <a href="/search"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 首页"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="首页">
+      <span class="devsite-nav-text" tooltip >
+      首页
+   </span>
+        </a>
+  </li>
+
+                      <li class="devsite-nav-item">
+    <a href="/search/docs/guides/get-started"
+           class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children              devsite-nav-active"
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 指南"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="指南">
+      <span class="devsite-nav-text" tooltip >
+      指南
+   </span>
+        <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+        </a>
+  </li>
+
+                      <li class="devsite-nav-item">
+    <a href="/search/reference/overview"
+           class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children              "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 参考文档"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="参考文档">
+      <span class="devsite-nav-text" tooltip >
+      参考文档
+   </span>
+        <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+        </a>
+  </li>
+
+                      <li class="devsite-nav-item">
+    <a href="/search/tools"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 工具"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="工具">
+      <span class="devsite-nav-text" tooltip >
+      工具
+   </span>
+        </a>
+  </li>
+
+                      <li class="devsite-nav-item">
+    <a href="/search/help"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 帮助"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="帮助">
+      <span class="devsite-nav-text" tooltip >
+      帮助
+   </span>
+        </a>
+  </li>
+
+                    
+                  </ul>
+          </div>
+          <div class="devsite-mobile-nav-bottom">
+                            <ul class="devsite-nav-list" menu="_book">
+            <li class="devsite-nav-item           devsite-nav-divider           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path"><span class="devsite-nav-text" tooltip>在 Google 上占有一席之地</span></div></li>
+  <li class="devsite-nav-item           devsite-nav-expandable           devsite-nav-accordion"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>了解基础知识</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/docs/guides/get-started"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>开始使用</span></a></li><li class="devsite-nav-item"><a href="/search/docs/guides/enhance-site"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>在 Google 上建立商家详情</span></a></li><li class="devsite-nav-item"><a href="/search/docs/guides/intro-indexing"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>索引简介</span></a></li><li class="devsite-nav-item"><a href="/search/docs/guides/debug"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>调试网页</span></a></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item           devsite-nav-expandable           devsite-nav-accordion"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>适合移动设备</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/mobile-sites"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>概览</span></a></li><li class="devsite-nav-item"><a href="/search/mobile-sites/get-started"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>开始使用</span></a></li><li class="devsite-nav-item"><a href="/search/mobile-sites/mobile-first-indexing"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>关于“优先将移动版网站编入索引”的最佳做法</span></a></li><li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>选择配置</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/mobile-sites/mobile-seo"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>概览</span></a></li><li class="devsite-nav-item"><a href="/search/mobile-sites/mobile-seo/responsive-design"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>自适应设计</span></a></li><li class="devsite-nav-item"><a href="/search/mobile-sites/mobile-seo/dynamic-serving"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>动态提供内容</span></a></li><li class="devsite-nav-item"><a href="/search/mobile-sites/mobile-seo/separate-urls"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>单独的网址</span></a></li><li class="devsite-nav-item"><a href="/search/mobile-sites/mobile-seo/other-devices"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>平板电脑和非智能手机</span></a></li></ul></devsite-expandable-nav></li><li class="devsite-nav-item"><a href="/search/mobile-sites/mobile-seo/common-mistakes"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>避免常见错误</span></a></li><li class="devsite-nav-item"><a href="/search/mobile-sites/website-software"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>自定义您的网站软件</span></a></li><li class="devsite-nav-item"><a href="/search/mobile-sites/faq"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>常见问题解答</span></a></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item           devsite-nav-expandable           devsite-nav-accordion"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>将所做更改通知 Google</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/docs/guides/create-URLs"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>创建网址列表</span></a></li><li class="devsite-nav-item"><a href="/search/docs/guides/submit-URLs"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>向 Google 提交网址</span></a></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item           devsite-nav-expandable           devsite-nav-accordion"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>确保 Google 能够将 JavaScript 内容编入索引</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item           devsite-nav-new"><a href="/search/docs/guides/javascript-seo-basics"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>了解 JavaScript SEO 基础知识</span><span class="devsite-nav-icon material-icons"
+          data-icon="new"
+          data-title="新！"
+          aria-hidden="true"></span></a></li><li class="devsite-nav-item"><a href="/search/docs/guides/fix-search-javascript"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>解决与搜索相关的 JavaScript 问题</span></a></li><li class="devsite-nav-item"><a href="/search/docs/guides/lazy-loading"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>修正延迟加载的内容</span></a></li><li class="devsite-nav-item"><a href="/search/docs/guides/dynamic-rendering"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>实现动态呈现</span></a></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item           devsite-nav-expandable           devsite-nav-accordion"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>改善 AMP 结果</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/docs/guides/about-amp"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>了解 AMP 内容在搜索结果中的显示效果</span></a></li><li class="devsite-nav-item"><a href="/search/docs/guides/enhance-amp"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>优化 AMP 内容</span></a></li><li class="devsite-nav-item"><a href="/search/docs/guides/validate-amp"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>验证 AMP 内容</span></a></li><li class="devsite-nav-item"><a href="/search/docs/guides/remove-amp"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>移除 AMP 内容</span></a></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item           devsite-nav-divider           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path"><span class="devsite-nav-text" tooltip>提升您的内容在 Google 搜索结果中的表现</span></div></li>
+  <li class="devsite-nav-item           devsite-nav-expandable           devsite-nav-accordion"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>利用结构化数据实现富媒体搜索结果</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/docs/guides/search-gallery"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>浏览搜索功能库</span></a></li><li class="devsite-nav-item"><a href="/search/docs/guides/intro-structured-data"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>了解结构化数据的工作原理</span></a></li><li class="devsite-nav-item"><a href="/search/docs/guides/sd-policies"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>遵循指南</span></a></li><li class="devsite-nav-item           devsite-nav-external"><a href="https://codelabs.developers.google.com/codelabs/structured-data/index.html"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>试用结构化数据 Codelab</span><span class="devsite-nav-icon material-icons"
+          data-icon="external"
+          data-title="外部"
+          aria-hidden="true"></span></a></li><li class="devsite-nav-item"><a href="/search/docs/guides/prototype"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>构建、测试和发布结构化数据</span></a></li><li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>案例研究</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/case-studies/overview"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>精选案例研究</span></a></li><li class="devsite-nav-item"><a href="/search/case-studies/stylecraze-case-study"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>StyleCraze 使网站点击率提升到 1.2 倍</span></a></li><li class="devsite-nav-item"><a href="/search/case-studies/monster-india-case-study"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Monster India 使自然流量提高了 94%</span></a></li><li class="devsite-nav-item"><a href="/search/case-studies/jobrapido-case-study"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Jobrapido 使自然流量提高了 2 倍</span></a></li><li class="devsite-nav-item"><a href="/search/case-studies/ziprecruiter-case-study"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>ZipRecruiter 使转化率提高了 4.5 倍</span></a></li><li class="devsite-nav-item"><a href="/search/case-studies/eventbrite-case-study"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Eventbrite 使网站流量提升了一倍</span></a></li><li class="devsite-nav-item"><a href="/search/case-studies/rakuten-case-study"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Rakuten 的网站停留时间提高到 1.5 倍</span></a></li></ul></devsite-expandable-nav></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item           devsite-nav-expandable           devsite-nav-accordion"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>改善您的播客</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/search/docs/guides/podcast-overview"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>概览</span></a></li><li class="devsite-nav-item"><a href="/search/docs/guides/podcast-guidelines"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>遵循我们的指南</span></a></li><li class="devsite-nav-item"><a href="/search/docs/guides/podcast-management"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>管理您的播客</span></a></li><li class="devsite-nav-item"><a href="/search/docs/guides/podcast-troubleshooting"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>对您的播客排查问题</span></a></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item           devsite-nav-expandable           devsite-nav-accordion"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>参与尝鲜者计划</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item           devsite-nav-beta"><a href="/search/docs/guides/mini-apps"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>迷你应用</span><span class="devsite-nav-icon material-icons"
+          data-icon="beta"
+          data-title="Beta 版"
+          aria-hidden="true"></span></a></li><li class="devsite-nav-item           devsite-nav-beta"><a href="/search/docs/guides/3d-ar"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>3D 和 AR 结果</span><span class="devsite-nav-icon material-icons"
+          data-icon="beta"
+          data-title="Beta 版"
+          aria-hidden="true"></span></a></li><li class="devsite-nav-item           devsite-nav-beta"><a href="/search/docs/guides/package-tracking"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>包裹跟踪</span><span class="devsite-nav-icon material-icons"
+          data-icon="beta"
+          data-title="Beta 版"
+          aria-hidden="true"></span></a></li><li class="devsite-nav-item           devsite-nav-beta"><a href="/search/docs/guides/mobile-recharge"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>手机充值</span><span class="devsite-nav-icon material-icons"
+          data-icon="beta"
+          data-title="Beta 版"
+          aria-hidden="true"></span></a></li></ul></devsite-expandable-nav></li>
+          </ul>
+                      </div>
+      </div>
+</nav>
+              </devsite-book-nav>
+      <section id="gc-wrapper">
+        <main role="main" class="devsite-main-content"
+            has-book-nav            has-toc>
+          <devsite-toc class="devsite-nav"
+            ></devsite-toc>
+          <devsite-content>
+                          
+
+<article class="devsite-article">
+  <article class="devsite-article-inner">        
+    <div class="devsite-article-meta">
+      <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             ">
+                    <a href="/"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="1"
+          >
+            首页
+      
+  </a>
+        </li>
+    <li class="devsite-breadcrumb-item
+             ">
+                <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+                    <a href="/products"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="2"
+          >
+            产品
+      
+  </a>
+        </li>
+    <li class="devsite-breadcrumb-item
+             ">
+                <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+                    <a href="/search"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="3"
+          >
+            面向开发者的搜索服务
+      
+  </a>
+        </li>
+    <li class="devsite-breadcrumb-item
+             ">
+                <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+                    <a href="/search/docs/guides/get-started"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="4"
+          >
+            指南
+      
+  </a>
+        </li>
+  </ul>
+               <devsite-page-rating position="header" selected-rating="0" hover-rating-star="0">
+         </devsite-page-rating>
+          </div>
+
+              <h1 class="devsite-page-title">了解结构化数据的工作原理</h1>
+    
+    <devsite-toc class="devsite-nav" devsite-toc-embedded
+                 >
+    </devsite-toc>
+
+    <div class="devsite-article-body clearfix
+      ">
+
+              
+
+  <aside class="objective"><a href="https://codelabs.developers.google.com/codelabs/structured-data/index.html">欢迎试用我们新推出的结构化数据 Codelab。</a>此 Codelab 会引导您将几种类型的结构化数据添加到简单的 HTML 网站中，包括将结构化数据放在网站的什么位置，以及如何对其进行验证。</aside>
+  <p>Google 搜索致力于了解网页内容。您可以在网页上添加结构化数据，向 Google 提供有关该网页含义的明确线索，从而帮助我们理解该网页。
+    结构化数据是一种提供网页相关信息并对网页内容进行分类的标准化格式；例如，食谱网页上会有食材、烹饪时长和温度、卡路里等各类信息。</p>
+    <aside class="note">结构化数据可帮助 Google 通过有趣的搜索结果呈现元素来展示您的网站。详细了解<a href="https://support.google.com/webmasters/answer/7358659">您的内容在 Google 中的显示方式</a>。</aside>
+    <p>Google 会利用在网络上找到的结构化数据来了解网页内容并收集有关网络和世界的一般信息。例如，以下 <a href="https://json-ld.org">JSON-LD</a> 结构化数据片段可能会显示在 Unlimited Ball Bearings 公司的联系信息页面上，用于描述他们的联系信息：</p>
+    <pre class="prettyprint">
+&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "url": "http://www.example.com",
+  "name": "Unlimited Ball Bearings Corp.",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-401-555-1212",
+    "contactType": "Customer service"
+  }
+}
+&lt;/script&gt;</pre>
+    <p>Google 搜索也会利用结构化数据来启用特殊的搜索结果功能和增强选项。例如，一个包含有效结构化数据的食谱网页可以显示在图片搜索结果中，如下所示：</p>
+    <table>
+      <tbody><tr>
+        <th>搜索结果功能</th>
+        <th>等效的结构化数据（为简洁起见，削减了部分数据）</th>
+      </tr>
+      <tr>
+        <td><img src="https://developers.google.cn/search/docs/data-types/images/recipe02.png" alt="苹果派食谱富媒体搜索结果。" width="200" class="screenshot"/> </td>
+      <td><pre class="prettyprint">
+
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Grandma's Holiday Pie&lt;/title&gt;
+    &lt;script type="application/ld+json"&gt;
+    {
+      "@context": "https://schema.org/",
+      "@type": "Recipe",
+      "name": "Grandma's Holiday Apple Pie",
+      "author": "Elaine Smith",
+      "image": "http://images.edge-generalmills.com/56459281-6fe6-4d9d-984f-385c9488d824.jpg",
+      "description": "A classic apple pie.",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4",
+        "reviewCount": "276",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "prepTime": "PT30M",
+      "totalTime": "PT1H",
+      "recipeYield": "8",
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "servingSize": "1 medium slice",
+        "calories": "230 calories",
+        "fatContent": "1 g",
+        "carbohydrateContent": "43 g"
+      },
+      "recipeIngredient": [
+        "1 box refrigerated pie crusts, softened as directed on box",
+        "6 cups thinly sliced, peeled apples (6 medium)",
+        "..."
+      ],
+      "recipeInstructions": [
+        "1...",
+        "2..."
+       ]
+    }
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre></td></tr>
+    </tbody></table>
+    <p>由于结构化数据可标识食谱的各个元素，因此用户可按食材、卡路里数、烹饪时长等条件搜索您的食谱。</p>
+    <p>结构化数据是使用应用相关信息的网页上的页内标记进行编码的。该网页上的结构化数据应描述该网页的内容。您不应仅为了容纳结构化数据而创建空白网页或空网页；也不应添加与用户无法看到的信息相关的结构化数据（即使这些信息准确无误）。要了解更多技术和质量准则，请参阅<a href="/search/docs/guides/sd-policies">结构化数据常规指南</a>。</p>
+  <aside class="tip"><strong>Google 结构化数据测试工具</strong>是一种简单实用的工具，可用于验证结构化数据；在某些情况下，还可用于预览 Google 搜索中的功能。不妨试试：
+    <form method="post" target="_blank" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-action="click" data-label="See markup button" action="https://search.google.com/structured-data/testing-tool?utm_campaign=devsite&utm_medium=jsonld&utm_source=intro-structured-data"><input type="submit" value="查看标记"/><textarea name="code" style="display:none">&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Contact Us&lt;/title&gt;
+    &lt;script type="application/ld+json"&gt;
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "http://www.your-company-site.com",
+      "contactPoint": [
+        { "@type": "ContactPoint",
+          "telephone": "+1-401-555-1212",
+          "contactType": "customer service"
+        }
+      ]
+    }
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</textarea></form></aside>
+  <h2>结构化数据格式</h2>
+    <p>本文档介绍了对 Google 搜索有特殊含义的结构化数据的必需属性、推荐属性或可选属性分别是哪些。大多数的 Google 搜索结构化数据都使用 <a href="https://schema.org/" class="external">schema.org</a> 词汇表，但您应以 developers.google.com 上的文档（而不是 schema.org 文档）决定 Google 搜索的行为。Google 搜索不要求使用此处未作介绍的属性或对象，即使该属性或对象被 schema.org 标记为必需项。</p>
+  <p>请务必在开发期间使用<a href="https://search.google.com/structured-data/testing-tool">结构化数据测试工具</a>测试结构化数据，并在部署后使用<a href="https://support.google.com/webmasters/answer/7552505">“富媒体搜索结果状态”报告</a>监控网页的运行状况；在部署后，这些网页可能会因模板或呈现方面的问题而发生故障。</p>
+    <p>要让某个对象在 Google 搜索结果中出现时具有增强的显示效果，您必须为该对象添加所有的必需属性。一般来说，采用的推荐功能越多，您的信息就越有可能在 Google 搜索结果中出现时具有增强的显示效果。
+      <strong>不过</strong>，更重要的是要提供数量较少但完整无误的推荐属性，而不要尝试提供所有可能的建议属性，但是数据不够完整、格式有误或不够准确。</p>
+    <p>除了此处所述的属性和对象之外，Google 还可以广泛使用 <a href="https://schema.org/sameAs">sameAs</a> 属性和其他 <a href="https://schema.org/">schema.org</a> 结构化数据。其中的部分元素可用于实现未来发布的搜索功能（如果被视为有用）。</p>
+    <p>除非另有说明，否则 Google 搜索支持以下格式的结构化数据：</p>
+    <table classes="details">
+     <tbody><tr>
+        <th>格式</th>
+        <th>说明和放置位置</th>
+      </tr>
+     <tr>
+        <td><a href="http://json-ld.org/">JSON-LD</a>*<strong>（推荐）</strong></td>
+        <td>嵌在网页标头或正文的 &lt;script> 标记中的 JavaScript 表示法。此标记不与用户可见文本交错显示，使得嵌套数据项更易于表达，例如，某个 Event 的 MusicVenue 的 PostalAddress 中的 Country。
+          此外，Google 可在 JSON-LD 数据被动态注入网页内容时读取该数据，例如通过内容管理系统中的 JavaScript 代码或嵌入式微件。</td>
+      </tr>
+     <tr>
+        <td><a href="https://www.w3.org/TR/microdata/">微数据</a></td>
+        <td>一种开放社区 HTML 规范，用于在 HTML 内容中嵌套结构化数据。与 RDFa 一样，它会使用 HTML 标记属性为您想让以结构化数据形式显示的属性命名。它通常用在网页正文中，但也可用在标头中。</td>
+      </tr>
+     <tr>
+        <td><a href="https://rdfa.info/">RDFa</a></td>
+        <td>一种 HTML5 扩展功能，通过引入与您要向搜索引擎描述的用户可见内容对应的 <a href="https://www.w3.org/TR/rdfa-lite/#the-attributes">HTML 标记属性</a>来支持关联的数据。RDFa 通常用在 HTML 网页的标头和主体部分中。</td>
+      </tr>
+    </tbody></table>
+    <aside class="note">Google 建议尽可能使用 JSON-LD 格式的结构化数据。
+    </aside>
+    <h2 name="guidelines">结构化数据准则</h2>
+    <p>请务必遵循<a href="/search/docs/guides/sd-policies">结构化数据常规指南</a>以及任何与您所用的结构化数据类型相关的准则，否则结构化数据可能无法在 Google 搜索中显示为富媒体搜索结果。</p>
+    <h2>构建、测试和发布结构化数据</h2>
+    <p><a href="/search/docs/guides/prototype">请参阅我们推荐的流程，了解如何构建新的结构化数据网页</a>。</p>
+
+          </div>
+
+    
+                   <devsite-page-rating position="footer" selected-rating="0" hover-rating-star="0">
+         </devsite-page-rating>
+                               <devsite-feedback
+  project-name="面向开发者的搜索服务"
+  product-id="103417"
+  bucket="Search Docs"
+  context="DevSite feedback link"
+  version="devsite-webserver-20200227-r01-rc00.425026937843239108"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="header"
+              project-icon="https://developers.google.cn/site-assets/logo-google-g.svg"
+        >
+    <button>发送反馈</button>
+</devsite-feedback>
+                   
+          </article>
+</article>
+
+<devsite-content-footer class="nocontent">
+  <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.cn/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>  <p>Last updated 2020-02-07.</p></devsite-content-footer>
+
+
+
+                      </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+                      <nav class="devsite-footer-promos nocontent">
+  <ul class="devsite-footer-promos-list">
+        <li class="devsite-footer-promo">
+      <a href="//twitter.com/googlewmc"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+                         data-label="Footer Promo Link (index 1)"
+              >
+                        <img class="devsite-footer-promo-icon"
+             src="/search/images/logo-twitter.svg"
+             alt="Twitter">
+                Twitter
+      </a>
+      <div class="devsite-footer-promo-description">关注 @googlewmc 获取资讯</div>
+    </li>
+        <li class="devsite-footer-promo">
+      <a href="//webmasters.googleblog.com/"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+                         data-label="Footer Promo Link (index 2)"
+              >
+                        <img class="devsite-footer-promo-icon"
+             src="//www.gstatic.com/images/icons/material/product/2x/blogger_64dp.png"
+             alt="博客">
+                博客
+      </a>
+      <div class="devsite-footer-promo-description">了解与 Google 搜索相关的最新资讯</div>
+    </li>
+        <li class="devsite-footer-promo">
+      <a href="//codelabs.developers.google.com/?cat=Search"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+                         data-label="Footer Promo Link (index 3)"
+              >
+                        <img class="devsite-footer-promo-icon"
+             src="//www.gstatic.com/images/branding/product/1x/google_developers_48dp.png"
+             alt="Codelab">
+                Codelab
+      </a>
+      <div class="devsite-footer-promo-description">欢迎试用我们的 Codelab</div>
+    </li>
+        <li class="devsite-footer-promo">
+      <a href="//youtube.com/channel/UCWf2ZlNsCGDS89VBF_awNvA"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+                         data-label="Footer Promo Link (index 4)"
+              >
+                        <img class="devsite-footer-promo-icon"
+             src="//www.gstatic.com/images/icons/material/product/2x/youtube_64dp.png"
+             alt="视频">
+                视频
+      </a>
+      <div class="devsite-footer-promo-description">观看视频和讲座</div>
+    </li>
+      </ul>
+</nav>
+
+                  </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+                      <nav class="devsite-footer-linkboxes nocontent">
+    <ul class="devsite-footer-linkboxes-list">
+        <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading">咨询专家</h3>      <ul class="devsite-footer-linkbox-list">
+                <li class="devsite-footer-linkbox-item">
+          <a href="//productforums.google.com/forum/#!forum/webmasters"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 1)"           >
+            网站站长中心帮助论坛
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//www.google.com/webmasters/connect/#attend-events"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 2)"           >
+            工作时间实时帮助
+          </a>
+        </li>
+              </ul>
+    </li>
+        <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading">与社区互动</h3>      <ul class="devsite-footer-linkbox-list">
+                <li class="devsite-footer-linkbox-item">
+          <a href="//twitter.com/googlewmc"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 1)"           >
+            Twitter 上的 Google 网站站长专页
+          </a>
+        </li>
+              </ul>
+    </li>
+        <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading">开发者控制台</h3>      <ul class="devsite-footer-linkbox-list">
+                <li class="devsite-footer-linkbox-item">
+          <a href="//console.developers.google.com"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 1)"           >
+            Google API Console
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//console.cloud.google.com"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 2)"           >
+            Google Cloud Platform Console
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//play.google.com/apps/publish"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 3)"           >
+            Google Play 管理中心
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//console.firebase.google.com"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 4)"           >
+            Firebase Console
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//console.actions.google.com"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 5)"           >
+            Actions on Google Console
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//cast.google.com/publish"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 6)"           >
+            Cast SDK Developer Console
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//chrome.google.com/webstore/developer/dashboard"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 7)"           >
+            Chrome Web Store Dashboard
+          </a>
+        </li>
+              </ul>
+    </li>
+      </ul>
+  </nav>
+                  </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+                      
+<div class="devsite-footer-utility nocontent">
+    <nav class="devsite-footer-sites">
+    <a href="https://developers.google.cn/"
+       class="devsite-footer-sites-logo-link gc-analytics-event"
+       data-category="Site-Wide Custom Events"
+       data-label="Footer Google Developers Link">
+      <img class="devsite-footer-sites-logo"
+           src="/_static/images/lockup-developers.svg"
+           alt="Google Developers">
+    </a>
+    <ul class="devsite-footer-sites-list">
+            <li class="devsite-footer-sites-item">
+        <a href="//developer.android.google.cn"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Android Link"
+                  >
+          Android
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//developer.chrome.com/home"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Chrome Link"
+                  >
+          Chrome
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//firebase.google.cn"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Firebase Link"
+                  >
+          Firebase
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//cloud.google.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Google Cloud Platform Link"
+                  >
+          Google Cloud Platform
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="/products"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer All products Link"
+                  >
+          所有产品
+        </a>
+      </li>
+          </ul>
+  </nav>
+  
+  <nav class="devsite-footer-utility-links">
+        <ul class="devsite-footer-utility-list">
+            <li class="devsite-footer-utility-item
+                 ">
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="/terms/site-terms"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Terms link"
+         >
+          条款
+        </a>
+              </li>
+            <li class="devsite-footer-utility-item
+                 ">
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.cn/privacy"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+         >
+          隐私权政策
+        </a>
+              </li>
+            <li class="devsite-footer-utility-item
+                 devsite-footer-utility-button">
+                <span class="devsite-footer-utility-description">订阅 Google Developers 简报</span>
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//services.google.com/fb/forms/googledevelopersnewsletter/?utm_medium=referral&amp;utm_source=google-products&amp;utm_team=googledevs&amp;utm_campaign=201611-newsletter-launch"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Subscribe link"
+         >
+          订阅
+        </a>
+              </li>
+          </ul>
+    
+    <devsite-language-selector>
+  <devsite-select class="devsite-language-selector-menu">
+    <select class="devsite-language-selector-select"
+            name="language"
+            track-name="click"
+            track-type="languageSelector">
+                <option>Language</option>
+              <option value="id"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="id"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Bahasa Indonesia
+      </option>
+          <option value="de"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="de"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Deutsch
+      </option>
+          <option value="en"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="en"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        English
+      </option>
+          <option value="es"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español
+      </option>
+          <option value="es_419"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es_419"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español – América Latina
+      </option>
+          <option value="fr"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="fr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Français
+      </option>
+          <option value="it"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="it"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Italiano
+      </option>
+          <option value="pl"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="pl"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Polski
+      </option>
+          <option value="pt_br"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="pt_br"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Português – Brasil
+      </option>
+          <option value="vi"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="vi"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Tiếng Việt
+      </option>
+          <option value="tr"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="tr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Türkçe
+      </option>
+          <option value="ru"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ru"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Русский
+      </option>
+          <option value="ar"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ar"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        العربيّة
+      </option>
+          <option value="hi"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="hi"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        हिंदी
+      </option>
+          <option value="bn"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="bn"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        বাংলা
+      </option>
+          <option value="th"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="th"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        ภาษาไทย
+      </option>
+          <option value="zh_cn"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_cn"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 简体
+      </option>
+          <option value="zh_tw"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_tw"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 繁體
+      </option>
+          <option value="ja"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ja"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        日本語
+      </option>
+          <option value="ko"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ko"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        한국어
+      </option>
+        </select>
+  </devsite-select>
+</devsite-language-selector>
+
+  </nav>
+</div>
+                  </devsite-footer-utility>
+      </section></section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar                   ></devsite-snackbar>    <devsite-tooltip blocked-link></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics>
+              <script type="application/json" analytics>[{"metrics": {}, "dimensions": {"dimension6": "zh-cn", "dimension4": "\u9762\u5411\u5f00\u53d1\u8005\u7684\u641c\u7d22\u670d\u52a1", "dimension5": "zh-cn", "dimension3": false, "dimension1": "Signed out", "dimension8": null}, "gaid": "UA-24532603-11"}, {"metrics": {}, "dimensions": {"dimension6": "zh-cn", "dimension4": "\u9762\u5411\u5f00\u53d1\u8005\u7684\u641c\u7d22\u670d\u52a1", "dimension5": "zh-cn", "dimension3": false, "dimension1": "Signed out", "dimension8": null}, "gaid": "UA-24532603-6"}]</script>
+<script type="application/json" gtm>{}</script>
+          </devsite-analytics>
+        <script>
+    (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/js/app_loader.js', '[1,"zh_cn",null,"/js/devsite_app.js","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers","https://google-developers.gonglchuangl.net",null,null,["/_pwa/developers/manifest.json","/_static/images/video-placeholder.svg","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers/images/favicon.png","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons"],1]')
+  </script>  </body>
+</html>
