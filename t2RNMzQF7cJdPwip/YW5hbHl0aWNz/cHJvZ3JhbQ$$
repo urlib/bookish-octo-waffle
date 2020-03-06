@@ -1,0 +1,1957 @@
+<!doctype html>
+<html       lang="zh-CN"      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="721724668570-nbkv1cfusk7kk4eni4pjvepaus73b13t.apps.googleusercontent.com">
+    <meta name="google-signin-scope" content="profile email">
+    <meta property="og:site_name" content="Google Developers">
+    <meta property="og:type" content="website">
+    
+          <meta name="theme-color" content="#e8710a">
+    
+    <meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="/_pwa/developers/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.cn" crossorigin>
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons">
+        <link rel="stylesheet" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers/css/app.css">
+    <noscript>
+      <link rel="stylesheet" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers/css/ce_bundle.css">
+    </noscript>
+    <link rel="shortcut icon" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers/images/favicon.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers/images/touchicon-180.png"><link rel="canonical" href="https://developers.google.cn/analytics/program?hl=zh-cn">      
+<title>Google Analytics（分析）技术合作伙伴计划 &nbsp;|&nbsp; Google Developers</title>
+
+<meta property="og:title" content="Google Analytics（分析）技术合作伙伴计划 &nbsp;|&nbsp; Google Developers">
+  <meta name="description" content="Google Analytics（分析）技术合作伙伴计划">
+  <meta property="og:description" content="Google Analytics（分析）技术合作伙伴计划">
+
+
+  <meta property="og:url" content="https://developers.google.cn/analytics/program?hl=zh-cn">
+
+  <meta property="og:image" content="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers/images/opengraph/orange.png">
+  <meta property="og:image:secure_url" content="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers/images/opengraph/orange.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta property="og:locale" content="zh_cn">
+  <meta name="twitter:card" content="summary_large_image">
+
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Google Analytics（分析）",
+      "item": "https://developers.google.cn/analytics"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "技术合作伙伴计划",
+      "item": "https://developers.google.cn/analytics/program"
+    }]
+  }
+  </script>
+
+
+
+  
+    
+    
+    
+    
+  
+
+    </head>
+  <body type="article"
+        theme="orange"
+        class=""
+        
+        layout="docs"
+        block-apix                pending>
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+    <section class="devsite-wrapper"><devsite-header>
+      
+
+
+
+
+
+
+
+<div class="devsite-header--inner">
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="Open menu">
+        </button>
+        <div class="devsite-product-name-wrapper">
+          <a href="/analytics">
+      <div class="devsite-product-logo-container"
+       
+       >
+      <img class="devsite-product-logo"
+         alt="Google Analytics（分析）"
+         src="https://www.gstatic.cn/analytics-suite/header/suite/v2/ic_analytics.svg"
+         srcset=""
+         sizes="64px">
+    </div>
+  
+  </a>
+  
+  
+  <span class="devsite-product-name">
+    <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             devsite-has-google-wordmark">
+                                  <a href="/analytics"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Upper Header"
+              data-value="1"
+          >
+              <svg class="devsite-google-wordmark"
+       xmlns="http://www.w3.org/2000/svg"
+       viewBox="0 0 148 48">
+    <title>Google</title>
+    <path class="devsite-google-wordmark-svg-path" d="M19.58,37.65c-9.87,0-18.17-8.04-18.17-17.91c0-9.87,8.3-17.91,18.17-17.91c5.46,0,9.35,2.14,12.27,4.94l-3.45,3.45c-2.1-1.97-4.93-3.49-8.82-3.49c-7.21,0-12.84,5.81-12.84,13.02c0,7.21,5.64,13.02,12.84,13.02c4.67,0,7.34-1.88,9.04-3.58c1.4-1.4,2.32-3.41,2.66-6.16H19.58v-4.89h16.47c0.18,0.87,0.26,1.92,0.26,3.06c0,3.67-1.01,8.21-4.24,11.44C28.93,35.9,24.91,37.65,19.58,37.65z M61.78,26.12c0,6.64-5.1,11.53-11.36,11.53s-11.36-4.89-11.36-11.53c0-6.68,5.1-11.53,11.36-11.53S61.78,19.43,61.78,26.12z M56.8,26.12c0-4.15-2.96-6.99-6.39-6.99c-3.43,0-6.39,2.84-6.39,6.99c0,4.11,2.96,6.99,6.39,6.99C53.84,33.11,56.8,30.22,56.8,26.12z M87.25,26.12c0,6.64-5.1,11.53-11.36,11.53c-6.26,0-11.36-4.89-11.36-11.53c0-6.68,5.1-11.53,11.36-11.53C82.15,14.59,87.25,19.43,87.25,26.12zM82.28,26.12c0-4.15-2.96-6.99-6.39-6.99c-3.43,0-6.39,2.84-6.39,6.99c0,4.11,2.96,6.99,6.39,6.99C79.32,33.11,82.28,30.22,82.28,26.12z M112.09,15.29v20.7c0,8.52-5.02,12.01-10.96,12.01c-5.59,0-8.95-3.76-10.22-6.81l4.41-1.83c0.79,1.88,2.71,4.1,5.81,4.1c3.8,0,6.16-2.36,6.16-6.77v-1.66h-0.18c-1.14,1.4-3.32,2.62-6.07,2.62c-5.76,0-11.05-5.02-11.05-11.49c0-6.51,5.28-11.57,11.05-11.57c2.75,0,4.93,1.22,6.07,2.58h0.18v-1.88H112.09z M107.64,26.16c0-4.06-2.71-7.03-6.16-7.03c-3.49,0-6.42,2.97-6.42,7.03c0,4.02,2.93,6.94,6.42,6.94C104.93,33.11,107.64,30.18,107.64,26.16z M120.97,3.06v33.89h-5.07V3.06H120.97z M140.89,29.92l3.93,2.62c-1.27,1.88-4.32,5.11-9.61,5.11c-6.55,0-11.28-5.07-11.28-11.53c0-6.86,4.77-11.53,10.71-11.53c5.98,0,8.91,4.76,9.87,7.34l0.52,1.31l-15.42,6.38c1.18,2.31,3.01,3.49,5.59,3.49C137.79,33.11,139.58,31.84,140.89,29.92zM128.79,25.77l10.31-4.28c-0.57-1.44-2.27-2.45-4.28-2.45C132.24,19.04,128.66,21.31,128.79,25.77z"/>
+  </svg>Analytics（分析）        
+  </a>
+              </li>
+    <li class="devsite-breadcrumb-item
+             ">
+                <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+                    <a href="/analytics/program"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Upper Header"
+              data-value="2"
+          >
+            技术合作伙伴计划
+      
+  </a>
+        </li>
+  </ul>
+  </span>
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+                       </div>
+          <devsite-search
+            enable-suggestions
+              project-name="Google Analytics（分析）技术合作伙伴计划"    tenant-name="Google Developers"                >
+  <form class="devsite-search-form" action="https://developers.google.cn/s/results" method="GET">
+    <div class="devsite-search-container">
+      <div class="devsite-searchbox">
+                <input placeholder="搜索"
+          type="text"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          value=""
+          autocomplete="off"
+                    aria-label="搜索框">
+        <div class="devsite-search-image material-icons" aria-hidden="true"></div>
+      </div>
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              aria-label="Open search box"></button>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          aria-label="Close search box"></button>
+</devsite-search>
+
+        </div>
+
+        
+        <devsite-language-selector>
+  <devsite-select class="devsite-language-selector-menu">
+    <select class="devsite-language-selector-select"
+            name="language"
+            track-name="click"
+            track-type="languageSelector">
+                <option>Language</option>
+              <option value="id"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="id"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Bahasa Indonesia
+      </option>
+          <option value="de"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="de"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Deutsch
+      </option>
+          <option value="en"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="en"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        English
+      </option>
+          <option value="es"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español
+      </option>
+          <option value="fr"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="fr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Français
+      </option>
+          <option value="pt_br"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="pt_br"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Português – Brasil
+      </option>
+          <option value="ru"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ru"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Русский
+      </option>
+          <option value="zh_cn"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_cn"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 简体
+      </option>
+          <option value="ja"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ja"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        日本語
+      </option>
+          <option value="ko"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ko"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        한국어
+      </option>
+        </select>
+  </devsite-select>
+</devsite-language-selector>
+
+
+        
+              </div>    </div>  </div>
+  <div class="devsite-collapsible-section
+          devsite-header-no-lower-tabs
+    ">
+    <div class="devsite-header-background">
+                              </div>  </div></div>
+
+  </devsite-header>      <devsite-book-nav scrollbars >
+                  
+
+
+
+
+
+<nav class="devsite-book-nav devsite-nav nocontent">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="Close navigation">
+    </button>
+    <div class="devsite-product-name-wrapper">
+          <a href="/analytics">
+      <div class="devsite-product-logo-container"
+       
+       >
+      <img class="devsite-product-logo"
+         alt="Google Analytics（分析）"
+         src="https://www.gstatic.com/analytics-suite/header/suite/v2/ic_analytics.svg"
+         srcset=""
+         sizes="64px">
+    </div>
+  
+  </a>
+  
+          <span class="devsite-product-name">
+        <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             devsite-has-google-wordmark">
+                                  <a href="/analytics"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Upper Header"
+              data-value="1"
+          >
+              <svg class="devsite-google-wordmark"
+       xmlns="http://www.w3.org/2000/svg"
+       viewBox="0 0 148 48">
+    <title>Google</title>
+    <path class="devsite-google-wordmark-svg-path" d="M19.58,37.65c-9.87,0-18.17-8.04-18.17-17.91c0-9.87,8.3-17.91,18.17-17.91c5.46,0,9.35,2.14,12.27,4.94l-3.45,3.45c-2.1-1.97-4.93-3.49-8.82-3.49c-7.21,0-12.84,5.81-12.84,13.02c0,7.21,5.64,13.02,12.84,13.02c4.67,0,7.34-1.88,9.04-3.58c1.4-1.4,2.32-3.41,2.66-6.16H19.58v-4.89h16.47c0.18,0.87,0.26,1.92,0.26,3.06c0,3.67-1.01,8.21-4.24,11.44C28.93,35.9,24.91,37.65,19.58,37.65z M61.78,26.12c0,6.64-5.1,11.53-11.36,11.53s-11.36-4.89-11.36-11.53c0-6.68,5.1-11.53,11.36-11.53S61.78,19.43,61.78,26.12z M56.8,26.12c0-4.15-2.96-6.99-6.39-6.99c-3.43,0-6.39,2.84-6.39,6.99c0,4.11,2.96,6.99,6.39,6.99C53.84,33.11,56.8,30.22,56.8,26.12z M87.25,26.12c0,6.64-5.1,11.53-11.36,11.53c-6.26,0-11.36-4.89-11.36-11.53c0-6.68,5.1-11.53,11.36-11.53C82.15,14.59,87.25,19.43,87.25,26.12zM82.28,26.12c0-4.15-2.96-6.99-6.39-6.99c-3.43,0-6.39,2.84-6.39,6.99c0,4.11,2.96,6.99,6.39,6.99C79.32,33.11,82.28,30.22,82.28,26.12z M112.09,15.29v20.7c0,8.52-5.02,12.01-10.96,12.01c-5.59,0-8.95-3.76-10.22-6.81l4.41-1.83c0.79,1.88,2.71,4.1,5.81,4.1c3.8,0,6.16-2.36,6.16-6.77v-1.66h-0.18c-1.14,1.4-3.32,2.62-6.07,2.62c-5.76,0-11.05-5.02-11.05-11.49c0-6.51,5.28-11.57,11.05-11.57c2.75,0,4.93,1.22,6.07,2.58h0.18v-1.88H112.09z M107.64,26.16c0-4.06-2.71-7.03-6.16-7.03c-3.49,0-6.42,2.97-6.42,7.03c0,4.02,2.93,6.94,6.42,6.94C104.93,33.11,107.64,30.18,107.64,26.16z M120.97,3.06v33.89h-5.07V3.06H120.97z M140.89,29.92l3.93,2.62c-1.27,1.88-4.32,5.11-9.61,5.11c-6.55,0-11.28-5.07-11.28-11.53c0-6.86,4.77-11.53,10.71-11.53c5.98,0,8.91,4.76,9.87,7.34l0.52,1.31l-15.42,6.38c1.18,2.31,3.01,3.49,5.59,3.49C137.79,33.11,139.58,31.84,140.89,29.92zM128.79,25.77l10.31-4.28c-0.57-1.44-2.27-2.45-4.28-2.45C132.24,19.04,128.66,21.31,128.79,25.77z"/>
+  </svg>Analytics（分析）        
+  </a>
+              </li>
+    <li class="devsite-breadcrumb-item
+             ">
+                <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+                    <a href="/analytics/program"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Upper Header"
+              data-value="2"
+          >
+            技术合作伙伴计划
+      
+  </a>
+        </li>
+  </ul>
+      </span>
+    
+</div>  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+              <ul class="devsite-nav-list">
+                      <li class="devsite-nav-item">
+    <a href="/analytics/program"
+           class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children              devsite-nav-active"
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 指南"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="指南">
+      <span class="devsite-nav-text" tooltip >
+      指南
+   </span>
+        <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+        </a>
+  </li>
+
+                    
+                  </ul>
+          </div>
+          <div class="devsite-mobile-nav-bottom">
+                            <ul class="devsite-nav-list" menu="_book">
+            <li class="devsite-nav-item"><a href="/analytics/program"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>简介</span></a></li>
+  <li class="devsite-nav-item"><a href="/analytics/program/join"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>加入计划</span></a></li>
+  <li class="devsite-nav-item"><a href="/analytics/program/benefits"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>合作伙伴权益</span></a></li>
+  <li class="devsite-nav-item"><a href="/analytics/program/apply-gallery"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>合作伙伴资源库申请</span></a></li>
+  <li class="devsite-nav-item"><a href="/analytics/program/promo"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>推广机会</span></a></li>
+          </ul>
+                      </div>
+      </div>
+</nav>
+              </devsite-book-nav>
+      <section id="gc-wrapper">
+        <main role="main" class="devsite-main-content"
+            has-book-nav            has-toc>
+          <devsite-toc class="devsite-nav"
+            ></devsite-toc>
+          <devsite-content>
+                          
+
+<article class="devsite-article">
+  <article class="devsite-article-inner"><style>
+        /* Styles inlined from /analytics/main.css */
+/* _includes/apiary/_migration-guide.html */
+
+.valid { background-color:#B2E3B2; }
+.invalid { background-color:#EBCCCC; }
+.na { background-color:##a8a8a8; }
+
+
+/* _includes/collection_fields/analytics_js_template.html */
+/* _includes/collection_fields/output/analytics_js_fieldnames.html */
+/* _includes/collection_fields/output/protocol_parameters.html */
+/* _includes/collection_fields/protocol_template.html */
+
+.ind {
+  margin: 0 0 0 2em;
+}
+/*
+table.big, pre {
+  width: 800px;
+}
+table.small {
+  width: 600px;
+}
+*/
+.none {
+  color: gray;
+  font-style: italic;
+}
+
+/* _includes/collection_fields/output/protocol_parameters.html */
+/* _includes/collection_fields/protocol_template.html */
+
+/*
+table {
+  width: 800px;
+}
+*/
+
+/* _includes/gloves/_common_css_header.html */
+
+#glove-start .finger-icon {
+  background: transparent url('/analytics/images/home/all_icons_sprite.png') no-repeat;
+  float: left;
+  width: 48px;
+  height: 48px;
+  margin-right: 20px;
+}
+
+#glove-start #glove-platform .finger-icon {
+  background-position: -13px -238px;
+}
+
+#glove-start #glove-collection .finger-icon {
+  background-position: -9px -185px;
+}
+
+#glove-start #glove-processing .finger-icon {
+  background-position: -102px -238px;
+}
+
+#glove-start #glove-config .finger-icon {
+  background-position: -56px -185px;
+}
+
+#glove-start #glove-reporting .finger-icon {
+   background-position: -105px -185px;
+}
+
+#glove-start #glove-solutions .finger-icon {
+  background: transparent url('/analytics/images/home/checkmark-b48.png') no-repeat;
+}
+
+#glove-start #glove-related_topics .finger-icon{
+  background: transparent url('http://www.google.com/images/icons/feature/articles-y64.png') no-repeat;
+  background-size: 48px 48px;
+}
+
+#glove-start #glove-platform,
+#glove-start #glove-config,
+#glove-start #glove-collection,
+#glove-start #glove-reporting,
+#glove-start #glove-solutions,
+#glove-start #glove-related_topics,
+#glove-start #glove-processing {
+  padding: 0px !important;
+}
+
+#glove-start #glove ul {
+  padding: 0;
+}
+
+#glove-start #glove ul li {
+  padding-left: 85px;
+  list-style-type: none;
+  margin-bottom: 5px;
+}
+
+#glove-start #glove ul li:first-child, #glove ul li:nth-child(2) {
+  padding: 0;
+}
+
+#glove-start #glove .finger-link {
+  font-size: 120%;
+}
+
+#glove-start #glove .finger-desc {
+  padding-left: 6px;
+}
+
+#glove-start #glove h3.finger-heading {
+  line-height: 48px;
+  margin: 20px 0 0;
+  padding: 0;
+}
+
+#glove-start #glove-show-more {
+  display: none;
+}
+
+#glove-container {
+  width: 300px;
+  height: 220px;
+  position: relative;
+}
+
+#glove-container:hover #glove {
+  max-height: 600px;
+}
+
+#glove-container:hover #glove-show-more {
+  height: 0;
+  opacity: 0;
+}
+
+#glove-container #glove {
+  width: 300px;
+  overflow: hidden;
+  height: auto;
+  max-height: 220px;
+  margin: 0;
+  position: absolute;
+  background-color: #fefefe;
+  transition: max-height .2s linear;
+  -webkit-transition: max-height .2s linear;
+  -moz-transition: max-height .2s linear;
+  -o-transition: max-height .2s linear;
+}
+
+#glove-container #glove-show-more {
+  width: 298px;
+  height: 20px;
+  bottom: 0;
+  position: absolute;
+  background-color: #efefef;
+  border: 1px solid #ccc;
+  color: #777;
+  font-weight: bold;
+  font-size: 11px;
+  text-align: center;
+  opacity: 1;
+  transition: opacity 0.2s ease-out, height 0.2s ease-out;
+  -webkit-transition: opacity 0.2s ease-out, height 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out, height 0.2s ease-out;
+  -o-transition: opacity 0.2s ease-out, height 0.2s ease-out;
+}
+
+#glove-container #glove a:hover {
+  color: #006AC8;
+}
+
+#glove-container #glove ul {
+  margin: 0;
+  padding: 5px 11px;
+  border: solid 1px #ccc;
+}
+
+#glove-container #glove ul li {
+  list-style-type: none;
+  font-weight: bold;
+  margin-left: 3px;
+}
+
+#glove-container #glove ul li:nth-child(2) .finger-link {
+  margin: 0;
+}
+
+#glove-container #glove .finger-heading {
+  font-weight: bold;
+  font-size: 13px;
+  margin: 0;
+  color: #777;
+}
+
+#glove-container #glove h3.finger-heading {
+  padding-top: 10px;
+  line-height: 16px;
+}
+
+#glove-container #glove h2.finger-heading {
+  text-transform: uppercase;
+  padding: 0;
+  border: none;
+}
+
+#glove-container #glove .finger-link {
+  color: #777;
+  display: inline-block;
+  margin-left: 15px;
+}
+
+#glove-container #glove .finger-desc {
+  display: none;
+}
+
+/* _includes/limits_quotas/_apiary-quotas.html */
+
+/*
+h4 {
+  font-size: 133% !important;
+  font-weight: bold;
+}
+.m-left {
+  margin-left: 30px;
+}
+*/
+
+
+/* _includes/limits_quotas/_limits-quotas.html */
+
+/*
+h3 {
+  font-size: 133% !important;
+  font-weight: bold;
+}
+.m-left {
+  margin-left: 30px;
+}
+
+
+/* _includes/mobile/_ios_url_builder.html */
+
+.custom {
+  display: none;
+}
+
+
+/* _includes/mobile/v4/_campaigns.html */
+/* _includes/mobile/v4/_customdimsmets.html */
+
+.TODO {
+  color: red;
+  background-color: yellow;
+}
+
+
+/* changelogs/_common_subscribe.html */
+
+.clogs {
+  overflow: hidden;
+}
+.citem {
+  float: left;
+  display: block;
+  margin-right: 5px;
+}
+.noline {
+  text-decoration: none;
+}
+.line {
+  text-decoration: underline;
+  color: #1155cc;
+}
+.img {
+  margin-top: 3px;
+}
+
+/*Used in feed widget typicall embedded into bottom of page.*/
+.feed {
+  background-color: #fff;
+  box-shadow: none;
+  border: none;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.feed>article .entry-content {
+  font-size: 13px !important;
+  color: #000 !important;
+}
+
+
+/* daring-developers/devguides/mgmtAdWordsLinksGuide.html */
+/* daring-developers/devguides/mgmtFilterGuide.html */
+
+.v3alpha {
+  color: red;
+}
+
+
+/* devguides/collection/analyticsjs/advanced.html */
+
+.my-apiparam {
+  color: #066;
+  font-style: italic;
+}
+
+
+/* devguides/collection/analyticsjs/display-features.html */
+
+/*
+.prettyprint em {
+  background-color: #ff9;
+  font-style: inherit;
+}
+*/
+
+/* devguides/collection/analyticsjs/experiments.html */
+/* devguides/collection/analyticsjs/method-reference.html */
+/* devguides/collection/gajs/experiments.html */
+
+.indoc {
+  margin-left: 24px;
+}
+
+
+/* devguides/collection/analyticsjs/index.html */
+
+.myparam {
+  color: #066;
+  font-weight: bold;
+}
+
+
+/* devguides/collection/gajs/gaTrackingTiming.html */
+
+/*
+table {
+  width: auto !important;
+}
+*/
+
+
+/* devguides/collection/index.html */
+
+#collection-index #h-title {
+  background: #FFF url('/analytics/images/iconCollection.png') no-repeat left 5px;
+  height: 100px;
+  padding-left: 84px;
+  margin-top: 15px;
+}
+
+
+/* devguides/collection/mobile.html */
+
+.platform-links h3 {
+  margin-bottom: 0 !important;
+}
+
+
+/* devguides/collection/protocol/v1/devguide.html */
+
+.myparam {
+  color: #066;
+  font-weight: bold;
+}
+
+
+/* devguides/config/index.html */
+
+#config-index #h-title {
+  background: #FFF url('/analytics/images/iconReporting.png') no-repeat left 5px;
+  height: 100px;
+  padding-left: 84px;
+  margin-top: 15px;
+}
+#config-index .item {
+  list-style-type: none;
+  margin: 15px 0;
+}
+#config-index .sub-list {
+  clear: both;
+}
+#config-index .sub-list > li {
+  list-style-type: none;
+  margin: 2px;
+}
+
+
+/* devguides/config/mgmt/v2/mgmtFeedReference.html */
+/* devguides/config/mgmt/v2/mgmtJava.html */
+
+/*.minusImage { display: none; }*/
+.tog-img { padding-right: .5em; }
+.tog-right .tog-img { padding-left: .5em; }
+
+
+/* devguides/config/mgmt/v3/_beforeYouBeginGuide.html */
+
+#lang-list {
+  display: inline;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#lang-list li {
+  display: inline;
+}
+
+#lang-list li:after {
+  content: ", ";
+}
+
+#lang-list li:last-child:before {
+  content: "and ";
+}
+
+#lang-list li:last-child:after {
+  content: ".";
+}
+
+
+/*
+.toc > li {
+  margin-top: 6px !important;
+}
+*/
+
+.toc {
+  list-style-type: none;
+}
+
+/* devguides/config/provisioning/v3/index.html */
+
+.apply-link {
+  font-size: 1.1em;
+  margin-left: -16px;
+}
+
+
+/* devguides/index.html */
+
+/* oh snap */
+#devguides-index .hr {
+  border-bottom: 1px solid #DDD;
+  margin-bottom: 20px;
+}
+#devguides-index .l-list {
+  margin-left: 30px;
+}
+#devguides-index h4 {
+  margin-right: 6px;
+}
+#devguides-index #collection {
+  background: url('/analytics/images/iconCollection.png') no-repeat left top;
+}
+#devguides-index #config {
+  background: url('/analytics/images/iconConfiguration.png') no-repeat left top;
+}
+#devguides-index #reporting {
+  background: url('/analytics/images/iconReporting.png') no-repeat left top;
+}
+#devguides-index #socialdata {
+  background: url('/analytics/images/iconSocialData64.png') no-repeat left top;
+}
+
+#devguides-index #collection,
+#devguides-index #config,
+#devguides-index #reporting,
+#devguides-index #socialdata {
+  padding-left: 92px !important;
+}
+#devguides-index #config {
+  min-height: 70px;
+}
+
+
+/* devguides/platform/campaigns-overview.html */
+/* devguides/platform/customdimsmets-overview.html */
+/* devguides/platform/experiments-overview.html */
+/* devguides/platform/segments-overview.html */
+/* devguides/platform/social-interactions-overview.html */
+/* devguides/platform/social-interactions.html */
+/* devguides/platform/user-id-overview.html */
+/* devguides/platform/user-id.html */
+
+figcaption {
+   text-align: left;
+}
+
+
+/* devguides/platform/cost-data-import.html */
+
+.required {
+  color: red;
+  font-weight: bold;
+}
+
+
+/* devguides/platform/index.html */
+
+/* oh snap */
+#platform-index .hr {
+  border-bottom: 1px solid #DDD;
+  margin-bottom: 20px;
+}
+#platform-index h4 {
+  margin-right: 6px;
+}
+#platform-index .l-list {
+  margin-left: 30px;
+}
+#platform-index #collection {
+  background: url('/analytics/images/iconCollection.png') no-repeat left top;
+}
+#platform-index #config {
+  background: url('/analytics/images/iconConfiguration.png') no-repeat left top;
+}
+#platform-index #reporting {
+  background: url('/analytics/images/iconReporting.png') no-repeat left top;
+}
+#platform-index #socialdata {
+  background: url('/analytics/images/iconSocialData64.png') no-repeat left top;
+}
+
+#platform-index #collection,
+#platform-index #config,
+#platform-index #reporting,
+#platform-index #socialdata {
+  padding-left: 92px !important;
+}
+#platform-index #config {
+  min-height: 70px;
+}
+#platform-index #h-title {
+  background: #FFF url('/analytics/images/iconPlatform.png') no-repeat left 5px;
+  height: 100px;
+  padding-left: 84px;
+  margin-top: 15px;
+}
+
+
+/* devguides/platform/segments.html */
+
+#platform-segments .selected {
+  color: #4A86E8 !important;
+}
+
+
+
+/* devguides/reporting/core/v2/index.html */
+
+#reporting-core-v2 h4 {
+  margin: .5em 0 !important
+}
+
+
+/* devguides/reporting/core/v3/coreDevguide.html */
+/* devguides/reporting/mcf/v3/mcfDevGuide.html */
+/* devguides/reporting/metadata/v3/devguide.html */
+/* devguides/reporting/realtime/v3/devguide.html */
+
+.simple-dropdown {
+  border: 0px;
+  width: 290px;
+}
+
+
+/* devguides/reporting/core/v3/segments.html */
+
+code.invalid {
+  color: #8B0000 !important;
+}
+
+
+/* devguides/reporting/index.html */
+
+#reporting-index #h-title {
+  background: #FFF url('/analytics/images/iconReporting.png') no-repeat left 5px;
+  height: 100px;
+  padding-left: 84px;
+  margin-top: 15px;
+}
+#reporting-index .space {
+  margin-left: 7px;
+}
+
+
+/* devguides/reporting/mcf/dimsmets/conversionpaths.html */
+/* devguides/reporting/mcf/dimsmets/index.html */
+/* devguides/reporting/mcf/dimsmets/interactions.html */
+/* devguides/reporting/mcf/dimsmets/time.html */
+/* devguides/reporting/realtime/dimsmets/apptracking.html */
+/* devguides/reporting/realtime/dimsmets/eventtracking.html */
+/* devguides/reporting/realtime/dimsmets/geonetwork.html */
+/* devguides/reporting/realtime/dimsmets/goalconversions.html */
+/* devguides/reporting/realtime/dimsmets/index.html */
+/* devguides/reporting/realtime/dimsmets/pagetracking.html */
+/* devguides/reporting/realtime/dimsmets/platform.html */
+/* devguides/reporting/realtime/dimsmets/trafficsources.html */
+/* devguides/reporting/realtime/dimsmets/user.html */
+
+
+.line {
+  margin-top: 3px !important;
+}
+.ind {
+  margin: 0 0 0 2em;
+}
+.gray {
+  color: gray;
+}
+.tog-img {
+  margin-left: 6px;
+}
+.tog-chk {
+  margin-right: 6px;
+}
+/*
+table {
+  width: auto !important;
+}
+*/
+
+
+/* index.html */
+
+#index .box {
+  width: 100%;
+  height: 120px;
+  background-color: #666;
+}
+
+#index #tc-main {
+  width: 765px;
+}
+.slim #index #tc-main {
+  width: 100%;
+}
+#index a {
+  text-decoration: none;
+}
+#index h3 {
+  margin-top: 0 !important;
+  margin-bottom: 8px;
+  font-size: 18px !important;
+}
+#index .b-space {
+  margin-bottom: 15px !important;
+}
+#index #header,
+#index #narritive {
+  border-bottom: solid 1px #ccc;
+  padding-bottom: 15px;
+  margin-bottom: 15px !important;
+  position: relative;
+}
+#index #header {
+  padding-top: 30px;
+}
+#index #non-devs {
+  font-size: 12px;
+  color: #666;
+  position: absolute;
+  top: -11px;
+  right: 2px;
+}
+#index #h-dec {
+  color: #15c;
+  margin: 0 auto;
+  border-bottom: 0;
+  font-size: 28px;
+  text-align: center;
+}
+#index #h-dp {
+  font-weight: bold;
+  font-size: 20px;
+  color: #FF7200;
+  margin-bottom: 5px !important;
+  text-align: center;
+  font-style: italic;
+}
+#index #h-logo {
+  display: block;
+  margin: 0 auto;
+}
+#index #narritive {
+  overflow: hidden;
+  width: 100%;
+}
+#index #l-nar {
+  float: left;
+  width: 45%;
+}
+#index #r-nar {
+  float: left;
+  margin-left: 10%;
+  width: 45%;
+}
+#index #getstarted {
+  font-size: 14px;
+}
+#index .n-h {
+  color: #666;
+}
+
+#index .n-t {
+  font-size: 18px;
+  color: #666;
+}
+#index .e-link {
+  display: block;
+  border-right: solid 7px #fff;
+  padding-right: 10px;
+  position: relative;
+}
+#index .e-link:hover {
+  border-right: solid 7px #ccc;
+}
+#index #e-user-centric {
+  position: absolute;
+  width: 60px;
+  height: 61px;
+  background: transparent url('/analytics/images/home/all_icons_sprite.png') no-repeat -82px -10px;
+}
+#index #e-data-integration {
+  position: absolute;
+  width: 60px;
+  height: 40px;
+  background: transparent url('/analytics/images/home/all_icons_sprite.png') no-repeat -85px -69px;
+}
+#index #e-customize-extend {
+  position: absolute;
+  width: 68px;
+  height: 61px;
+  background: transparent url('/analytics/images/home/all_icons_sprite.png') no-repeat -83px -114px;
+}
+#index .e-link:hover > #e-user-centric {
+  background: transparent url('/analytics/images/home/all_icons_sprite.png') no-repeat -4px -10px;
+}
+#index .e-link:hover > #e-data-integration {
+  background: transparent url('/analytics/images/home/all_icons_sprite.png') no-repeat -2px -68px;
+}
+#index .e-link:hover > #e-customize-extend {
+  background: transparent url('/analytics/images/home/all_icons_sprite.png') no-repeat 1px -114px;
+}
+#index .e-pl {
+  padding-left: 75px;
+}
+#index .e-h {
+  color: #15c;
+}
+#index .e-t {
+  color: #666;
+  font-size: 14px;
+}
+#index #sol {
+  margin: 10px 0 0 180px
+}
+
+#index .r-list {
+  width: 710px;
+  margin: 0 auto;
+  padding: 0 !important;
+}
+#index li {
+  list-style-type: none;
+}
+#index .r-h {
+  color: #15c;
+}
+#index .r-t {
+  text-align: left;
+  padding: 0 15px;
+  color: #666;
+}
+#index .l-api {
+  display: block;
+  height: 185px;
+  width: 155px;
+  float: left;
+  text-align: center;
+  margin: 0 10px;
+  border-radius: 7px;
+  border: solid 1px #EFEFEF !important;
+  background-color: #EAEAEA;
+  padding-top: 15px;
+  position: relative;
+}
+.slim #index  .l-api {
+  height: 200px;
+}
+#index .l-api:hover {
+  -moz-box-shadow: 2px 2px 2px 2px #ccc !important;
+  box-shadow: 2px 2px 2px 2px #ccc !important;
+  border: solid 1px #fff;
+}
+#index .r-icon {
+  margin: 0 auto;
+  width: 42px;
+  height: 48px;
+}
+#index #r-platform {
+  background: transparent url('/analytics/images/home/all_icons_sprite.png') no-repeat -13px -238px;
+}
+#index #r-collection {
+  background: transparent url('/analytics/images/home/all_icons_sprite.png') no-repeat -9px -185px;
+}
+#index #r-confiuration {
+  background: transparent url('/analytics/images/home/all_icons_sprite.png') no-repeat -56px -185px;
+}
+#index #r-reporting {
+  background: transparent url('/analytics/images/home/all_icons_sprite.png') no-repeat -105px -185px;
+}
+
+
+
+/* program/build.html */
+
+header#publish {
+  background-image: url(/analytics/images/program_publish-32.png);
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+  line-height: 50px;
+  padding-left: 42px;
+}
+
+
+/* program/promo.html */
+
+#getintouch {
+  font-size: 15px
+}
+
+
+/* program/publish.html */
+
+header#promote {
+  background-image: url(/analytics/images/program_promote-32.png);
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+  line-height: 50px;
+  padding-left: 42px;
+}
+
+
+/* resources/articles/ga-introduction.html */
+
+
+#articles-ga-introduction .hr {
+  border-bottom: 1px solid #DDD;
+  margin-bottom: 20px;
+}
+
+#articles-ga-introduction #platform {
+  background: url('/analytics/images/toolbox-b64.png') no-repeat left top;
+}
+#articles-ga-introduction #program {
+  background: url('/analytics/images/chart-o64.png') no-repeat left top;
+}
+#articles-ga-introduction #whyanalytics {
+  background: url('/analytics/images/lightbulb-y64.png') no-repeat left top;
+}
+#articles-ga-introduction #getstarted {
+  background: url('/analytics/images/play-r64.png') no-repeat left top;
+}
+#articles-ga-introduction #platform,
+#articles-ga-introduction #program,
+#articles-ga-introduction #whyanalytics,
+#articles-ga-introduction #getstarted {
+  padding-left: 92px !important;
+}
+#articles-ga-introduction .l-list {
+  margin-left: 30px;
+}
+
+
+/* solutions/articles/cost-data-import.html */
+
+  .ad-link {
+    text-decoration: underline;
+    color: blue;
+    font-weight: bold;
+  }
+
+
+/* solutions/experiments.html */
+
+#solutions-experiments .article-date {
+  font-style: italic;
+  color: #777;
+  font-weight: normal;
+  padding-left: 0;
+}
+#solutions-experiments .intro-p {
+  font-size: 14px;
+  color: #666;
+}
+#solutions-experiments .img-left {
+  width: 222px;
+  float: left;
+  margin-right: 15px;
+  display: block
+ }
+#solutions-experiments .img-left-div {
+  float: left;
+  width: 600px;
+  margin-bottom: 35px;
+  margin-top: 15px;
+}
+#solutions-experiments ul#article-list {
+  list-style: none;
+}
+#solutions-experiments #article-list h3 {
+  font-size: 13px;
+  margin: 0;
+}
+
+
+/* solutions/google-analytics-spreadsheet-add-on.html */
+
+.Screenshot {
+  border: 1px solid #ccc;
+  height: auto;
+  max-width: 100%;
+}
+.u-nowrap {
+  white-space: nowrap;
+}
+
+
+
+/* solutions/index.html */
+
+#solutions-index .article-date {
+  font-style: italic;
+  color: #777;
+  font-weight: normal;
+  padding-left: 5px;
+}
+#solutions-index ul#article-list {
+  list-style: none;
+}
+#solutions-index #article-list h3 {
+  font-size: 13px;
+  margin: 0;
+}
+
+
+/* solutions/integration-upload.html */
+
+#solutions-integration-upload .article-date {
+  font-style: italic;
+  color: #777;
+  font-weight: normal;
+  padding-left: 5px;
+}
+#solutions-integration-upload .intro-p {
+  font-size: 14px;
+  color: #666;
+}
+#solutions-integration-upload .img-left {
+  width: 222px;
+  float: left;
+  display: block
+ }
+#solutions-integration-upload .img-left-div {
+  float: left;
+  width: 658px;
+  margin-bottom: 35px;
+  margin-top: 15px;
+}
+#solutions-integration-upload ul#article-list {
+  list-style: none;
+}
+#solutions-integration-upload #article-list h3 {
+  font-size: 13px;
+  margin: 0;
+}
+
+
+/* solutions/large-companies.html */
+
+#solutions-large-companies .article-date {
+  font-style: italic;
+  color: #777;
+  font-weight: normal;
+  padding-left: 5px;
+}
+#solutions-large-companies .intro-p {
+  font-size: 14px;
+  color: #666;
+}
+#solutions-large-companies .img-left {
+  float: left;
+  width: 425px;
+  text-align: center;
+}
+#solutions-large-companies .img-right {
+  float: right;
+  width: 425px;
+  text-align: center;
+}
+#solutions-large-companies .img-desc {
+  text-align: left;
+  padding: 0px 20px 0px 26px;
+}
+#solutions-large-companies ul {
+  list-style: none;
+  text-align: left;
+  margin-top: 10px;
+}
+#solutions-large-companies .img-left-div {
+  float: left;
+  width: 725px;
+  margin-bottom: 35px;
+  margin-top: 15px;
+}
+
+#solutions-large-companies ul#article-list {
+  list-style: none;
+}
+#solutions-large-companies #article-list h3 {
+  font-size: 13px;
+  margin: 0;
+}
+#solutions-large-companies article {
+  overflow: hidden;
+}
+
+
+/* solutions/mobile.html */
+
+#solutions-mobile .article-date {
+  font-style: italic;
+  color: #777;
+  font-weight: normal;
+  padding-left: 5px;
+}
+#solutions-mobile .intro-p {
+  font-size: 14px;
+  color: #666;
+}
+#solutions-mobile .img-left {
+  width: 222px;
+  float: left;
+  margin-right: 15px;
+  display: block
+ }
+#solutions-mobile .img-left-div {
+  float: left;
+  width: 658px;
+  margin-bottom: 35px;
+  margin-top: 15px;
+}
+ */
+#solutions-mobile ul#article-list {
+  list-style: none;
+}
+#solutions-mobile #article-list h3 {
+  font-size: 13px;
+  margin: 0;
+}
+
+
+/* solutions/report-automation-magic.html */
+
+/*
+sup {
+  color: #dd4b39;
+  font-weight: lighter;
+}
+*/
+
+
+/* solutions/reporting.html */
+
+.Feature {
+  margin: 2em 0;
+  overflow: hidden;
+}
+.Feature-body {
+  overflow: hidden;
+}
+.Feature-figure {
+  float: left;
+  margin-right: 2em;
+  text-align: center;
+  width: 128px;
+}
+.Feature-img {
+  height: auto;
+  max-width: 100%;
+}
+
+.ArticleList {
+  border-top: 1px solid #CCC;
+  list-style: none;
+  margin: 0;
+  padding: 2em 0 0;
+}
+
+.ArticleTitle {
+  font: inherit !important;
+  font-weight: bold !important;
+  margin: 0 0 0.5em !important;
+}
+.ArticleTitle-date {
+  color: #777;
+  font-style: italic;
+  font-weight: normal;
+  padding-left: 0.5em;
+}
+
+/* solutions/_index.yaml */
+.indent {
+  margin-left: 5%;
+}
+
+        </style>        
+    <div class="devsite-article-meta">
+      <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             ">
+                    <a href="/"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="1"
+          >
+            首页
+      
+  </a>
+        </li>
+    <li class="devsite-breadcrumb-item
+             ">
+                <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+                    <a href="/products"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="2"
+          >
+            产品
+      
+  </a>
+        </li>
+    <li class="devsite-breadcrumb-item
+             ">
+                <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+                    <a href="/analytics"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="3"
+          >
+            Google Analytics（分析）
+      
+  </a>
+        </li>
+    <li class="devsite-breadcrumb-item
+             ">
+                <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+                    <a href="/analytics/program"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="4"
+          >
+            技术合作伙伴计划
+      
+  </a>
+        </li>
+  </ul>
+               <devsite-page-rating position="header" selected-rating="0" hover-rating-star="0">
+         </devsite-page-rating>
+          </div>
+
+              <h1 class="devsite-page-title">Google Analytics（分析）技术合作伙伴计划</h1>
+    
+    <devsite-toc class="devsite-nav" devsite-toc-embedded
+                 >
+    </devsite-toc>
+
+    <div class="devsite-article-body clearfix
+      ">
+
+              
+<p>技术合作伙伴是在 Google Analytics（分析）平台上构建应用和解决方案的开发者，他们使数据更方便使用、分析更透彻、处理起来更轻松。</p>
+
+<p>技术合作伙伴计划欢迎所有类型的开发者和项目加入。无论您是独自工作还是与团队合作，是为小型企业还是国际组织开发应用，是免费还是有偿发布工具或是自己使用，我们都欢迎您的加入。</p>
+
+<p>如果您使用 Google Analytics（分析）来开发创新应用，我们诚邀您加入技术合作伙伴计划！</p>
+
+<p>计划权益包括以下内容：</p>
+<ul>
+  <li>增加配额</li>
+  <li>有机会在 Google Analytics（分析）合作伙伴资源库中创建公开目录</li>
+  <li>推广机会</li>
+</ul>
+
+<aside class="special"><strong>有兴趣加入吗？</strong> 了解如何<a href="/analytics/program/join">加入 Google Analytics（分析）技术合作伙伴计划</a>。<br />
+  <strong>已经是合作伙伴？</strong>
+  <a href="/analytics/program/benefits">申请享受计划权益</a>。</aside>
+
+
+          </div>
+
+    
+                   <devsite-page-rating position="footer" selected-rating="0" hover-rating-star="0">
+         </devsite-page-rating>
+                   
+          </article>
+</article>
+
+<devsite-content-footer class="nocontent">
+  <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.cn/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>  <p>Last updated 2018-07-31.</p></devsite-content-footer>
+
+
+
+                      </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+                      <nav class="devsite-footer-promos nocontent">
+  <ul class="devsite-footer-promos-list">
+        <li class="devsite-footer-promo">
+      <a href="https://github.com/googleanalytics/"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+                         data-label="Footer Promo Link (index 1)"
+              >
+                        <img class="devsite-footer-promo-icon"
+             src="/site-assets/logo-github.svg"
+             alt="GitHub">
+                GitHub
+      </a>
+      <div class="devsite-footer-promo-description">试用 Google Analytics（分析）示例</div>
+    </li>
+        <li class="devsite-footer-promo">
+      <a href="http://stackoverflow.com/questions/tagged/google-analytics"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+                         data-label="Footer Promo Link (index 2)"
+              >
+                        <img class="devsite-footer-promo-icon"
+             src="/site-assets/logo-stack-overflow.svg"
+             alt="Stack Overflow">
+                Stack Overflow
+      </a>
+      <div class="devsite-footer-promo-description">询问使用 google-analytics 代码的问题</div>
+    </li>
+        <li class="devsite-footer-promo">
+      <a href="https://twitter.com/googleanalytics"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+                         data-label="Footer Promo Link (index 3)"
+              >
+                        <img class="devsite-footer-promo-icon"
+             src="/site-assets/logo-twitter.svg"
+             alt="Twitter">
+                Twitter
+      </a>
+      <div class="devsite-footer-promo-description">在 Twitter 上关注 @googleanalytics</div>
+    </li>
+        <li class="devsite-footer-promo">
+      <a href="https://www.youtube.com/user/googleanalytics"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+                         data-label="Footer Promo Link (index 4)"
+              >
+                        <img class="devsite-footer-promo-icon"
+             src="https://www.gstatic.cn/images/icons/material/product/2x/youtube_64dp.png"
+             alt="视频">
+                视频
+      </a>
+      <div class="devsite-footer-promo-description">在 YouTube 上观看 Google Analytics（分析）视频</div>
+    </li>
+      </ul>
+</nav>
+
+                  </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+                      <nav class="devsite-footer-linkboxes nocontent">
+    <ul class="devsite-footer-linkboxes-list">
+        <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading">合作伙伴</h3>      <ul class="devsite-footer-linkbox-list">
+                <li class="devsite-footer-linkbox-item">
+          <a href="/analytics/program"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 1)"           >
+            技术合作伙伴计划
+          </a>
+        </li>
+              </ul>
+    </li>
+        <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading">Connect</h3>      <ul class="devsite-footer-linkbox-list">
+                <li class="devsite-footer-linkbox-item">
+          <a href="/analytics/community"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 1)"           >
+            社区和最新动态
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="/analytics/help"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 2)"           >
+            获取帮助
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="https://issuetracker.google.com/issues?q=componentid:187400"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 3)"           >
+            报告问题
+          </a>
+        </li>
+              </ul>
+    </li>
+        <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading">产品信息</h3>      <ul class="devsite-footer-linkbox-list">
+                <li class="devsite-footer-linkbox-item">
+          <a href="/analytics/policy"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 1)"           >
+            Protocol/SDK 政策
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="/analytics/terms/branding-policy"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 2)"           >
+            品牌信息政策
+          </a>
+        </li>
+              </ul>
+    </li>
+      </ul>
+  </nav>
+                  </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+                      
+<div class="devsite-footer-utility nocontent">
+    <nav class="devsite-footer-sites">
+    <a href="https://developers.google.cn/"
+       class="devsite-footer-sites-logo-link gc-analytics-event"
+       data-category="Site-Wide Custom Events"
+       data-label="Footer Google Developers Link">
+      <img class="devsite-footer-sites-logo"
+           src="/_static/images/lockup-developers.svg"
+           alt="Google Developers">
+    </a>
+    <ul class="devsite-footer-sites-list">
+            <li class="devsite-footer-sites-item">
+        <a href="//developer.android.google.cn"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Android Link"
+                  >
+          Android
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//developer.chrome.com/home"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Chrome Link"
+                  >
+          Chrome
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//firebase.google.cn"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Firebase Link"
+                  >
+          Firebase
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//cloud.google.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Google Cloud Platform Link"
+                  >
+          Google Cloud Platform
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="/products"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer All products Link"
+                  >
+          所有产品
+        </a>
+      </li>
+          </ul>
+  </nav>
+  
+  <nav class="devsite-footer-utility-links">
+        <ul class="devsite-footer-utility-list">
+            <li class="devsite-footer-utility-item
+                 ">
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="/terms/site-terms"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Terms link"
+         >
+          条款
+        </a>
+              </li>
+            <li class="devsite-footer-utility-item
+                 ">
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.cn/privacy"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+         >
+          隐私权政策
+        </a>
+              </li>
+            <li class="devsite-footer-utility-item
+                 devsite-footer-utility-button">
+                <span class="devsite-footer-utility-description">订阅 Google Developers 简报</span>
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//services.google.com/fb/forms/googledevelopersnewsletter/?utm_medium=referral&amp;utm_source=google-products&amp;utm_team=googledevs&amp;utm_campaign=201611-newsletter-launch"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Subscribe link"
+         >
+          订阅
+        </a>
+              </li>
+          </ul>
+    
+    <devsite-language-selector>
+  <devsite-select class="devsite-language-selector-menu">
+    <select class="devsite-language-selector-select"
+            name="language"
+            track-name="click"
+            track-type="languageSelector">
+                <option>Language</option>
+              <option value="id"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="id"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Bahasa Indonesia
+      </option>
+          <option value="de"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="de"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Deutsch
+      </option>
+          <option value="en"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="en"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        English
+      </option>
+          <option value="es"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español
+      </option>
+          <option value="fr"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="fr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Français
+      </option>
+          <option value="pt_br"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="pt_br"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Português – Brasil
+      </option>
+          <option value="ru"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ru"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Русский
+      </option>
+          <option value="zh_cn"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_cn"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 简体
+      </option>
+          <option value="ja"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ja"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        日本語
+      </option>
+          <option value="ko"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ko"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        한국어
+      </option>
+        </select>
+  </devsite-select>
+</devsite-language-selector>
+
+  </nav>
+</div>
+                  </devsite-footer-utility>
+      </section></section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar                   ></devsite-snackbar>    <devsite-tooltip blocked-link></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics>
+              <script type="application/json" analytics>[{"metrics": {}, "dimensions": {"dimension6": "zh-cn", "dimension4": "Google Analytics\uff08\u5206\u6790\uff09\u6280\u672f\u5408\u4f5c\u4f19\u4f34\u8ba1\u5212", "dimension5": "zh-cn", "dimension3": false, "dimension1": "Signed out", "dimension8": null}, "gaid": "UA-24532603-11"}, {"metrics": {}, "dimensions": {"dimension6": "zh-cn", "dimension4": "Google Analytics\uff08\u5206\u6790\uff09\u6280\u672f\u5408\u4f5c\u4f19\u4f34\u8ba1\u5212", "dimension5": "zh-cn", "dimension3": false, "dimension1": "Signed out", "dimension8": null}, "gaid": "UA-41425441-2"}]</script>
+<script type="application/json" gtm>{}</script>
+          </devsite-analytics>
+        <script>
+    (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/js/app_loader.js', '[1,"zh_cn",null,"/js/devsite_app.js","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers","https://google-developers.gonglchuangl.net",1,null,["/_pwa/developers/manifest.json","/_static/images/video-placeholder.svg","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers/images/favicon.png","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons"],1]')
+  </script>  </body>
+</html>
