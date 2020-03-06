@@ -1,0 +1,1019 @@
+<!doctype html>
+<html       lang="zh-CN"      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="721724668570-nbkv1cfusk7kk4eni4pjvepaus73b13t.apps.googleusercontent.com">
+    <meta name="google-signin-scope" content="profile email">
+    <meta property="og:site_name" content="Google Developers">
+    <meta property="og:type" content="website">
+    
+          <meta name="theme-color" content="#1e8e3e">
+    
+    <meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="/_pwa/developers/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.cn" crossorigin>
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons">
+        <link rel="stylesheet" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers/css/app.css">
+    <noscript>
+      <link rel="stylesheet" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers/css/ce_bundle.css">
+    </noscript>
+    <link rel="shortcut icon" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers/images/favicon.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers/images/touchicon-180.png"><link rel="canonical" href="https://developers.google.cn/shopping-content/v2/quickstart?hl=zh-cn">      
+<title>使用入门 &nbsp;|&nbsp; Content API for Shopping &nbsp;|&nbsp; Google Developers</title>
+
+<meta property="og:title" content="使用入门 &nbsp;|&nbsp; Content API for Shopping &nbsp;|&nbsp; Google Developers">
+  <meta name="description" content="此 API 可让您以编程方式管理购物商品。">
+  <meta property="og:description" content="此 API 可让您以编程方式管理购物商品。">
+
+
+  <meta property="og:url" content="https://developers.google.cn/shopping-content/v2/quickstart?hl=zh-cn">
+
+  <meta property="og:image" content="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers/images/opengraph/google-green.png">
+  <meta property="og:image:secure_url" content="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers/images/opengraph/google-green.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta property="og:locale" content="zh_cn">
+  <meta name="twitter:card" content="summary_large_image">
+
+
+
+
+
+  
+
+  
+
+  
+
+
+    </head>
+  <body type="article"
+        theme="google-green"
+        class=""
+        
+        layout="docs"
+        block-apix                pending>
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+    <section class="devsite-wrapper"><devsite-header>
+      
+
+
+
+
+
+
+
+<div class="devsite-header--inner">
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="Open menu">
+        </button>
+        <div class="devsite-product-name-wrapper">
+      
+  
+  <span class="devsite-product-name">
+    <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             ">
+                                  <a href="/shopping-content/v2/quickstart"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Upper Header"
+              data-value="1"
+          >
+              Content API for Shopping        
+  </a>
+              </li>
+  </ul>
+  </span>
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+                       </div>
+          <devsite-search
+            enable-suggestions
+              project-name="Content API for Shopping"    tenant-name="Google Developers"                >
+  <form class="devsite-search-form" action="https://developers.google.cn/s/results" method="GET">
+    <div class="devsite-search-container">
+      <div class="devsite-searchbox">
+                <input placeholder="搜索"
+          type="text"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          value=""
+          autocomplete="off"
+                    aria-label="搜索框">
+        <div class="devsite-search-image material-icons" aria-hidden="true"></div>
+      </div>
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              aria-label="Open search box"></button>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          aria-label="Close search box"></button>
+</devsite-search>
+
+        </div>
+
+        
+        <devsite-language-selector>
+  <devsite-select class="devsite-language-selector-menu">
+    <select class="devsite-language-selector-select"
+            name="language"
+            track-name="click"
+            track-type="languageSelector">
+                <option>Language</option>
+              <option value="id"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="id"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Bahasa Indonesia
+      </option>
+          <option value="de"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="de"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Deutsch
+      </option>
+          <option value="en"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="en"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        English
+      </option>
+          <option value="es"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español
+      </option>
+          <option value="fr"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="fr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Français
+      </option>
+          <option value="pt_br"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="pt_br"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Português – Brasil
+      </option>
+          <option value="ru"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ru"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Русский
+      </option>
+          <option value="zh_cn"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_cn"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 简体
+      </option>
+          <option value="ja"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ja"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        日本語
+      </option>
+          <option value="ko"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ko"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        한국어
+      </option>
+        </select>
+  </devsite-select>
+</devsite-language-selector>
+
+
+        
+              </div>    </div>  </div>
+  <div class="devsite-collapsible-section
+    ">
+    <div class="devsite-header-background">
+                                  <div class="devsite-doc-set-nav-row">
+                                                      <devsite-tabs class="lower-tabs">
+    <div class="devsite-tabs-wrapper">
+                        <tab  active>
+            <a href="/shopping-content/v2/quickstart"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="指南"
+   aria-label="指南, selected"         data-category="Site-Wide Custom Events"
+        data-label="Tab: 指南"
+   >
+  指南
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/shopping-content/v2/reference/v2.1"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="参考"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 参考"
+   >
+  参考
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/shopping-content/v2/libraries"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="示例和库"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 示例和库"
+   >
+  示例和库
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/shopping-content/forum"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="支持"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 支持"
+   >
+  支持
+</a>
+
+          </tab>
+                  </div>
+  </devsite-tabs>
+
+
+                            </div>
+          </div>  </div></div>
+
+  </devsite-header>      <devsite-book-nav scrollbars >
+                  
+
+
+
+
+
+<nav class="devsite-book-nav devsite-nav nocontent">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="Close navigation">
+    </button>
+    <div class="devsite-product-name-wrapper">
+      
+          <span class="devsite-product-name">
+        <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             ">
+                                  <a href="/shopping-content/v2/quickstart"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Upper Header"
+              data-value="1"
+          >
+              Content API for Shopping        
+  </a>
+              </li>
+  </ul>
+      </span>
+    
+</div>  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+              <ul class="devsite-nav-list">
+                      <li class="devsite-nav-item">
+    <a href="/shopping-content/v2/quickstart"
+           class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children              devsite-nav-active"
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 指南"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="指南">
+      <span class="devsite-nav-text" tooltip >
+      指南
+   </span>
+        <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+        </a>
+  </li>
+
+                      <li class="devsite-nav-item">
+    <a href="/shopping-content/v2/reference/v2.1"
+           class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children              "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 参考"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="参考">
+      <span class="devsite-nav-text" tooltip >
+      参考
+   </span>
+        <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+        </a>
+  </li>
+
+                      <li class="devsite-nav-item">
+    <a href="/shopping-content/v2/libraries"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 示例和库"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="示例和库">
+      <span class="devsite-nav-text" tooltip >
+      示例和库
+   </span>
+        </a>
+  </li>
+
+                      <li class="devsite-nav-item">
+    <a href="/shopping-content/forum"
+           class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children              "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 支持"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="支持">
+      <span class="devsite-nav-text" tooltip >
+      支持
+   </span>
+        <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+        </a>
+  </li>
+
+                    
+                  </ul>
+          </div>
+          <div class="devsite-mobile-nav-bottom">
+                            <ul class="devsite-nav-list" menu="_book">
+            <li class="devsite-nav-item"><a href="/shopping-content/v2/quickstart"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>使用入门</span></a></li>
+  <li class="devsite-nav-item           devsite-nav-new"><a href="/adwords/shopping"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>购物自动化指南</span><span class="devsite-nav-icon material-icons"
+          data-icon="new"
+          data-title="新！"
+          aria-hidden="true"></span></a></li>
+  <li class="devsite-nav-item"><a href="/shopping-content/v2/making-requests"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>发出请求</span></a></li>
+  <li class="devsite-nav-item"><a href="/shopping-content/v2/how-tos/authorizing"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>向请求授权</span></a></li>
+  <li class="devsite-nav-item"><a href="/shopping-content/v2/how-tos/service-accounts"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>服务帐号</span></a></li>
+  <li class="devsite-nav-item"><a href="/shopping-content/v2/how-tos/account-level-tax-shipping"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>帐号级税费和运费</span></a></li>
+  <li class="devsite-nav-item"><a href="/shopping-content/v2/how-tos/severity-mapping"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>API 问题严重性简介</span></a></li>
+  <li class="devsite-nav-item"><a href="/shopping-content/v2/best-practices"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>最佳做法</span></a></li>
+  <li class="devsite-nav-item"><a href="/shopping-content/v2/how-tos/testing"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>测试</span></a></li>
+  <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>本地产品目录广告</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/shopping-content/v2/how-tos/lia/get-started"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>开始使用本地产品目录广告</span></a></li><li class="devsite-nav-item"><a href="/shopping-content/v2/how-tos/lia/configure-targets"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>为 LIA 配置目标国家/地区</span></a></li><li class="devsite-nav-item"><a href="/shopping-content/v2/how-tos/lia/link-gmb"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>关联您的“Google 我的商家”帐号</span></a></li><li class="devsite-nav-item"><a href="/shopping-content/v2/how-tos/lia/verify-inventory"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>核实您的产品目录</span></a></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Orders API</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/shopping-content/v2/orders-guide"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>使用入门</span></a></li><li class="devsite-nav-item"><a href="/shopping-content/v2/about-orders"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>订单简介</span></a></li><li class="devsite-nav-item"><a href="/shopping-content/v2/building-orders"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>使用 Orders API</span></a></li><li class="devsite-nav-item"><a href="/shopping-content/v2/order-invoices"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Order Invoices API</span></a></li><li class="devsite-nav-item"><a href="/shopping-content/v2/order-returns"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Order Returns API</span></a></li><li class="devsite-nav-item"><a href="/shopping-content/v2/orders-best-practices"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>最佳做法</span></a></li><li class="devsite-nav-item"><a href="/shopping-content/v2/order-limits"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>限制和限制条件</span></a></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item"><a href="/shopping-content/v2/products"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Products API</span></a></li>
+  <li class="devsite-nav-item"><a href="/shopping-content/v2/accountstatuses"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Account Statuses API</span></a></li>
+  <li class="devsite-nav-item"><a href="/shopping-content/v2/inventory"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Inventory API（仅适用于 v2）</span></a></li>
+  <li class="devsite-nav-item"><a href="/shopping-content/v2/productstatuses"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Product Statuses API</span></a></li>
+          </ul>
+                      </div>
+      </div>
+</nav>
+              </devsite-book-nav>
+      <section id="gc-wrapper">
+        <main role="main" class="devsite-main-content"
+            has-book-nav            has-toc>
+          <devsite-toc class="devsite-nav"
+            ></devsite-toc>
+          <devsite-content>
+                          
+
+<article class="devsite-article">
+  <article class="devsite-article-inner">        
+    <div class="devsite-article-meta">
+      <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             ">
+                    <a href="/"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="1"
+          >
+            首页
+      
+  </a>
+        </li>
+    <li class="devsite-breadcrumb-item
+             ">
+                <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+                    <a href="/products"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="2"
+          >
+            产品
+      
+  </a>
+        </li>
+    <li class="devsite-breadcrumb-item
+             ">
+                <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+                    <a href="/ads"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="3"
+          >
+            Ads
+      
+  </a>
+        </li>
+    <li class="devsite-breadcrumb-item
+             ">
+                <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+                    <a href="/shopping-content/v2/quickstart"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="4"
+          >
+            Content API for Shopping
+      
+  </a>
+        </li>
+  </ul>
+               <devsite-page-rating position="header" selected-rating="0" hover-rating-star="0">
+         </devsite-page-rating>
+          </div>
+
+              <h1 class="devsite-page-title">使用入门</h1>
+    
+    <devsite-toc class="devsite-nav" devsite-toc-embedded
+                 >
+    </devsite-toc>
+
+    <div class="devsite-article-body clearfix
+      ">
+
+              
+
+<p>Content API for Shopping 可让应用直接与 <a href="//merchants.google.com">Merchant Center 平台</a>互动，大幅提高大型或复杂 Merchant Center 帐号的管理效率。一些典型的用例包括：</p>
+
+<ul>
+<li>自动帐号管理</li>
+<li>基于每个商品的商品管理</li>
+<li>Datafeed 规划</li>
+<li>管理复杂的税费和运费设置</li>
+</ul>
+
+<p>您可以使用 Content API for Shopping 来构建软件以管理客户级至商品级的帐号。Merchant Center 网站能做到的 API 基本上都能做到，而且是以编程方式做到<em></em>。为了帮助您入门，我们提供了用 Java、.NET、Python、PHP、Ruby 和 Go 编写的<a href="/shopping-content/v2/libraries">代码示例</a>。</p>
+
+<p>本指南将帮助您使用 Content API 来创建您的首个应用。在您开始编码之前，您需要执行以下几项操作。</p>
+
+<h2 id="set_up_your_merchant_center_account">设置您的 Merchant Center 帐号</h2>
+
+<ol>
+<li><p>创建一个 <a href="//support.google.com/merchants/answer/188493">Merchant Center 帐号</a>。</p></li>
+<li><p><a href="//support.google.com/merchants/answer/176793">验证网站网址并声明所有权</a>。</p></li>
+<li><p>配置您的<a href="//support.google.com/merchants/answer/160162">税费和运费设置</a>。</p></li>
+<li><p>请务必记住您用于创建此 Merchant Center 帐号的电子邮件，因为稍后您将需要使用该电子邮件。在屏幕截图中，您会看到其显示为 <code>merchant_user@example.com</code>。</p></li>
+</ol>
+
+<h2 id="make_your_first_api_request_without_a_line_of_code">发出首个 API 请求（无需任何代码！）</h2>
+
+<ol>
+<li><p>在我们的 <code>Products.list</code> 开发者文档中访问 <a href="/shopping-content/v2/reference/v2/products/list#try-it">API Explorer</a>。</p></li>
+<li><p>确保登录的 Google 帐号列在 <strong>Users</strong> 设置（可从溢出菜单访问）中。</p>
+
+<p><img src="/shopping-content/images/quickstart/1_usersettings.png" class="screenshot"/></p></li>
+<li><p>在 API Explorer 中，确保 Authentication 设置显示为 <strong>Google OAuth 2.0</strong>：</p>
+
+<p><img src="/shopping-content/images/quickstart/2_oauth2_toggle.png" class="screenshot"/></p>
+<aside class="note"><strong>注意</strong>：<span>Google API 使用 OAuth 2.0 协议进行身份验证和授权。首先，您需要从 Google API 控制台获取 OAuth 凭据。然后，您的客户端应用会从 Google 授权服务器请求访问令牌，从响应中提取令牌，然后将此令牌发送到您要访问的 Google API。</span></aside></li>
+<li><p>点击 <strong>Accept</strong>，可授权 Google 创建的 API 控制台项目代表您临时访问您的 Merchant Center 帐号，从而发出一个 API 请求。请注意，此屏幕应来自 google.com，而且您应该使用 Merchant Center 电子邮件地址登录。</p>
+
+<p><img src="/shopping-content/images/quickstart/3_oauthconsent.png" class="screenshot"/></p></li>
+<li><p>将 Merchant Center 帐号中的商家 ID 输入到表单的 <code>merchantId</code> 字段中，然后点击 <strong>Execute</strong>。</p>
+
+<p><img src="/shopping-content/images/quickstart/4_sandboxresponse.jpg" class="screenshot"/>&gt;</p></li>
+<li><p>您应该会看到一个成功响应。恭喜！您已经发出首个购物 API 请求。</p></li>
+<li><p>如果您的 Merchant Center 中还没有商品，则列表中不会有任何商品。但您无需担心，我们很快就会添加一些商品。此时，您可以跳到其他请求并查看它们的功能。由于这是一个 RESTful API，因此所有请求的工作方式都相似。接下来的步骤最好包括 <a href="//shopping-content/v2/reference/v2/products/insert#try-ita"><code>Products.insert</code></a>、<a href="//shopping-content/v2/reference/v2/inventory/set#try-ita"><code>Inventory.set</code></a> 和 <a href="//shopping-content/v2/reference/v2/accountstatuses/get#try-ita"><code>Accountstatuses.get</code></a>。</p></li>
+</ol>
+
+<h2 id="retrieve_a_service_account_key_for_authentication">检索用于身份验证的服务帐号密钥</h2>
+
+<p>Merchant Center 可以自动为您创建一个 Google API 控制台项目和关联的<a href="/identity/protocols/OAuth2ServiceAccount">服务帐号</a>密钥。使用 Content API for Shopping 时，您的应用将使用此密钥进行身份验证。</p>
+
+<ol>
+<li><p>从 Merchant Center 的三点状菜单中选择 <strong>Content API</strong>。</p>
+
+<p><img src="/shopping-content/images/quickstart/content_api_in_overflow.png" class="screenshot"/></p></li>
+<li><p>选择 <strong>Authentication</strong> 标签页。</p></li>
+<li><p>点击 <strong>+</strong> 按钮，可以创建新的 API 密钥。</p>
+
+<p><img src="/shopping-content/images/quickstart/creating_new_api_key.png" class="screenshot"/></p>
+<aside class="note"><strong>注意</strong>：<span>如果您之前不同意使用 Google API 所需的服务条款，那么现在系统将会引导您完成此过程。</span></aside></li>
+</ol>
+
+<p>创建新的 API 控制台项目，并且在该项目中创建新的服务帐号之后，该服务帐号 ID 将作为新用户添加到您的 Merchant Center 帐号中。此外，您的浏览器将自动下载包含服务帐号密钥的 JSON 文件。如果您丢失此文件，则无法重新下载，但您可以重复上述过程创建一个新的密钥。</p>
+<aside class="caution"><strong>警告</strong>：<span>默认情况下，新用户只有<strong>标准</strong>访问权限，这意味着它将无法使用需要其他访问权限级别的方法。例如，<code>Accounts</code> 服务中的大多数方法都要求用户具有<strong>管理员</strong>访问权限。您可以在<strong>用户</strong>设置面板中调整新用户的权限。</span></aside>
+<blockquote>
+<p>如果您已经有一个现成的 API 控制台项目并且想要改用该项目，那么以下是您为现成项目设置 Content API 访问权限的具体操作。</p>
+
+<ul>
+<li><p>如果您要访问自己的 Merchant Center 帐号，我们建议您使用<a href="/identity/protocols/OAuth2ServiceAccount">服务帐号</a>来简化身份验证流程。有关如何设置新服务帐号的详细信息，请查看<a href="/shopping-content/v2/how-tos/service-accounts">服务帐号指南</a>。创建帐号后，您已下载并存储的服务帐号密钥将用于身份验证，您可以接收调用 API 所需的 API 令牌。</p></li>
+<li><p>如果您有兴趣代表客户使用其自己的 Merchant Center 帐号进行调用，请参阅<a href="/shopping-content/v2/how-tos/authorizing">授权请求指南</a>。但是，如果为了试用 Content API，我们建议您设置一个<a href="/shopping-content/v2/how-tos/testing">测试帐号</a>，并使用它直到完成开发。</p></li>
+</ul>
+</blockquote>
+
+<h2 id="your_first_authorized_api_request_using_python">使用 Python 实现首个获授权的 API 请求</h2>
+
+<p>您拥有服务帐号密钥之后，就可以使用可用的<a href="/shopping-content/v2/libraries">示例代码</a>访问您的帐号。本指南将借助 Python 示例演示如何使用 API。</p>
+
+<ol>
+<li><p>从我们的 GitHub 页面下载 <a href="//github.com/googleads/googleads-shopping-samples/tree/master/python">Python 示例</a>。</p></li>
+<li><p>在 <code>python</code> 目录中，使用 PIP 安装所需的软件包依赖项。随附的 <code>README.md</code> 文件中提供了更详细的说明。
+</p><pre class="devsite-terminal">pip install -r requirements.txt</pre><p></p></li>
+<li><p>运行 <code>shopping/content/products/list.py</code> 文件，类似于我们之前在 API 沙盒中所执行的操作。
+</p><pre class="devsite-terminal">python -m shopping.content.products.list</pre><p></p></li>
+<li><p>如果您没有按照源文件随附的 README 文件中的配置说明进行操作，则会收到错误消息，指出无法找到示例配置。按照 README 文件中的说明创建配置目录，并在其中填写适当的信息。您在设置服务帐号时下载的 JSON 文件应放在该目录中，文件名为 <code>service-account.json</code>。</p></li>
+<li><p>设置了示例配置之后，请再次运行 <code>shopping/content/products/list.py</code>。
+</p><pre class="devsite-terminal">python -m shopping.content.products.list</pre><p></p></li>
+<li><p>此时，Python 脚本应该完成执行操作，然后打印出它找到的商品列表，或者打印出您的帐号中没有商品的消息。如果您收到“用户无法访问帐号 1234567890”等错误消息，则很可能是因为您尚未将该服务帐号用户设置为 Merchant Center 中的授权用户。从 API 的角度来看，API 控制台项目代表发送请求的用户不在获授权的 Merchant Center 管理员列表中，因此 Merchant Center 当然会拒绝该请求。</p></li>
+<li><p>您可以根据需要多次尝试运行 <code>shopping/content/products/list.py</code>，因为它是一个只读请求。您还可以浏览我们为 Python 和其他语言创建的许多其他示例。</p></li>
+</ol>
+
+<p>此时，您已经有了一个非常适合使用 Content API for Shopping 进行开发的环境。现在，您可以继续了解有关<a href="/shopping-content/v2/making-requests">发出请求</a>和<a href="/shopping-content/v2/best-practices">最佳做法</a>的详情。</p>
+
+
+          </div>
+
+    
+                   <devsite-page-rating position="footer" selected-rating="0" hover-rating-star="0">
+         </devsite-page-rating>
+                               <devsite-feedback
+  project-name="Content API for Shopping"
+  product-id="82128"
+  bucket="SCAPI"
+  context=""
+  version="devsite-webserver-20200227-r01-rc00.425026937843239108"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="header"
+        project-icon="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers/images/touchicon-180.png"
+    >
+    <button>发送反馈</button>
+</devsite-feedback>
+                   
+          </article>
+</article>
+
+<devsite-content-footer class="nocontent">
+  <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.cn/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>  </devsite-content-footer>
+
+
+
+                      </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+                      <nav class="devsite-footer-promos nocontent">
+  <ul class="devsite-footer-promos-list">
+        <li class="devsite-footer-promo">
+      <a href="//ads-developers.googleblog.com/search/label/content_api"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+                         data-label="Footer Promo Link (index 1)"
+              >
+                        <img class="devsite-footer-promo-icon"
+             src="https://www.gstatic.cn/images/icons/material/product/2x/blogger_64dp.png"
+             alt="博客">
+                博客
+      </a>
+      <div class="devsite-footer-promo-description">最新 Google Ads API 开发者博客</div>
+    </li>
+      </ul>
+</nav>
+
+                  </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+                      <nav class="devsite-footer-linkboxes nocontent">
+    <ul class="devsite-footer-linkboxes-list">
+        <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading">工具</h3>      <ul class="devsite-footer-linkbox-list">
+                <li class="devsite-footer-linkbox-item">
+          <a href="/shopping-content/v2/libraries"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 1)"           >
+            下载
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="https://developers.google.com/apis-explorer/#p/content/v2/"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 2)"           >
+            APIs Explorer
+          </a>
+        </li>
+              </ul>
+    </li>
+        <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading">商品信息</h3>      <ul class="devsite-footer-linkbox-list">
+                <li class="devsite-footer-linkbox-item">
+          <a href="/shopping-content/v2/terms"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 1)"           >
+            服务条款
+          </a>
+        </li>
+              </ul>
+    </li>
+        <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading">开发者控制台</h3>      <ul class="devsite-footer-linkbox-list">
+                <li class="devsite-footer-linkbox-item">
+          <a href="//console.developers.google.com"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 1)"           >
+            Google API Console
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//console.cloud.google.com"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 2)"           >
+            Google Cloud Platform Console
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//play.google.com/apps/publish"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 3)"           >
+            Google Play 管理中心
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//console.firebase.google.com"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 4)"           >
+            Firebase Console
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//console.actions.google.com"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 5)"           >
+            Actions on Google Console
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//cast.google.com/publish"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 6)"           >
+            Cast SDK Developer Console
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="//chrome.google.com/webstore/developer/dashboard"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 7)"           >
+            Chrome Web Store Dashboard
+          </a>
+        </li>
+              </ul>
+    </li>
+      </ul>
+  </nav>
+                  </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+                      
+<div class="devsite-footer-utility nocontent">
+    <nav class="devsite-footer-sites">
+    <a href="https://developers.google.cn/"
+       class="devsite-footer-sites-logo-link gc-analytics-event"
+       data-category="Site-Wide Custom Events"
+       data-label="Footer Google Developers Link">
+      <img class="devsite-footer-sites-logo"
+           src="/_static/images/lockup-developers.svg"
+           alt="Google Developers">
+    </a>
+    <ul class="devsite-footer-sites-list">
+            <li class="devsite-footer-sites-item">
+        <a href="//developer.android.google.cn"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Android Link"
+                  >
+          Android
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//developer.chrome.com/home"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Chrome Link"
+                  >
+          Chrome
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//firebase.google.cn"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Firebase Link"
+                  >
+          Firebase
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//cloud.google.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Google Cloud Platform Link"
+                  >
+          Google Cloud Platform
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="/products"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer All products Link"
+                  >
+          所有产品
+        </a>
+      </li>
+          </ul>
+  </nav>
+  
+  <nav class="devsite-footer-utility-links">
+        <ul class="devsite-footer-utility-list">
+            <li class="devsite-footer-utility-item
+                 ">
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="/terms/site-terms"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Terms link"
+         >
+          条款
+        </a>
+              </li>
+            <li class="devsite-footer-utility-item
+                 ">
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.cn/privacy"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+         >
+          隐私权政策
+        </a>
+              </li>
+            <li class="devsite-footer-utility-item
+                 devsite-footer-utility-button">
+                <span class="devsite-footer-utility-description">订阅 Google Developers 简报</span>
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//services.google.com/fb/forms/googledevelopersnewsletter/?utm_medium=referral&amp;utm_source=google-products&amp;utm_team=googledevs&amp;utm_campaign=201611-newsletter-launch"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Subscribe link"
+         >
+          订阅
+        </a>
+              </li>
+          </ul>
+    
+    <devsite-language-selector>
+  <devsite-select class="devsite-language-selector-menu">
+    <select class="devsite-language-selector-select"
+            name="language"
+            track-name="click"
+            track-type="languageSelector">
+                <option>Language</option>
+              <option value="id"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="id"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Bahasa Indonesia
+      </option>
+          <option value="de"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="de"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Deutsch
+      </option>
+          <option value="en"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="en"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        English
+      </option>
+          <option value="es"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español
+      </option>
+          <option value="fr"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="fr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Français
+      </option>
+          <option value="pt_br"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="pt_br"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Português – Brasil
+      </option>
+          <option value="ru"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ru"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Русский
+      </option>
+          <option value="zh_cn"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_cn"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 简体
+      </option>
+          <option value="ja"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ja"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        日本語
+      </option>
+          <option value="ko"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ko"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        한국어
+      </option>
+        </select>
+  </devsite-select>
+</devsite-language-selector>
+
+  </nav>
+</div>
+                  </devsite-footer-utility>
+      </section></section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar                   ></devsite-snackbar>    <devsite-tooltip blocked-link></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics>
+              <script type="application/json" analytics>[{"metrics": {}, "dimensions": {"dimension6": "zh-cn", "dimension4": "Content API for Shopping", "dimension5": "zh-cn", "dimension3": false, "dimension1": "Signed out", "dimension8": null}, "gaid": "UA-24532603-11"}, {"metrics": {}, "dimensions": {"dimension6": "zh-cn", "dimension4": "Content API for Shopping", "dimension5": "zh-cn", "dimension3": false, "dimension1": "Signed out", "dimension8": null}, "gaid": "UA-54828107-11"}]</script>
+<script type="application/json" gtm>{}</script>
+          </devsite-analytics>
+        <script>
+    (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/js/app_loader.js', '[1,"zh_cn",null,"/js/devsite_app.js","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers","https://google-developers.gonglchuangl.net",null,null,["/_pwa/developers/manifest.json","/_static/images/video-placeholder.svg","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers/images/favicon.png","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons"],1]')
+  </script>  </body>
+</html>
