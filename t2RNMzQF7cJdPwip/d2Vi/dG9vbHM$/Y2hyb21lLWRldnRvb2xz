@@ -1,0 +1,1615 @@
+<!doctype html>
+<html       lang="zh-CN"      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="721724668570-nbkv1cfusk7kk4eni4pjvepaus73b13t.apps.googleusercontent.com">
+    <meta name="google-signin-scope" content="profile email">
+    <meta property="og:site_name" content="Google Developers">
+    <meta property="og:type" content="website">
+    
+          <meta name="theme-color" content="#1a73e8">
+    
+    <meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="/_pwa/developers/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.cn" crossorigin>
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons">
+        <link rel="stylesheet" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers/css/app.css">
+    <noscript>
+      <link rel="stylesheet" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers/css/ce_bundle.css">
+    </noscript>
+    <link rel="shortcut icon" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers/images/favicon.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers/images/touchicon-180.png"><link rel="canonical" href="https://developers.google.cn/web/tools/chrome-devtools?hl=zh-cn">      
+<title>Chrome 开发者工具 &nbsp;|&nbsp; Tools for Web Developers &nbsp;|&nbsp; Google Developers</title>
+
+<meta property="og:title" content="Chrome 开发者工具 &nbsp;|&nbsp; Tools for Web Developers &nbsp;|&nbsp; Google Developers">
+  <meta name="description" content="选项1">
+  <meta property="og:description" content="选项1">
+
+
+  <meta property="og:url" content="https://developers.google.cn/web/tools/chrome-devtools?hl=zh-cn">
+
+  <meta property="og:image" content="https://developers.google.cn/web/images/social-webfu-16x9.png">
+  <meta property="og:image:secure_url" content="https://developers.google.cn/web/images/social-webfu-16x9.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta property="og:locale" content="zh_cn">
+  <meta name="twitter:card" content="summary_large_image">
+
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Web",
+      "item": "https://developers.google.cn/web"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tools for Web Developers",
+      "item": "https://developers.google.cn/web/tools"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Chrome 开发者工具",
+      "item": "https://developers.google.cn/web/tools/chrome-devtools"
+    }]
+  }
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+
+    </head>
+  <body type="article"
+        theme="google-blue"
+        class=""
+        
+        layout="docs"
+        block-apix                pending>
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+    <section class="devsite-wrapper"><devsite-header>
+      
+
+
+
+
+
+
+
+<div class="devsite-header--inner">
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="Open menu">
+        </button>
+        <div class="devsite-product-name-wrapper">
+          <a href="/web">
+      <div class="devsite-product-logo-container"
+       
+       >
+      <img class="devsite-product-logo"
+         alt="Web"
+         src="/web/images/web-fundamentals-icon192x192.png"
+         srcset="https://developers.google.cn/web/images/web-fundamentals-icon192x192_36.png 36w,https://developers.google.cn/web/images/web-fundamentals-icon192x192_48.png 48w,https://developers.google.cn/web/images/web-fundamentals-icon192x192_72.png 72w,https://developers.google.cn/web/images/web-fundamentals-icon192x192_96.png 96w,https://developers.google.cn/web/images/web-fundamentals-icon192x192_480.png 480w,https://developers.google.cn/web/images/web-fundamentals-icon192x192_720.png 720w,https://developers.google.cn/web/images/web-fundamentals-icon192x192_856.png 856w,https://developers.google.cn/web/images/web-fundamentals-icon192x192_960.png 960w,https://developers.google.cn/web/images/web-fundamentals-icon192x192_1440.png 1440w,https://developers.google.cn/web/images/web-fundamentals-icon192x192_1920.png 1920w,https://developers.google.cn/web/images/web-fundamentals-icon192x192_2880.png 2880w"
+         sizes="64px">
+    </div>
+  
+  </a>
+  
+  
+  <span class="devsite-product-name">
+    <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             ">
+                                  <a href="/web"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Upper Header"
+              data-value="1"
+          >
+              Web        
+  </a>
+              </li>
+  </ul>
+  </span>
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+                            <devsite-tabs class="upper-tabs">
+    <div class="devsite-tabs-wrapper">
+                        <tab  >
+            <a href="/web/fundamentals"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="fundamentals"
+           data-category="webFu"
+        data-label="upper-webfu"
+   >
+  Fundamentals
+</a>
+
+          </tab>
+                                <tab  active>
+            <a href="/web/tools"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="tools"
+   aria-label="Tools, selected"         data-category="Site-Wide Custom Events"
+        data-label="Tab: Tools"
+   >
+  Tools
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/web/updates"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="updates"
+           data-category="webFu"
+        data-label="upper-updates"
+   >
+  Updates
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/web/showcase"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="caseStudies"
+           data-category="webFu"
+        data-label="upper-showcase"
+   >
+  Case Studies
+</a>
+
+          </tab>
+                  </div>
+  </devsite-tabs>
+
+
+                       </div>
+          <devsite-search
+            enable-suggestions
+              project-name="Tools for Web Developers"    tenant-name="Google Developers"                >
+  <form class="devsite-search-form" action="https://developers.google.cn/s/results" method="GET">
+    <div class="devsite-search-container">
+      <div class="devsite-searchbox">
+                <input placeholder="搜索"
+          type="text"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          value=""
+          autocomplete="off"
+                    aria-label="搜索框">
+        <div class="devsite-search-image material-icons" aria-hidden="true"></div>
+      </div>
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              aria-label="Open search box"></button>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          aria-label="Close search box"></button>
+</devsite-search>
+
+        </div>
+
+        
+        <devsite-language-selector>
+  <devsite-select class="devsite-language-selector-menu">
+    <select class="devsite-language-selector-select"
+            name="language"
+            track-name="click"
+            track-type="languageSelector">
+                <option>Language</option>
+              <option value="id"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="id"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Bahasa Indonesia
+      </option>
+          <option value="de"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="de"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Deutsch
+      </option>
+          <option value="en"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="en"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        English
+      </option>
+          <option value="es"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español
+      </option>
+          <option value="fr"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="fr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Français
+      </option>
+          <option value="pt_br"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="pt_br"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Português – Brasil
+      </option>
+          <option value="ru"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ru"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Русский
+      </option>
+          <option value="zh_cn"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_cn"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 简体
+      </option>
+          <option value="zh_tw"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_tw"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 繁體
+      </option>
+          <option value="ja"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ja"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        日本語
+      </option>
+          <option value="ko"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ko"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        한국어
+      </option>
+        </select>
+  </devsite-select>
+</devsite-language-selector>
+
+
+        
+              </div>    </div>  </div>
+  <div class="devsite-collapsible-section
+    ">
+    <div class="devsite-header-background">
+                        <div class="devsite-product-id-row"
+           >
+            <div class="devsite-product-description-row">
+                                                <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             ">
+                    <a href="/web/tools"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Lower Header"
+              data-value="1"
+          >
+            Tools for Web Developers
+      
+  </a>
+        </li>
+  </ul>
+                                                        </div>
+                                                                            </div>
+                                      <div class="devsite-doc-set-nav-row">
+                                                      <devsite-tabs class="lower-tabs">
+    <div class="devsite-tabs-wrapper">
+                        <tab  >
+            <a href="/web/tools"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="首页"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 首页"
+   >
+  首页
+</a>
+
+          </tab>
+                                <tab  active>
+            <a href="/web/tools/chrome-devtools"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="chromeDevtools"
+   aria-label="Chrome DevTools, selected"         data-category="Site-Wide Custom Events"
+        data-label="Tab: Chrome DevTools"
+   >
+  Chrome DevTools
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/web/tools/lighthouse"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="lighthouse"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: Lighthouse"
+   >
+  Lighthouse
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/web/tools/puppeteer"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="puppeteer"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: Puppeteer"
+   >
+  Puppeteer
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/web/tools/workbox"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="workbox"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: Workbox"
+   >
+  Workbox
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/web/tools/chrome-user-experience-report"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="chromeUserExperienceReport"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: Chrome User Experience Report"
+   >
+  Chrome User Experience Report
+</a>
+
+          </tab>
+                  </div>
+  </devsite-tabs>
+
+
+                            </div>
+          </div>  </div></div>
+  
+
+  </devsite-header>      <devsite-book-nav scrollbars >
+                  
+
+
+
+
+
+<nav class="devsite-book-nav devsite-nav nocontent">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="Close navigation">
+    </button>
+    <div class="devsite-product-name-wrapper">
+          <a href="/web">
+      <div class="devsite-product-logo-container"
+       
+       >
+      <img class="devsite-product-logo"
+         alt="Web"
+         src="/web/images/web-fundamentals-icon192x192.png"
+         srcset="/web/images/web-fundamentals-icon192x192_36.png 36w, /web/images/web-fundamentals-icon192x192_48.png 48w, /web/images/web-fundamentals-icon192x192_72.png 72w, /web/images/web-fundamentals-icon192x192_96.png 96w, /web/images/web-fundamentals-icon192x192_480.png 480w, /web/images/web-fundamentals-icon192x192_720.png 720w, /web/images/web-fundamentals-icon192x192_856.png 856w, /web/images/web-fundamentals-icon192x192_960.png 960w, /web/images/web-fundamentals-icon192x192_1440.png 1440w, /web/images/web-fundamentals-icon192x192_1920.png 1920w, /web/images/web-fundamentals-icon192x192_2880.png 2880w"
+         sizes="64px">
+    </div>
+  
+  </a>
+  
+          <span class="devsite-product-name">
+        <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             ">
+                                  <a href="/web"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Upper Header"
+              data-value="1"
+          >
+              Web        
+  </a>
+              </li>
+  </ul>
+      </span>
+    
+</div>  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+              <ul class="devsite-nav-list">
+                      <li class="devsite-nav-item">
+                  <a href="/web/fundamentals"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Fundamentals"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="fundamentals">
+      <span class="devsite-nav-text" tooltip >
+      Fundamentals
+   </span>
+        </a>
+  
+                                        </li>
+                      <li class="devsite-nav-item">
+                  <a href="/web/tools"
+           class="devsite-nav-title gc-analytics-event
+                            devsite-nav-active"
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Tools"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="tools">
+      <span class="devsite-nav-text" tooltip >
+      Tools
+   </span>
+        </a>
+  
+                                            <ul class="devsite-nav-responsive-tabs">
+                                                                                                  <li class="devsite-nav-item">
+    <a href="/web/tools"
+           class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children              "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 首页"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="首页">
+      <span class="devsite-nav-text" tooltip menu="_book">
+      首页
+   </span>
+        <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="_book">
+    </span>
+        </a>
+  </li>
+
+                                                                                                  <li class="devsite-nav-item">
+    <a href="/web/tools/chrome-devtools"
+           class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children              devsite-nav-active"
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Chrome DevTools"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="chromeDevtools">
+      <span class="devsite-nav-text" tooltip menu="_book">
+      Chrome DevTools
+   </span>
+        <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="_book">
+    </span>
+        </a>
+  </li>
+
+                                                                                                  <li class="devsite-nav-item">
+    <a href="/web/tools/lighthouse"
+           class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children              "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Lighthouse"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="lighthouse">
+      <span class="devsite-nav-text" tooltip menu="_book">
+      Lighthouse
+   </span>
+        <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="_book">
+    </span>
+        </a>
+  </li>
+
+                                                                                                  <li class="devsite-nav-item">
+    <a href="/web/tools/puppeteer"
+           class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children              "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Puppeteer"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="puppeteer">
+      <span class="devsite-nav-text" tooltip menu="_book">
+      Puppeteer
+   </span>
+        <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="_book">
+    </span>
+        </a>
+  </li>
+
+                                                                                                  <li class="devsite-nav-item">
+    <a href="/web/tools/workbox"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Workbox"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="workbox">
+      <span class="devsite-nav-text" tooltip >
+      Workbox
+   </span>
+        </a>
+  </li>
+
+                                                                                                  <li class="devsite-nav-item">
+    <a href="/web/tools/chrome-user-experience-report"
+           class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children              "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Chrome User Experience Report"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="chromeUserExperienceReport">
+      <span class="devsite-nav-text" tooltip menu="_book">
+      Chrome User Experience Report
+   </span>
+        <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="_book">
+    </span>
+        </a>
+  </li>
+
+                                  </ul>
+                          </li>
+                      <li class="devsite-nav-item">
+                  <a href="/web/updates"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Updates"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="updates">
+      <span class="devsite-nav-text" tooltip >
+      Updates
+   </span>
+        </a>
+  
+                                        </li>
+                      <li class="devsite-nav-item">
+                  <a href="/web/showcase"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Case Studies"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="caseStudies">
+      <span class="devsite-nav-text" tooltip >
+      Case Studies
+   </span>
+        </a>
+  
+                                        </li>
+                    
+                  </ul>
+          </div>
+          <div class="devsite-mobile-nav-bottom">
+                            <ul class="devsite-nav-list" menu="_book">
+            <li class="devsite-nav-item"><a href="/web/tools/chrome-devtools"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Home</span></a></li>
+  <li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/open"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Open DevTools</span></a></li>
+  <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>CSS</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/css"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Get Started with Viewing and Changing CSS</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/css/reference"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>CSS Reference</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/coverage"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Find Unused CSS</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/inspect-styles/animations"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Inspect Animations</span></a></li><li class="devsite-nav-item           devsite-nav-deprecated"><a href="/web/tools/chrome-devtools/inspect-styles/edit-styles"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Edit Styles</span><span class="devsite-nav-icon material-icons"
+          data-icon="deprecated"
+          data-title="已弃用"
+          aria-hidden="true"></span></a></li><li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Guides</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/css/print-preview"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Force DevTools Into Print Preview Mode</span></a></li></ul></devsite-expandable-nav></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Console</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/console"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/console/log"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Log Messages</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/console/javascript"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Run JavaScript</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/console/reference"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Reference</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/console/api"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>API Reference</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/console/utilities"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Utilities API Reference</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/console/live-expressions"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Live Expressions</span></a></li><li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Deprecated</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item           devsite-nav-deprecated"><a href="/web/tools/chrome-devtools/console/console-write"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Diagnose and Log to the Console</span><span class="devsite-nav-icon material-icons"
+          data-icon="deprecated"
+          data-title="已弃用"
+          aria-hidden="true"></span></a></li><li class="devsite-nav-item           devsite-nav-deprecated"><a href="/web/tools/chrome-devtools/console/structured-data"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Compare Similar Data Objects</span><span class="devsite-nav-icon material-icons"
+          data-icon="deprecated"
+          data-title="已弃用"
+          aria-hidden="true"></span></a></li><li class="devsite-nav-item           devsite-nav-deprecated"><a href="/web/tools/chrome-devtools/console/track-executions"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Measure and Count Executions</span><span class="devsite-nav-icon material-icons"
+          data-icon="deprecated"
+          data-title="已弃用"
+          aria-hidden="true"></span></a></li><li class="devsite-nav-item           devsite-nav-deprecated"><a href="/web/tools/chrome-devtools/console/track-exceptions"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Handle Exceptions and Errors</span><span class="devsite-nav-icon material-icons"
+          data-icon="deprecated"
+          data-title="已弃用"
+          aria-hidden="true"></span></a></li><li class="devsite-nav-item           devsite-nav-deprecated"><a href="/web/tools/chrome-devtools/console/expressions"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Evaluate Expressions</span><span class="devsite-nav-icon material-icons"
+          data-icon="deprecated"
+          data-title="已弃用"
+          aria-hidden="true"></span></a></li><li class="devsite-nav-item           devsite-nav-deprecated"><a href="/web/tools/chrome-devtools/console/events"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Monitor Events</span><span class="devsite-nav-icon material-icons"
+          data-icon="deprecated"
+          data-title="已弃用"
+          aria-hidden="true"></span></a></li></ul></devsite-expandable-nav></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Network</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/network"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Get Started</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/network/issues"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Network Issues Guide</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/network/reference"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Reference</span></a></li><li class="devsite-nav-item           devsite-nav-deprecated"><a href="/web/tools/chrome-devtools/network/resource-loading"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Resource Loading</span><span class="devsite-nav-icon material-icons"
+          data-icon="deprecated"
+          data-title="已弃用"
+          aria-hidden="true"></span></a></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Storage</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/storage/cookies"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Cookies</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/storage/localstorage"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Local Storage</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/storage/indexeddb"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>IndexedDB</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/storage/sessionstorage"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Session Storage</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/storage/applicationcache"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Application Cache</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/storage/websql"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Web SQL</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/storage/cache"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Cache</span></a></li><li class="devsite-nav-item           devsite-nav-deprecated"><a href="/web/tools/chrome-devtools/manage-data/local-storage"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Inspect and Manage Storage, Databases, and Caches</span><span class="devsite-nav-icon material-icons"
+          data-icon="deprecated"
+          data-title="已弃用"
+          aria-hidden="true"></span></a></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/command-menu"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Command Menu</span></a></li>
+  <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Mobile Simulation</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/device-mode"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/device-mode/testing-other-browsers"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Emulate and Test Other Browsers</span></a></li><li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Guides</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/device-mode/override-user-agent"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Override The User Agent String</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/device-mode/geolocation"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Override Geolocation</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/device-mode/orientation"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Simulate Device Orientation</span></a></li></ul></devsite-expandable-nav></li><li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Deprecated</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item           devsite-nav-deprecated"><a href="/web/tools/chrome-devtools/device-mode/emulate-mobile-viewports"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Test Responsive and Device-Specific Viewports</span><span class="devsite-nav-icon material-icons"
+          data-icon="deprecated"
+          data-title="已弃用"
+          aria-hidden="true"></span></a></li><li class="devsite-nav-item           devsite-nav-deprecated"><a href="/web/tools/chrome-devtools/device-mode/device-input-and-sensors"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Emulate Geolocation and Accelerometer Sensors</span><span class="devsite-nav-icon material-icons"
+          data-icon="deprecated"
+          data-title="已弃用"
+          aria-hidden="true"></span></a></li></ul></devsite-expandable-nav></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>DOM</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/dom"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Get Started</span></a></li><li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Deprecated</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item           devsite-nav-deprecated"><a href="/web/tools/chrome-devtools/inspect-styles"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>DOM Guide</span><span class="devsite-nav-icon material-icons"
+          data-icon="deprecated"
+          data-title="已弃用"
+          aria-hidden="true"></span></a></li><li class="devsite-nav-item           devsite-nav-deprecated"><a href="/web/tools/chrome-devtools/inspect-styles/edit-dom"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Edit the DOM</span><span class="devsite-nav-icon material-icons"
+          data-icon="deprecated"
+          data-title="已弃用"
+          aria-hidden="true"></span></a></li></ul></devsite-expandable-nav></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>JavaScript</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/javascript"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Get Started</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/javascript/breakpoints"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Pause Your Code With Breakpoints</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/coverage"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Find Unused JavaScript</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/javascript/source-maps"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Map Preprocessed Code to Source Code</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/javascript/reference"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>JS Debugging Reference</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/snippets"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Snippets</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/sources"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Sources Panel Overview</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/javascript/background-services"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Debug Background Services</span></a></li><li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Guides</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/javascript/guides/blackbox-chrome-extension-scripts"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Blackbox Chrome Extension Scripts</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/javascript/disable"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Disable JavaScript</span></a></li></ul></devsite-expandable-nav></li><li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Deprecated</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item           devsite-nav-deprecated"><a href="/web/tools/chrome-devtools/javascript/step-code"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Step Through Code</span><span class="devsite-nav-icon material-icons"
+          data-icon="deprecated"
+          data-title="已弃用"
+          aria-hidden="true"></span></a></li><li class="devsite-nav-item           devsite-nav-deprecated"><a href="/web/tools/chrome-devtools/javascript/pretty-print"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Pretty-Print Minified JavaScript</span><span class="devsite-nav-icon material-icons"
+          data-icon="deprecated"
+          data-title="已弃用"
+          aria-hidden="true"></span></a></li><li class="devsite-nav-item           devsite-nav-deprecated"><a href="/web/tools/chrome-devtools/javascript/watch-variables"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Watch Variables in Sources</span><span class="devsite-nav-icon material-icons"
+          data-icon="deprecated"
+          data-title="已弃用"
+          aria-hidden="true"></span></a></li></ul></devsite-expandable-nav></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Performance</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/evaluate-performance"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Get Started</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/speed/get-started"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Optimize Website Speed</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/rendering-tools"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/evaluate-performance/reference"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Performance Analysis Reference</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/evaluate-performance/performance-reference"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Timeline Event Reference</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/rendering-tools/js-execution"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Speed Up JavaScript Execution</span></a></li><li class="devsite-nav-item           devsite-nav-deprecated"><a href="/web/tools/chrome-devtools/evaluate-performance/timeline-tool"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>How to Use the Timeline Tool</span><span class="devsite-nav-icon material-icons"
+          data-icon="deprecated"
+          data-title="已弃用"
+          aria-hidden="true"></span></a></li><li class="devsite-nav-item           devsite-nav-deprecated"><a href="/web/tools/chrome-devtools/rendering-tools/forced-synchronous-layouts"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Diagnose Forced Synchronous Layouts</span><span class="devsite-nav-icon material-icons"
+          data-icon="deprecated"
+          data-title="已弃用"
+          aria-hidden="true"></span></a></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Accessibility</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/accessibility/reference"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Reference</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/accessibility/navigation"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Navigate DevTools With Assistive Technology</span></a></li><li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Guides</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/accessibility/focus"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Track Which Element Has Focus</span></a></li></ul></devsite-expandable-nav></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Remote Debugging</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/remote-debugging"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Get Started</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/remote-debugging/local-server"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Access Local Servers</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/remote-debugging/webviews"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Remote Debugging WebViews</span></a></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Memory</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/memory-problems"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/memory-problems/memory-101"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Understand Memory Terminology</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/memory-problems/heap-snapshots"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Record Heap Snapshots</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/memory-problems/allocation-profiler"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Use the Allocation Profiler</span></a></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/workspaces"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Workspaces</span></a></li>
+  <li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/progressive-web-apps"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Progressive Web Apps</span></a></li>
+  <li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/security"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Security</span></a></li>
+  <li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/shortcuts"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Keyboard Shortcuts</span></a></li>
+  <li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/resources"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Resources</span></a></li>
+  <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Customize</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/customize"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/customize/dark-theme"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Dark Theme</span></a></li><li class="devsite-nav-item"><a href="/web/tools/chrome-devtools/customize/placement"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Change Placement</span></a></li></ul></devsite-expandable-nav></li>
+  <li class="devsite-nav-item           devsite-nav-expandable"><devsite-expandable-nav collapsed>
+    <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button"><span class="devsite-nav-text" tooltip>Extend DevTools</span></div><ul class="devsite-nav-section"><li class="devsite-nav-item           devsite-nav-external"><a href="https://developer.chrome.com/devtools/docs/integrating"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Integrating with DevTools and Chrome</span><span class="devsite-nav-icon material-icons"
+          data-icon="external"
+          data-title="外部"
+          aria-hidden="true"></span></a></li><li class="devsite-nav-item           devsite-nav-external"><a href="https://developer.chrome.com/extensions/devtools"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>DevTools Extensions API</span><span class="devsite-nav-icon material-icons"
+          data-icon="external"
+          data-title="外部"
+          aria-hidden="true"></span></a></li><li class="devsite-nav-item           devsite-nav-external"><a href="https://developer.chrome.com/devtools/docs/debugger-protocol"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Debugger Protocol</span><span class="devsite-nav-icon material-icons"
+          data-icon="external"
+          data-title="外部"
+          aria-hidden="true"></span></a></li></ul></devsite-expandable-nav></li>
+          </ul>
+                                                                                                                                </div>
+      </div>
+</nav>
+              </devsite-book-nav>
+      <section id="gc-wrapper">
+        <main role="main" class="devsite-main-content"
+            has-book-nav            has-toc>
+          <devsite-toc class="devsite-nav"
+            ></devsite-toc>
+          <devsite-content>
+                          
+
+<article class="devsite-article">
+  <article class="devsite-article-inner">        
+    <div class="devsite-article-meta">
+      <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             ">
+                    <a href="/"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="1"
+          >
+            首页
+      
+  </a>
+        </li>
+    <li class="devsite-breadcrumb-item
+             ">
+                <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+                    <a href="/products"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="2"
+          >
+            产品
+      
+  </a>
+        </li>
+    <li class="devsite-breadcrumb-item
+             ">
+                <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+                    <a href="/web"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="3"
+          >
+            Web
+      
+  </a>
+        </li>
+    <li class="devsite-breadcrumb-item
+             ">
+                <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+                    <a href="/web/tools"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="4"
+          >
+            Tools for Web Developers
+      
+  </a>
+        </li>
+    <li class="devsite-breadcrumb-item
+             ">
+                <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+                    <a href="/web/tools/chrome-devtools"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="5"
+          >
+            Chrome DevTools
+      
+  </a>
+        </li>
+  </ul>
+               <devsite-page-rating position="header" selected-rating="0" hover-rating-star="0">
+         </devsite-page-rating>
+          </div>
+
+              <h1 class="devsite-page-title">Chrome 开发者工具</h1>
+    
+    <devsite-toc class="devsite-nav" devsite-toc-embedded
+                 >
+    </devsite-toc>
+
+    <div class="devsite-article-body clearfix
+      ">
+
+              
+
+
+<p>Chrome 开发者工具是一套内置于Google Chrome中的Web开发和调试工具，可用来对网站进行迭代、调试和分析。</p>
+<aside class="dogfood"><strong>Dogfood:</strong><span> 寻找最新版本的Chrome 开发者工具, <a href="https://www.google.com/intl/en/chrome/browser/canary.html">Chrome Canary</a> 总是有最新的DevTools.</span></aside>
+<h2 id="open">打开Chrome 开发者工具</h2>
+
+<ul>
+<li>在Chrome菜单中选择 <strong>更多工具</strong> &gt; <strong>开发者工具</strong></li>
+<li>在页面元素上右键点击，选择 “检查”</li>
+<li>使用 <a href="/web/tools/chrome-devtools/inspect-styles/shortcuts">快捷键 </a>
+<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> (Windows) 或 <kbd>Cmd</kbd>+<kbd>Opt</kbd>+<kbd>I</kbd> (Mac)</li>
+</ul>
+
+<h2 id="了解面板">了解面板</h2>
+
+<h3 id="设备模式">设备模式</h3>
+
+<p><img src="/web/tools/chrome-devtools/images/device-mode.png" alt="Device Mode" class="attempt-right"></p>
+
+<p>使用设备模式构建完全响应式，移动优先的网络体验。</p>
+
+<ul>
+<li><a href="/web/tools/chrome-devtools/device-mode">Device Mode</a></li>
+<li><a href="/web/tools/chrome-devtools/device-mode/emulate-mobile-viewports">Test Responsive and Device-specific Viewports</a></li>
+<li><a href="/web/tools/chrome-devtools/device-mode/device-input-and-sensors">Emulate Sensors: Geolocation &amp; Accelerometer</a></li>
+</ul>
+
+<div style="clear:both;"></div>
+
+<h3 id="元素面板">元素面板</h3>
+
+<p><img src="/web/tools/chrome-devtools/images/panels/elements.png" alt="Elements Panel" class="attempt-right">
+使用元素面板可以自由的操作DOM和CSS来迭代布局和设计页面.</p>
+
+<ul>
+<li><a href="/web/tools/chrome-devtools/inspect-styles">检查和调整页面</a></li>
+<li><a href="/web/tools/chrome-devtools/inspect-styles/edit-styles">编辑样式</a></li>
+<li><a href="/web/tools/chrome-devtools/inspect-styles/edit-dom">编辑DOM</a></li>
+</ul>
+
+<div style="clear:both;"></div>
+
+<h3 id="控制台面板">控制台面板</h3>
+
+<p><img src="/web/tools/chrome-devtools/images/panels/console.png" alt="Console Panel" class="attempt-right"></p>
+
+<p>在开发期间，可以使用控制台面板记录诊断信息，或者使用它作为 shell在页面上与JavaScript交互。</p>
+
+<ul>
+<li><a href="/web/tools/chrome-devtools/console">使用控制台面板</a></li>
+<li><a href="/web/tools/chrome-devtools/console">命令行交互</a></li>
+</ul>
+
+<div style="clear:both;"></div>
+
+<h3 id="源代码面板">源代码面板</h3>
+
+<p><img src="/web/tools/chrome-devtools/images/panels/sources.png" alt="Sources Panel" class="attempt-right"></p>
+
+<p>在源代码面板中设置断点来调试 JavaScript ，或者通过Workspaces（工作区）连接本地文件来使用开发者工具的实时编辑器。</p>
+
+<ul>
+<li><a href="/web/tools/chrome-devtools/javascript/add-breakpoints">断点调试</a></li>
+<li><a href="/web/tools/chrome-devtools/javascript/add-breakpoints">调试混淆的代码</a></li>
+<li><a href="/web/tools/setup/setup-workflow">使用开发者工具的Workspaces（工作区）进行持久化保存</a></li>
+</ul>
+
+<div style="clear:both;"></div>
+
+<h3 id="网络面板">网络面板</h3>
+
+<p><img src="/web/tools/chrome-devtools/images/panels/network.png" alt="Network Panel" class="attempt-right"></p>
+
+<p>使用网络面板了解请求和下载的资源文件并优化网页加载性能。</p>
+
+<ul>
+<li><a href="/web/tools/chrome-devtools/network-performance/resource-loading">网络面板基础</a></li>
+<li><a href="/web/tools/chrome-devtools/network-performance/understanding-resource-timing">了解资源时间轴</a></li>
+<li><a href="/web/tools/chrome-devtools/network-performance/network-conditions">网络带宽限制</a></li>
+</ul>
+
+<div style="clear:both;"></div>
+
+<h3 id="性能面板">性能面板</h3>
+<aside class="note"><strong>Note:</strong><span> 在 Chrome 57 之后时间线面板更名为性能面板.
+<img src="/web/tools/chrome-devtools/images/panels/performance.png" alt="Timeline Panel" class="attempt-right"></span></aside>
+<p>使用时间轴面板可以通过记录和查看网站生命周期内发生的各种事件来提高页面的运行时性能。</p>
+
+<ul>
+<li><a href="/web/tools/chrome-devtools/evaluate-performance/timeline-tool">如何查看性能</a></li>
+<li><a href="/web/tools/chrome-devtools/rendering-tools">分析运行时性能</a></li>
+<li><a href="/web/tools/chrome-devtools/rendering-tools/forced-synchronous-layouts">诊断强制的同步布局</a></li>
+</ul>
+
+<div style="clear:both;"></div>
+
+<h3 id="内存面板">内存面板</h3>
+<aside class="note"><strong>Note:</strong><span> 在 Chrome 57 之后分析面板更名为内存面板.
+<img src="/web/tools/chrome-devtools/images/panels/memory.png" alt="Profiles Panel" class="attempt-right"></span></aside>
+<p>如果需要比时间轴面板提供的更多信息，可以使用“配置”面板，例如跟踪内存泄漏。
+Use the Profiles panel if you need more information than the Timeline provide, for instance to track down memory leaks.</p>
+
+<ul>
+<li><a href="/web/tools/chrome-devtools/rendering-tools/js-execution">JavaScript CPU 分析器</a></li>
+<li><a href="/web/tools/chrome-devtools/memory-problems">内存堆区分析器</a></li>
+</ul>
+
+<div style="clear:both;"></div>
+
+<h3 id="应用面板">应用面板</h3>
+<aside class="note"><strong>Note:</strong><span> 在 Chrome 52 之后资源面板更名为应用面板.
+<img src="/web/tools/chrome-devtools/images/panels/application.png" alt="Application Panel" class="attempt-right"></span></aside>
+<p>使用资源面板检查加载的所有资源，包括IndexedDB与Web SQL数据库，本地和会话存储，cookie，应用程序缓存，图像，字体和样式表。</p>
+
+<ul>
+<li><a href="/web/tools/chrome-devtools/manage-data/local-storage">管理数据</a></li>
+</ul>
+
+<div style="clear:both;"></div>
+
+<h3 id="安全面板">安全面板</h3>
+
+<p><img src="/web/tools/chrome-devtools/images/panels/security.png" alt="Security Panel" class="attempt-right"></p>
+
+<p>使用安全面板调试混合内容问题，证书问题等等。</p>
+
+<ul>
+<li><a href="/web/tools/chrome-devtools/security">安全</a></li>
+</ul>
+
+<div style="clear:both;"></div>
+
+<h2 id="参与互动">参与互动</h2>
+
+<p><a href="https://twitter.com/ChromeDevTools" class="button button-white">Twitter</a> 
+<a href="https://stackoverflow.com/questions/tagged/google-chrome-devtools" class="button button-white">Stack Overflow</a> 
+<a href="https://chromiumdev.slack.com/messages/devtools/" class="button button-white">Slack</a> </p>
+
+          </div>
+
+    
+                   <devsite-page-rating position="footer" selected-rating="0" hover-rating-star="0">
+         </devsite-page-rating>
+                   
+          </article>
+</article>
+
+<devsite-content-footer class="nocontent">
+  <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.cn/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>  <p>Last updated 2017-09-26.</p></devsite-content-footer>
+
+  <devsite-google-survey type="gcs" site-id=ylj5ifxusvvmr4pp6ae5lwrctq></devsite-google-survey>
+
+
+                      </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+                      <nav class="devsite-footer-promos nocontent">
+  <ul class="devsite-footer-promos-list">
+        <li class="devsite-footer-promo">
+      <a href="https://blog.chromium.org"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+                         data-label="Footer Promo Link (index 1)"
+              >
+                        <img class="devsite-footer-promo-icon"
+             src="https://www.gstatic.cn/images/icons/material/product/2x/chrome_chromium_64dp.png"
+             alt="Chromium Blog">
+                Chromium Blog
+      </a>
+      <div class="devsite-footer-promo-description">The latest news on the Chromium blog.</div>
+    </li>
+        <li class="devsite-footer-promo">
+      <a href="https://web.dev/"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+                         data-label="Footer Promo Link (index 2)"
+              >
+                        <img class="devsite-footer-promo-icon"
+             src="/web/images/web-dev-logo.png"
+             alt="web.dev">
+                web.dev
+      </a>
+      <div class="devsite-footer-promo-description">Useful guidance and analysis from web.dev for web developers.</div>
+    </li>
+        <li class="devsite-footer-promo">
+      <a href="https://twitter.com/chromiumdev"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+                         data-label="Footer Promo Link (index 3)"
+              >
+                        <img class="devsite-footer-promo-icon"
+             src="/site-assets/logo-twitter.svg"
+             alt="Twitter">
+                Twitter
+      </a>
+      <div class="devsite-footer-promo-description">Connect with @ChromiumDev on Twitter.</div>
+    </li>
+        <li class="devsite-footer-promo">
+      <a href="/web/shows"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+                         data-label="Footer Promo Link (index 4)"
+              >
+                        <img class="devsite-footer-promo-icon"
+             src="https://www.gstatic.cn/images/icons/material/product/2x/youtube_64dp.png"
+             alt="Videos">
+                Videos
+      </a>
+      <div class="devsite-footer-promo-description">Check out our videos.</div>
+    </li>
+      </ul>
+</nav>
+
+                  </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+                      <nav class="devsite-footer-linkboxes nocontent">
+    <ul class="devsite-footer-linkboxes-list">
+        <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading">Key Topics</h3>      <ul class="devsite-footer-linkbox-list">
+                <li class="devsite-footer-linkbox-item">
+          <a href="/web/billions"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 1)"           >
+            Building for Billions
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="https://developers.chrome.com/extensions/api_index"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 2)"           >
+            Chrome Extension Docs
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="/web/site-kit"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 3)"           >
+            Site-Kit
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="/web/feedback"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 4)"           >
+            Developer Feedback Program
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="https://web.dev/progressive-web-apps/"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 5)"           >
+            Progressive Web Apps
+          </a>
+        </li>
+              </ul>
+    </li>
+        <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading">Training and Partners</h3>      <ul class="devsite-footer-linkbox-list">
+                <li class="devsite-footer-linkbox-item">
+          <a href="/web/ilt"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 1)"           >
+            Instructor Led Training
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="/web/shows/udacity"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 2)"           >
+            Web Courses at Udacity
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="/web/agencies"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 3)"           >
+            Agencies
+          </a>
+        </li>
+              </ul>
+    </li>
+        <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading">Contribute</h3>      <ul class="devsite-footer-linkbox-list">
+                <li class="devsite-footer-linkbox-item">
+          <a href="https://github.com/google/WebFundamentals/issues"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 1)"           >
+            File an Issue
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="https://github.com/google/WebFundamentals"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 2)"           >
+            View Page Source
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="/web/resources"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 3)"           >
+            Resources
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="/web/resources/translations"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 4)"           >
+            Translating
+          </a>
+        </li>
+              </ul>
+    </li>
+      </ul>
+  </nav>
+                  </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+                      
+<div class="devsite-footer-utility nocontent">
+    <nav class="devsite-footer-sites">
+    <a href="https://developers.google.cn/"
+       class="devsite-footer-sites-logo-link gc-analytics-event"
+       data-category="Site-Wide Custom Events"
+       data-label="Footer Google Developers Link">
+      <img class="devsite-footer-sites-logo"
+           src="/_static/images/lockup-developers.svg"
+           alt="Google Developers">
+    </a>
+    <ul class="devsite-footer-sites-list">
+            <li class="devsite-footer-sites-item">
+        <a href="//developer.android.google.cn"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Android Link"
+                  >
+          Android
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//developer.chrome.com/home"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Chrome Link"
+                  >
+          Chrome
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//firebase.google.cn"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Firebase Link"
+                  >
+          Firebase
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//cloud.google.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Google Cloud Platform Link"
+                  >
+          Google Cloud Platform
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="/products"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer All products Link"
+                  >
+          所有产品
+        </a>
+      </li>
+          </ul>
+  </nav>
+  
+  <nav class="devsite-footer-utility-links">
+        <ul class="devsite-footer-utility-list">
+            <li class="devsite-footer-utility-item
+                 ">
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="/terms/site-terms"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Terms link"
+         >
+          条款
+        </a>
+              </li>
+            <li class="devsite-footer-utility-item
+                 ">
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.cn/privacy"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+         >
+          隐私权政策
+        </a>
+              </li>
+            <li class="devsite-footer-utility-item
+                 devsite-footer-utility-button">
+                <span class="devsite-footer-utility-description">订阅 Google Developers 简报</span>
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//services.google.com/fb/forms/googledevelopersnewsletter/?utm_medium=referral&amp;utm_source=google-products&amp;utm_team=googledevs&amp;utm_campaign=201611-newsletter-launch"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Subscribe link"
+         >
+          订阅
+        </a>
+              </li>
+          </ul>
+    
+    <devsite-language-selector>
+  <devsite-select class="devsite-language-selector-menu">
+    <select class="devsite-language-selector-select"
+            name="language"
+            track-name="click"
+            track-type="languageSelector">
+                <option>Language</option>
+              <option value="id"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="id"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Bahasa Indonesia
+      </option>
+          <option value="de"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="de"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Deutsch
+      </option>
+          <option value="en"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="en"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        English
+      </option>
+          <option value="es"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español
+      </option>
+          <option value="fr"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="fr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Français
+      </option>
+          <option value="pt_br"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="pt_br"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Português – Brasil
+      </option>
+          <option value="ru"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ru"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Русский
+      </option>
+          <option value="zh_cn"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_cn"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 简体
+      </option>
+          <option value="zh_tw"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_tw"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 繁體
+      </option>
+          <option value="ja"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ja"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        日本語
+      </option>
+          <option value="ko"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ko"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        한국어
+      </option>
+        </select>
+  </devsite-select>
+</devsite-language-selector>
+
+  </nav>
+</div>
+                  </devsite-footer-utility>
+      </section></section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar                   ></devsite-snackbar>    <devsite-tooltip blocked-link></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics>
+              <script type="application/json" analytics>[{"metrics": {}, "dimensions": {"dimension6": "zh-cn", "dimension4": "Tools for Web Developers", "dimension5": "zh-cn", "dimension3": false, "dimension1": "Signed out", "dimension8": null}, "gaid": "UA-24532603-11"}, {"metrics": {}, "dimensions": {"dimension6": "zh-cn", "dimension4": "Tools for Web Developers", "dimension5": "zh-cn", "dimension3": false, "dimension1": "Signed out", "dimension8": null}, "gaid": "UA-52746336-1"}]</script>
+<script type="application/json" gtm>{}</script>
+          </devsite-analytics>
+        <script>
+    (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/js/app_loader.js', '[1,"zh_cn",null,"/js/devsite_app.js","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers","https://google-developers.gonglchuangl.net",1,null,["/_pwa/developers/manifest.json","/_static/images/video-placeholder.svg","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers/images/favicon.png","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons"],1]')
+  </script>  </body>
+</html>
