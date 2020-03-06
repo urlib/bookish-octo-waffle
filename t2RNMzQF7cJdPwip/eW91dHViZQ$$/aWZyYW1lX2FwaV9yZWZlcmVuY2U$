@@ -1,0 +1,2147 @@
+<!doctype html>
+<html       lang="zh-CN"      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="721724668570-nbkv1cfusk7kk4eni4pjvepaus73b13t.apps.googleusercontent.com">
+    <meta name="google-signin-scope" content="profile email">
+    <meta property="og:site_name" content="Google Developers">
+    <meta property="og:type" content="website">
+    
+          <meta name="theme-color" content="#ff0000">
+    
+    <meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="/_pwa/developers/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.cn" crossorigin>
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons">
+        <link rel="stylesheet" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers/css/app.css">
+    <noscript>
+      <link rel="stylesheet" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers/css/ce_bundle.css">
+    </noscript>
+    <link rel="shortcut icon" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers/images/favicon.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers/images/touchicon-180.png"><link rel="canonical" href="https://developers.google.cn/youtube/iframe_api_reference?hl=zh-cn">      
+<title>YouTube Player API Reference for iframe Embeds</title>
+
+<meta property="og:title" content="YouTube Player API Reference for iframe Embeds">
+  <meta name="description" content="Embed a YouTube player in your application.">
+  <meta property="og:description" content="Embed a YouTube player in your application.">
+
+
+  <meta property="og:url" content="https://developers.google.cn/youtube/iframe_api_reference?hl=zh-cn">
+
+  <meta property="og:image" content="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers/images/opengraph/youtube-theme.png">
+  <meta property="og:image:secure_url" content="https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers/images/opengraph/youtube-theme.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta property="og:locale" content="zh_cn">
+  <meta name="twitter:card" content="summary_large_image">
+
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "YouTube",
+      "item": "https://developers.google.cn/youtube"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "IFrame Player API",
+      "item": "https://developers.google.cn/youtube/iframe_api_reference"
+    }]
+  }
+  </script>
+
+
+
+  
+    
+    <link rel="alternate" type="application/rss+xml" title="RSS feed for YouTube IFrame Player API revision history" href="/youtube/feeds/iframe-player-api-revision-history.xml"/>
+    
+    
+    
+  
+
+    </head>
+  <body type="reference"
+        theme="youtube-theme"
+        class="docs"
+        
+        layout="docs"
+        block-apix                pending>
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+    <section class="devsite-wrapper"><devsite-header>
+      
+
+
+
+
+
+
+
+<div class="devsite-header--inner">
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="Open menu">
+        </button>
+        <div class="devsite-product-name-wrapper">
+          <a href="/youtube">
+      <div class="devsite-product-logo-container"
+       
+       >
+      <img class="devsite-product-logo"
+         alt="YouTube"
+         src="/site-assets/logo-youtube.svg"
+         srcset=""
+         sizes="64px">
+    </div>
+  
+  </a>
+  
+  
+  <span class="devsite-product-name">
+    <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             ">
+                                  <a href="/youtube"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Upper Header"
+              data-value="1"
+          >
+              YouTube        
+  </a>
+              </li>
+    <li class="devsite-breadcrumb-item
+             ">
+                <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+                    <a href="/youtube/iframe_api_reference"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Upper Header"
+              data-value="2"
+          >
+            IFrame Player API
+      
+  </a>
+        </li>
+  </ul>
+  </span>
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+                       </div>
+          <devsite-search
+            enable-suggestions
+              project-name="YouTube IFrame Player API"    tenant-name="Google Developers"                >
+  <form class="devsite-search-form" action="https://developers.google.cn/s/results" method="GET">
+    <div class="devsite-search-container">
+      <div class="devsite-searchbox">
+                <input placeholder="搜索"
+          type="text"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          value=""
+          autocomplete="off"
+                    aria-label="搜索框">
+        <div class="devsite-search-image material-icons" aria-hidden="true"></div>
+      </div>
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              aria-label="Open search box"></button>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          aria-label="Close search box"></button>
+</devsite-search>
+
+        </div>
+
+        
+        <devsite-language-selector>
+  <devsite-select class="devsite-language-selector-menu">
+    <select class="devsite-language-selector-select"
+            name="language"
+            track-name="click"
+            track-type="languageSelector">
+                <option>Language</option>
+              <option value="id"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="id"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Bahasa Indonesia
+      </option>
+          <option value="de"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="de"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Deutsch
+      </option>
+          <option value="en"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="en"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        English
+      </option>
+          <option value="es"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español
+      </option>
+          <option value="fr"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="fr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Français
+      </option>
+          <option value="it"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="it"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Italiano
+      </option>
+          <option value="pl"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="pl"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Polski
+      </option>
+          <option value="pt_br"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="pt_br"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Português – Brasil
+      </option>
+          <option value="cs"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="cs"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        česky
+      </option>
+          <option value="ru"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ru"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Русский
+      </option>
+          <option value="zh_cn"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_cn"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 简体
+      </option>
+          <option value="ja"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ja"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        日本語
+      </option>
+          <option value="ko"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ko"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        한국어
+      </option>
+        </select>
+  </devsite-select>
+</devsite-language-selector>
+
+
+        
+              </div>    </div>  </div>
+  <div class="devsite-collapsible-section
+    ">
+    <div class="devsite-header-background">
+                                  <div class="devsite-doc-set-nav-row">
+                                                      <devsite-tabs class="lower-tabs">
+    <div class="devsite-tabs-wrapper">
+                        <tab  active>
+            <a href="/youtube/iframe_api_reference"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="参考"
+   aria-label="参考, selected"         data-category="Site-Wide Custom Events"
+        data-label="Tab: 参考"
+   >
+  参考
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/youtube/youtube_player_demo"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="示例"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 示例"
+   >
+  示例
+</a>
+
+          </tab>
+                                <tab  >
+            <a href="/youtube/players/support"
+   class="gc-analytics-event"
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="支持"
+           data-category="Site-Wide Custom Events"
+        data-label="Tab: 支持"
+   >
+  支持
+</a>
+
+          </tab>
+                  </div>
+  </devsite-tabs>
+
+
+                            </div>
+          </div>  </div></div>
+
+  </devsite-header>      <devsite-book-nav scrollbars >
+                  
+
+
+
+
+
+<nav class="devsite-book-nav devsite-nav nocontent">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="Close navigation">
+    </button>
+    <div class="devsite-product-name-wrapper">
+          <a href="/youtube">
+      <div class="devsite-product-logo-container"
+       
+       >
+      <img class="devsite-product-logo"
+         alt="YouTube"
+         src="/site-assets/logo-youtube.svg"
+         srcset=""
+         sizes="64px">
+    </div>
+  
+  </a>
+  
+          <span class="devsite-product-name">
+        <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             ">
+                                  <a href="/youtube"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Upper Header"
+              data-value="1"
+          >
+              YouTube        
+  </a>
+              </li>
+    <li class="devsite-breadcrumb-item
+             ">
+                <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+                    <a href="/youtube/iframe_api_reference"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Upper Header"
+              data-value="2"
+          >
+            IFrame Player API
+      
+  </a>
+        </li>
+  </ul>
+      </span>
+    
+</div>  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+              <ul class="devsite-nav-list">
+                      <li class="devsite-nav-item">
+    <a href="/youtube/iframe_api_reference"
+           class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children              devsite-nav-active"
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 参考"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="参考">
+      <span class="devsite-nav-text" tooltip >
+      参考
+   </span>
+        <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+        </a>
+  </li>
+
+                      <li class="devsite-nav-item">
+    <a href="/youtube/youtube_player_demo"
+           class="devsite-nav-title gc-analytics-event
+                            "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 示例"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="示例">
+      <span class="devsite-nav-text" tooltip >
+      示例
+   </span>
+        </a>
+  </li>
+
+                      <li class="devsite-nav-item">
+    <a href="/youtube/players/support"
+           class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children              "
+    
+         data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 支持"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="支持">
+      <span class="devsite-nav-text" tooltip >
+      支持
+   </span>
+        <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+        </a>
+  </li>
+
+                    
+                  </ul>
+          </div>
+          <div class="devsite-mobile-nav-bottom">
+                            <ul class="devsite-nav-list" menu="_book">
+            <li class="devsite-nav-item"><a href="/youtube/iframe_api_reference"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>IFrame API</span></a></li>
+  <li class="devsite-nav-item"><a href="/youtube/player_parameters"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>播放器参数</span></a></li>
+  <li class="devsite-nav-item           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path"><span class="devsite-nav-text" tooltip>Mobile APIs</span></div></li>
+  <li class="devsite-nav-item           devsite-nav-external"><a href="/youtube/players/android_player_api"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Android API</span><span class="devsite-nav-icon material-icons"
+          data-icon="external"
+          data-title="外部"
+          aria-hidden="true"></span></a></li>
+  <li class="devsite-nav-item"><a href="/youtube/v3/guides/ios_youtube_helper"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>iOS助手库</span></a></li>
+          </ul>
+                      </div>
+      </div>
+</nav>
+              </devsite-book-nav>
+      <section id="gc-wrapper">
+        <main role="main" class="devsite-main-content"
+            has-book-nav            has-toc>
+          <devsite-toc class="devsite-nav"
+            ></devsite-toc>
+          <devsite-content>
+                          
+
+<article class="devsite-article">
+  <article class="devsite-article-inner">        
+    <div class="devsite-article-meta">
+      <ul class="devsite-breadcrumb-list">
+    <li class="devsite-breadcrumb-item
+             ">
+                    <a href="/"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="1"
+          >
+            首页
+      
+  </a>
+        </li>
+    <li class="devsite-breadcrumb-item
+             ">
+                <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+                    <a href="/products"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="2"
+          >
+            产品
+      
+  </a>
+        </li>
+    <li class="devsite-breadcrumb-item
+             ">
+                <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+                    <a href="/youtube"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="3"
+          >
+            YouTube
+      
+  </a>
+        </li>
+    <li class="devsite-breadcrumb-item
+             ">
+                <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+                    <a href="/youtube/iframe_api_reference"              class="devsite-breadcrumb-link gc-analytics-event"
+              data-category="Site-Wide Custom Events"
+              data-label="Breadcrumbs"
+              data-value="4"
+          >
+            IFrame Player API
+      
+  </a>
+        </li>
+  </ul>
+               <devsite-page-rating position="header" selected-rating="0" hover-rating-star="0">
+         </devsite-page-rating>
+          </div>
+
+              <h1 class="devsite-page-title">YouTube Player API Reference for iframe Embeds</h1>
+    
+    <devsite-toc class="devsite-nav" devsite-toc-embedded
+                 >
+    </devsite-toc>
+
+    <div class="devsite-article-body clearfix
+      ">
+
+              
+
+    <div itemscope="" itemtype="http://developers.google.com/ReferenceObject">
+    <meta itemprop="name" content="IFrame Player API"></meta>
+
+
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="bHQqvYy5KYo"
+          
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
+<p>通过 IFrame Player API，您可以在自己的网站上嵌入 YouTube 视频播放器并使用 JavaScript 控制播放器。与 <a href="/youtube/flash_api_reference">Flash</a> 和 <a href="/youtube/js_api_reference">JavaScript</a> Player API 不同的是，这两者都要求在您的网页上嵌入一个 Flash 对象，而 IFrame API 会将内容发布到网页上的<code>&lt;iframe&gt;</code>标记中。这种方法比之前提供的 API 更加灵活，因为它允许 YouTube 针对不支持 Flash 的移动设备提供 HTML5 播放器（而非 Flash 播放器）。</p>
+
+<p>使用 API 的 JavaScript 函数，您可以：将视频列入播放队列；播放、暂停或停止这些视频；调整播放器音量；或者检索正在播放的视频的相关信息。您还可以添加会响应特定的播放器事件（例如播放器状态变化或视频播放质量变化）而运行的事件监听器。</p>
+
+<p>本指南将介绍如何使用 IFrame API，列举 API 可以发送的不同类型的事件，并介绍如何撰写事件监听器来响应这些事件。此外，本指南还将详细说明您可以在控制视频播放器时调用的各种 JavaScript 函数，以及可用于进一步自定义播放器的播放器参数。</p>
+
+<h2 id="Requirements">要求</h2>
+<p>最终用户使用的必须是支持 HTML5 <code>postMessage</code> 功能的浏览器。除了 Internet Explorer 7 以外，大部分的新型浏览器都支持 <code>postMessage</code>。</p>
+
+嵌入式播放器必须具有一个尺寸至少为200x200像素的视口。如果播放器显示控件，>那么它必须足够大，可以在无需将视口缩小到最小尺寸以下的情况下完整显示控件。我们建议16:9播放器的宽至少为480像素、高至少为270像素。
+
+
+<p>使用 IFrame API 的所有网页都还必须实施以下 JavaScript 函数：</p>
+<ul>
+  <li>
+    <p><code>onYouTubeIframeAPIReady</code> – 在网页下载完播放器API的JavaScript（随后您便可以在网页上使用 API）时，API 就会调用此函数。因此，此函数可创建您希望在网页加载时显示的播放器对象。</p>
+  </li>
+</ul>
+
+<h2 id="Getting_Started">开始使用</h2>
+
+<p>下面的示例HTML网页可以创建一个执行以下操作的嵌入式播放器：加载视频，播放 6 秒钟，然后停止播放。示例下面的列表对 HTML 中带编号的注释进行了说明。</p>
+
+<pre class="prettyprint lang-html notranslate">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;body&gt;
+    <span class="code-comment">&lt;!-- 1. The &lt;iframe&gt; (and video player) will replace this &lt;div&gt; tag. --&gt;</span>
+    &lt;div id="player"&gt;&lt;/div&gt;
+
+    &lt;script&gt;
+      <span class="code-comment">// 2. This code loads the IFrame Player API code asynchronously.</span>
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      <span class="code-comment">// 3. This function creates an &lt;iframe&gt; (and YouTube player)
+      //    after the API code downloads.</span>
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '360',
+          width: '640',
+          videoId: 'M7lc1UVf-VE',
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+
+      <span class="code-comment">// 4. The API will call this function when the video player is ready.</span>
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+
+      <span class="code-comment">// 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.</span>
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING &amp;&amp; !done) {
+          setTimeout(stopVideo, 6000);
+          done = true;
+        }
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+
+<p>以下列表更加详细地介绍了上述示例：</p>
+
+<ol>
+  <li>
+    <p>此部分中的 <code>&lt;div&gt;</code> 标记用于标识 IFrame API 将在网页上的什么位置插入视频播放器。播放器对象的构造函数（参见<a href="#Loading_a_Video_Player">加载视频播放器</a>部分中的说明）用于按 <code>id</code> 标识 <code>&lt;div&gt;</code> 标记，确保API在正确位置放置 <code>&lt;iframe&gt;</code>。具体而言，IFrame API 将以 <code>&lt;iframe&gt;</code> 标记替换 <code>&lt;div&gt;</code> 标记。</p>
+    <p>或者，您也可以直接在网页上插入 <code>&lt;iframe&gt;</code> 元素。有关具体步骤，请参阅<a href="#Loading_a_Video_Player">加载视频播放器</a>部分中的说明。</p>
+  </li>
+  <li>
+    <p>此部分中的代码用于加载 IFrame Player API JavaScript 代码。此示例利用 DOM 修改来下载 API 代码，确保系统以异步方式检索代码。<code>&lt;script&gt;</code> 标记的 <code>async</code> 属性（也能帮助实现异步下载）尚未在所有新型浏览器中获得支持，具体请参阅此<a href="http://stackoverflow.com/a/1834129">堆栈溢出解答</a>中的讨论。</p>
+  </li>
+  <li>
+    <p><code>onYouTubeIframeAPIReady</code> 函数会在播放器 API 代码下载后马上运行。此部分代码会定义全局变量 <code>player</code>（指您要嵌入的视频播放器），而函数则据此构造视频播放器对象。</p>
+  </li>
+  <li>
+    <p><code>onPlayerReady</code> 在 <code>onReady</code> 事件触发时运行。在本示例中，该函数指示当视频播放器就绪时就应开始播放。</p>
+  </li>
+  <li>
+    <p>API会在播放器状态改变时调用 <code>onPlayerStateChange</code> 函数，指示播放器正在播放、已暂停、已完成等等。该函数指定当播放器状态为<code>1</code>（正在播放）时，播放器应播放 6 秒钟，然后调用 <code>stopVideo</code> 函数停止播放视频。</p>
+  </li>
+</ol>
+
+<h2 id="Loading_a_Video_Player">加载视频播放器</h2>
+<p>在 API 的 JavaScript 代码加载后 API 就会调用 <code>onYouTubeIframeAPIReady</code> 函数，此时您可以构造<code>YT.Player</code>对象以在网页上插入视频播放器。下面的 HTML 片段显示了以上示例中的 <code>onYouTubeIframeAPIReady</code> 函数：</p>
+<pre>
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player', {
+    height: '360',
+    width: '640',
+    videoId: 'M7lc1UVf-VE',
+    events: {
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
+    }
+  });
+}
+</pre>
+
+<p>视频播放器的构造函数指定了以下参数：</p>
+<ol>
+  <li>
+    <p>第一个参数指定 DOM 元素或 HTML 元素<code>id</code>（API 将在其中插入包含播放器的 <code>&lt;iframe&gt;</code> 标记）。</p>
+    <p>IFrame API 将以包含播放器的 <code>&lt;iframe&gt;</code> 元素替换指定的元素。如果所替换的元素在显示样式上与插入的 <code>&lt;iframe&gt;</code> 元素有所不同，这可能会影响网页的版式。默认情况下，<code>&lt;iframe&gt;</code> 会显示为 <code>inline-block</code> 元素。</p>
+  </li>
+  <li>第二个参数是用于指定播放器选项的对象。该对象包含以下属性：
+    <ul>
+      <li><code>width</code>（数字）– 视频播放器的宽度。默认值为 <code>640</code>。</li>
+      <li><code>height</code>（数字）– 视频播放器的高度。默认值为<code>360</code>。</li>
+      <li><code itemprop="property">videoId</code>（字符串）– 用于标识播放器将加载的视频的YouTube视频ID。</li>
+      <li><code itemprop="property">playerVars</code>（对象）– 该对象的属性用于标识可用于自定义播放器的<a href="/youtube/player_parameters.html?playerVersion=HTML5">播放器参数</a>。</li>
+      <li><code>events</code>（对象）– 该对象的属性用于标识 API 会触发的事件以及 API 将在这些事件发生时调用的函数（事件监听器）。在示例中，构造函数指示 <code>onPlayerReady</code> 函数在 <code>onReady</code> 事件触发时运行，而 <code>onPlayerStateChange</code> 函数在 <code>onStateChange</code> 事件触发时运行。</li>
+    </ul>
+  </li>
+</ol>
+
+<p>如<a href="#Getting_Started">开始使用</a>部分中所述，您可以自行创建 <code>&lt;iframe&gt;</code> 标记，而不必在网页上撰写空的 <code>&lt;div&gt;</code> 元素（然后由播放器 API 的 JavaScript 代码以 <code>&lt;iframe&gt;</code> 元素替换之）。</p>
+
+<pre>&lt;iframe id="player" type="text/html" width="640" height="360"
+  src="http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&amp;origin=http://example.com"
+  frameborder="0"&gt;&lt;/iframe&gt;</pre>
+
+<p>如果您要撰写 <code>&lt;iframe&gt;</code> 标记，在构造 <code>YT.Player</code> 对象时，您不需要指定 <code>width</code> 和 <code>height</code> 的值（将作为 <code>&lt;iframe&gt;</code> 标记的属性指定），也不需要指定 <code>videoId</code> 和播放器参数（将在 <code>src</code> 网址中指定）。作为额外的安全措施，您还应在网址中添加<code>origin</code>参数，以参数值的形式指定网址架构（<code>http://</code> 或 <code>https://</code>）和托管网页的完整域名。<code>origin</code> 为可选参数，添加此参数可避免第三方恶意注入 JavaScript 到您的网页 中，劫持您的 YouTube 播放器。</p>
+
+<p><a href="#Examples">示例</a>部分列举了关于如何构造视频播放器对象的更多示例。</p>
+
+
+<h2 id="Operations">操作</h2>
+
+<p>要调用播放器 API 方法，您必须先引用要控制的播放器对象，方法是按照本文档的<a href="#Getting_Started">开始使用</a>与<a href="#Loading_a_Video_Player">加载视频播放器</a>部分中的说明创建 <code>YT.Player</code> 对象。</p>
+
+<h2 id="Functions">函数</h2>
+
+</p>
+</p>
+</p>
+</p>
+</p>
+  <h3 id="Queueing_Functions">队列函数</h3>
+
+  <p>队列函数可让您加载和播放视频、播放列表或其他视频列表。如果您使用下面讲述的对象语法调用这些函数，那么您也可以将搜索结果列表或已上传视频的用户列表加入播放队列或加载这些内容。</p>
+
+  <p>该 API 支持两种不同的队列函数调用语法。</p>
+  <ul>
+    <li>
+      <p>参数语法要求函数参数以规定的顺序列出。</p>
+    </li>
+    <li>
+      <p>对象语法可让您传递一个对象作为单个参数，还可以让您为设置的函数参数定义对象属性。此外，该 API 还可以支持参数语法所不支持的其他功能。</p>
+    </li>
+  </ul>
+
+  <p>例如，<code><a href="#loadVideoById">loadVideoById</a></code> 函数可以通过以下任一方式调用。请注意，对象语法支持 <code>endSeconds</code> 属性，而参数语法则不支持。</p>
+
+  <ul>
+    <li>
+      <p><strong>参数语法</strong></p>
+      <pre class="prettyprint notranslate">loadVideoById("bHQqvYy5KYo", 5, "large")</pre>
+    </li>
+    <li>
+      <p><strong>对象语法</strong></p>
+    <pre class="prettyprint notranslate">
+loadVideoById({'videoId': 'bHQqvYy5KYo',
+               'startSeconds': 5,
+               'endSeconds': 60,
+               'suggestedQuality': 'large'});</pre>
+    </li>
+  </ul>
+
+    <h4 id="Video_Queueing_Functions">视频队列函数</h4>
+
+      <dl>
+  <dt class="notranslate" id="cueVideoById"><code itemprop="property">cueVideoById</code></dt>
+  <dd>
+    <ul>
+      <li>
+            <p><strong>参数语法</strong></p>
+        <pre class="notranslate">
+player.cueVideoById(videoId:String,
+                    startSeconds:Number,
+                    suggestedQuality:String):Void</pre>
+          </li>
+          <li>
+            <p><strong>对象语法</strong></p>
+        <pre class="notranslate">
+player.cueVideoById({videoId:String,
+                     startSeconds:Number,
+                     endSeconds:Number,
+                     suggestedQuality:String}):Void</pre>
+          </li>
+        </ul>
+        <div style="padding-left: 24px">
+        <p>此函数用于加载指定视频的缩略图，并准备用于播放视频的播放器。只有调用 <code><a href="#playVideo">playVideo()</a></code> 或 <code><a href="#seekTo">seekTo()</a></code> 之后，播放器才会请求 FLV。</p>
+        <ul>
+          <li>必需参数 <code itemprop="property">videoId</code> 用于指定要播放的视频的 YouTube 视频 ID。在 YouTube Data API 视频 Feed 中，<code><a href="/youtube/reference#youtube_data_api_tag_yt:videoid">&lt;yt:videoid&gt;</a></code> 代码用于指定 ID。</li>
+          <li>可选参数 <code itemprop="property">startSeconds</code> 接受浮点值/整数值，用于指定在调用 <code><a href="#playVideo">playVideo()</a></code>后视频开始播放的时间。如果您在指定 <code>startSeconds</code> 值后调用 <code><a href="#seekTo">seekTo()</a></code>，则播放器会根据 <code><a href="#seekTo">seekTo()</a></code> 调用中指定的时间开始播放。在视频插入完毕而且可供播放时，播放器会广播 <a href="#getPlayerState"><code>video cued</code> 事件</a>(<code>5</code>)。</li>
+          <li>可选参数 <code itemprop="property">endSeconds</code> 仅受对象语法支持，而且接受浮点值/整数值，用于指定调用 <code><a href="#playVideo">playVideo()</a></code> 后视频停止播放的时间。如果您在指定 <code>endSeconds</code> 值后调用 <code><a href="#seekTo">seekTo()</a></code>，则该 <code>endSeconds</code> 值就会失效。</li>
+          <li>可选参数 <code itemprop="property">suggestedQuality</code> 用于指定视频的建议播放质量。有关播放质量的更多信息，请参见<code><a href="#setPlaybackQuality">setPlaybackQuality</a></code>函数的定义。</li>
+        </ul>
+      </div>
+      </dd>
+</dl>
+
+      <dl>
+      <dt id="loadVideoById"><p><code itemprop="property">loadVideoById</code></p></dt>
+      <dd>
+    <ul>
+      <li>
+        <p><strong>Argument syntax</strong></p>
+        <pre class="notranslate">
+player.loadVideoById(videoId:String,
+                     startSeconds:Number,
+                     suggestedQuality:String):Void</pre>
+      </li>
+      <li>
+        <p><strong>Object syntax</strong></p>
+        <pre class="notranslate">
+player.loadVideoById({videoId:String,
+                      startSeconds:Number,
+                      endSeconds:Number,
+                      suggestedQuality:String}):Void</pre>
+      </li>
+    </ul>
+        <div style="padding-left: 24px">
+        <p>此函数用于加载并播放指定的视频。</p>
+        <ul>
+          <li>必需参数 <code>videoId</code> 用于指定待播视频的 YouTube 视频 ID。在 YouTube Data API 视频 Feed 中，<code><a href="/youtube/reference#youtube_data_api_tag_yt:videoid">&lt;yt:videoid&gt;</a></code> 代码用于指定 ID。</li>
+          <li>可选参数 <code>startSeconds</code> 接受浮点值/整数值。如果指定该可选参数，则视频会从距离指定时间最近的关键帧开始播放。</li>
+          <li>可选参数 <code>endSeconds</code> 接受浮点值/整数值。如果指定该可选参数，则视频会在指定的时间停止播放。</li>
+          <li>可选参数 <code>suggestedQuality</code> 用于指定视频的建议播放质量。有关播放质量的更多信息，请参见 <code><a href="#setPlaybackQuality">setPlaybackQuality</a></code> 函数的定义。</li>
+        </ul>
+    </div>
+      </dd>
+</dl>
+
+      <dl>
+      <dt id="cueVideoByUrl"><p><code itemprop="property">cueVideoByUrl</code></p></dt>
+      <dd>
+    <ul>
+      <li>
+        <p><strong>Argument syntax</strong></p>
+        <pre class="notranslate">
+player.cueVideoByUrl(mediaContentUrl:String,
+                     startSeconds:Number,
+                     suggestedQuality:String):Void</pre>
+      </li>
+      <li>
+        <p><strong>Object syntax</strong></p>
+        <pre class="notranslate">
+player.cueVideoByUrl({mediaContentUrl:String,
+                      startSeconds:Number,
+                      endSeconds:Number,
+                      suggestedQuality:String}):Void</pre>
+      </li>
+    </ul>
+    <div style="padding-left: 24px">
+        <p>此函数用于加载指定视频的缩略图，并准备播放视频的播放器。仅在调用 <code><a href="#playVideo">playVideo()</a></code> 或 <code><a href="#seekTo">seekTo()</a></code> 之后，播放器才会请求 FLV。</p>
+        <ul>
+          <li>必需参数 <code itemprop="property">mediaContentUrl</code> 用于指定完全符合要求的 YouTube 播放器网址，格式为 <code>http://www.youtube.com/v/VIDEO_ID?version=3</code>。在 YouTube Data API 视频 Feed 中，如果 <code><a href="/youtube/2.0/reference#youtube_data_api_tag_media:content">&lt;media:content&gt;</a></code> 代码的 <code>format</code> 属性值为 <code>5</code>，则表明该代码的 <code>url</code> 属性包含完全符合要求的播放器网址。</li>
+          <li>可选参数 <code>startSeconds</code> 接受浮点值/整数值，用于指定调用 <code><a href="#playVideo">playVideo()</a></code> 后视频开始播放的时间。如果您在指定 <code>startSeconds</code> 后调用 <code><a href="#seekTo">seekTo()</a></code>，则播放器会根据 <code><a href="#seekTo">seekTo()</a></code> 调用中指定的时间开始播放。在视频插入完毕而且可供播放时，播放器会广播 <a href="#getPlayerState"><code>video cued</code> 事件</a>(5)。</li>
+          <li>可选参数 <code>endSeconds</code> 仅受对象语法支持，而且接受浮点值/整数值，用于指定调用 <code><a href="#playVideo">playVideo()</a></code> 后视频停止播放的时间。如果您在指定 <code>endSeconds</code> 值后调用 <code><a href="#seekTo">seekTo()</a></code>，则该 <code>endSeconds</code> 值就会失效。</li>
+          <li>可选参数 <code>suggestedQuality</code> 用于指定视频的建议播放质量。有关播放质量的更多信息，请参见 <code><a href="#setPlaybackQuality">setPlaybackQuality</a></code> 函数的定义。</li>
+        </ul>
+    </div>
+      </dd>
+</dl>
+
+      <dl>
+      <dt id="loadVideoByUrl"><p><code itemprop="property">loadVideoByUrl</code></p></dt>
+      <dd>
+    <ul>
+      <li>
+        <p><strong>Argument syntax</strong></p>
+        <pre class="notranslate">
+player.loadVideoByUrl(mediaContentUrl:String,
+                      startSeconds:Number,
+                      suggestedQuality:String):Void</pre>
+      </li>
+      <li>
+        <p><strong>Object syntax</strong></p>
+        <pre class="notranslate">
+player.loadVideoByUrl({mediaContentUrl:String,
+                       startSeconds:Number,
+                       endSeconds:Number,
+                       suggestedQuality:String}):Void</pre>
+      </li>
+    </ul>
+    <div style="padding-left: 24px">
+        <p>此函数用于加载并播放指定的视频。</p>
+        <ul>
+          <li>必需参数 <code>mediaContentUrl</code> 用于指定完全符合要求的 YouTube 播放器网址，格式为 <code>http://www.youtube.com/v/VIDEO_ID?version=3</code>。在 YouTube Data API 视频 Feed 中，如果 <code><a href="/youtube/2.0/reference#youtube_data_api_tag_media:content">&lt;media:content&gt;</a></code> 代码的 <code>format</code> 属性值为 <code>5</code>，则表明该代码的 <code>url</code> 属性包含完全符合要求的播放器网址。</li>
+          <li>可选参数 <code>startSeconds</code> 接受浮点值/整数值，用于指定视频开始播放的时间。如果指定 <code>startSeconds</code>（数值可以是浮点值），则视频会从距离指定时间最近的关键帧开始播放。</li>
+          <li>可选参数 <code>endSeconds</code> 仅受对象语法支持，而且接受浮点值/整数值，用于指定视频停止播放的时间。</li>
+          <li>可选参数 <code>suggestedQuality</code> 用于指定视频的建议播放质量。有关播放质量的更多信息，请参见 <code><a href="#setPlaybackQuality">setPlaybackQuality</a></code> 函数的定义。</li>
+        </ul>
+    </div>
+      </dd>
+</dl>
+
+    <a name="Queueing_Functions_for_Playlists"></a>
+    <h4 id="Playlist_Queueing_Functions">列表队列函数</h4>
+
+    <p><code>cuePlaylist</code> 和 <code>loadPlaylist</code> 函数允许您加载和播放播放列表或视频列表。如果您使用对象语法调用这些函数，那么您还可以将搜索结果列表或已上传视频的用户列表加入播放队列（或加载这些内容）。</p>
+    <p>由于函数的具体工作方式取决于它们的调用方法（参数语法还是对象语法），因此我们在下文提供了这两种调用方法的说明。</p>
+
+<dl>
+  <dt class="notranslate" id="cuePlaylist"><code itemprop="property">cuePlaylist</code></dt>
+  <dd id="cuePlaylistDescription">
+    <ul>
+      <li>
+        <p><strong>Argument syntax</strong></p>
+        <pre class="notranslate">
+player.cuePlaylist(playlist:String|Array,
+                   index:Number,
+                   startSeconds:Number,
+                   suggestedQuality:String):Void</pre>
+        将指定的播放列表加入播放队列。在播放列表插入完毕而且可供播放时，播放器会广播 <a href="#getPlayerState"><code>video cued</code>事件</a>(<code>5</code>)。
+          <ul>
+            <li>
+              <p>必需参数 <code itemprop="property">playlist</code> 用于指定 YouTube 视频 ID 数组。在 YouTube Data API Feed 中，<code><a href="/youtube/reference#youtube_data_api_tag_yt:videoid">&lt;yt:videoid&gt;</a></code> 代码用于指定视频 ID。</p>
+            </li>
+            <li>
+              <p>可选参数 <code itemprop="property">index</code> 用于指定播放列表中首先播放的视频的索引。该参数使用从零开始的索引，且默认参数值为 <code>0</code>，因此，默认行为是加载和播放播放列表中的第一个视频。</p>
+            </li>
+            <li>
+              <p>可选参数 <code>startSeconds</code> 接受浮点值/整数值，用于指定调用 <code><a href="#playVideo">playVideo()</a></code> 函数后播放列表中第一个视频开始播放的时间。如果您在指定 <code>startSeconds</code> 值后调用 <code><a href="#seekTo">seekTo()</a></code>，则播放器会根据 <code><a href="#seekTo">seekTo()</a></code> 调用中指定的时间开始播放。如果您在插入播放列表后调用 <code><a href="#playVideoAt">playVideoAt()</a></code> 函数，则播放器会从指定视频的开头开始播放。</p>
+            </li>
+            <li>
+              <p>可选参数 <code>suggestedQuality</code> 用于指定视频的建议播放质量。有关播放质量的更多信息，请参见 <code><a href="#setPlaybackQuality">setPlaybackQuality</a></code> 函数的定义。</p>
+            </li>
+          </ul>
+
+      </li>
+      <li>
+        <p><strong>对象语法</strong></p>
+        <pre class="notranslate">
+player.cuePlaylist({listType:String,
+                    list:String,
+                    index:Number,
+                    startSeconds:Number,
+                    suggestedQuality:String}):Void</pre>
+        将指定的视频列表加入播放队列。列表可以是播放列表、搜索结果 Feed 或用户的已上传视频 Feed。在列表插入完毕而且可供播放时，播放器会广播 <a href="#getPlayerState"><code>video cued</code> 事件</a>(<code>5</code>)。
+          <ul>
+            <li>
+              <p>可选属性 <code itemprop="property">listType</code> 用于指定您检索的结果 Feed 的类型。有效值有 <code>playlist</code>、<code>search</code> 和 <code>user_uploads</code>。默认值为 <code>playlist</code>。</p>
+            </li>
+            <li>
+              <p>必需属性 <code itemprop="property">list</code> 包含一个键值，用于标识 YouTube 应返回的特定视频列表。</p>
+              <p><ul>
+                <li>如果 <code>listType</code> 属性值为 <code>playlist</code>，则 <code>list</code> 属性会指定播放列表 ID 或视频 ID 数组。在 YouTube Data API Feed 中，<code><a href="/youtube/reference#youtube_data_api_tag_yt:playlistid">&lt;yt:playlistid&gt;</a></code> 代码用于指定播放列表 ID，<code><a href="/youtube/reference#youtube_data_api_tag_yt:videoid">&lt;yt:videoid&gt;</a></code> 代码用于指定视频 ID。</li>
+                <li>如果  <code>listType</code> 属性值为 <code>search</code>，则 <code>list</code> 属性会指定搜索查询。</li>
+                <li>如果 <code>listType</code> 属性值为 <code itemprop="property">user_uploads</code>，则 <code>list</code> 属性会标识将要返回的视频的上传者。</li>
+              </ul></p>
+            </li>
+            <li>
+              <p>可选属性 <code>index</code> 用于指定列表中首先播放的视频的索引。该参数使用从零开始的索引，且默认参数值为<code>0</code>，因此，默认行为是加载和播放列表中的第一个视频。</p>
+            </li>
+            <li>
+              <p>可选属性 <code>startSeconds</code> 接受浮点值/整数值，用于指定调用 <code><a href="#playVideo">playVideo()</a></code> 函数后列表中第一个视频开始播放的时间。如果您在指定 <code>startSeconds</code> 值后调用 <code><a href="#seekTo">seekTo()</a></code>，则播放器会从 <code><a href="#seekTo">seekTo()</a></code> 调用中指定的时间开始播放。如果您在插入列表后调用 <code><a href="#playVideoAt">playVideoAt()</a></code> 函数，则播放器会从指定视频的开头开始播放。</p>
+            </li>
+            <li>
+              <p>可选属性 <code>suggestedQuality</code> 用于指定列表中视频的建议播放质量。有关播放质量的更多信息，请参见 <code><a href="#setPlaybackQuality">setPlaybackQuality</a></code> 函数的定义。</p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </dd>
+  </dl>
+
+      <dl>
+  <dt class="notranslate" id="loadPlaylist"><code itemprop="property">loadPlaylist</code></dt>
+  <dd id="loadPlaylistDescription">
+    <ul>
+      <li>
+        <p><strong>Argument syntax</strong></p>
+        <pre class="notranslate">
+player.loadPlaylist(playlist:String|Array,
+                    index:Number,
+                    startSeconds:Number,
+                    suggestedQuality:String):Void</pre>
+        此函数用于加载指定的播放列表并播放。
+          <ul>
+            <li>
+              <p>必需参数 <code>playlist</code> 用于指定 YouTube 视频 ID 数组。在 YouTube Data API Feed 中，<code><a href="/youtube/reference#youtube_data_api_tag_yt:videoid">&lt;yt:videoid&gt;</a></code> 代码用于指定视频 ID。</p>
+            </li>
+            <li>
+              <p>可选参数 <code>index</code> 用于指定播放列表中首先播放的视频的索引。该参数使用从零开始的索引，且默认参数值为<code>0</code>，因此，默认行为是加载和播放播放列表中的第一个视频。</p>
+            </li>
+            <li>
+              <p>可选参数 <code>startSeconds</code> 接受浮点值/整数值，用于指定播放列表中第一个视频开始播放的时间。</p>
+            </li>
+            <li>
+              <p>可选参数 <code>suggestedQuality</code> 用于指定视频的建议播放质量。有关播放质量的更多信息，请参见 <code><a href="#setPlaybackQuality">setPlaybackQuality</a></code> 函数的定义。</p>
+            </li>
+          </ul>
+      </li>
+      <li>
+        <p><strong>Object syntax</strong></p>
+        <pre class="notranslate">
+player.loadPlaylist({list:String,
+                     listType:String,
+                     index:Number,
+                     startSeconds:Number,
+                     suggestedQuality:String}):Void</pre>
+        此函数用于加载指定的列表并播放。列表可以是播放列表、搜索结果 Feed 或用户的已上传视频 Feed。
+          <ul>
+            <li>
+              <p>可选属性 <code>listType</code> 用于指定您检索的结果 Feed 的类型。有效值有 <code>playlist</code>、<code>search</code> 和 <code>user_uploads</code>。默认值为 <code>playlist</code>。</p>
+            </li>
+            <li>
+              <p>必需属性 <code>list</code> 包含一个键值，用于标识 YouTube 应返回的特定视频列表。</p>
+              <p><ul>
+                <li>如果 <code>listType</code> 属性值为 <code>playlist</code>，则 <code>list</code> 属性会指定播放列表 ID 或视频 ID 数组。在 YouTube Data API Feed 中，<code><a href="/youtube/reference#youtube_data_api_tag_yt:playlistid">&lt;yt:playlistid&gt;</a></code> 代码用于指定播放列表 ID，<code><a href="/youtube/reference#youtube_data_api_tag_yt:videoid">&lt;yt:videoid&gt;</a></code> 代码用于指定视频 ID。</li>
+                <li>如果 <code>listType</code> 属性值为 <code>search</code>，则 <code>list</code> 属性会指定搜索查询。</li>
+                <li>如果 <code>listType</code> 属性值为 <code>user_uploads</code>，则 <code>list</code> 属性会标识将要返回的视频的上传者。</li>
+              </ul></p>
+            </li>
+            <li>
+              <p>可选属性 <code>index</code> 用于指定列表中首先播放的视频的索引。该参数使用从零开始的索引，且默认参数值为<code>0</code>，因此，默认行为是加载和播放列表中的第一个视频。</p>
+            </li>
+            <li>
+              <p>可选属性 <code>startSeconds</code> 接受浮点值/整数值，用于指定列表中第一个视频开始播放的时间。</p>
+            </li>
+            <li>
+              <p>可选属性 <code>suggestedQuality</code> 用于指定列表中视频的建议播放质量。有关播放质量的更多信息，请参见 <code><a href="#setPlaybackQuality">setPlaybackQuality</a></code> 函数的定义。</p>
+            </li>
+          </ul>
+      </li>
+    </ul>
+  </dd>
+</dl>
+
+  <h3 id="Playback_controls">播放控制和播放器设置</h3>
+    <h4>播放视频</h4>
+
+      <dl>
+      <dt id="playVideo"><code>player.<span itemprop="property">playVideo</span>():Void</code></dt>
+      <dd>播放当前已插入/已加载的视频。此函数执行后，播放器的最终状态将是 <code>playing</code> (1)。<br /><br /><strong>注意</strong>：只有通过播放器中的原生播放按钮启动播放，本次播放才会计入视频的官方观看次数。</dd>
+</dl>
+
+      <dl>
+      <dt id="pauseVideo"><code>player.<span itemprop="property">pauseVideo</span>():Void</code></dt>
+      <dd>暂停当前正在播放的视频。除非调用此函数时，播放器的状态为 <code>ended</code> (<code>0</code>)（在这种情况下，播放器的状态不会改变），否则此函数执行后，播放器的最终状态将是 <code>paused</code> (<code>2</code>)。</dd>
+</dl>
+
+      <dl>
+      <dt id="stopVideo"><code>player.<span itemprop="property">stopVideo</span>():Void</code></dt>
+      <dd>停止和取消加载当前视频。您应将此函数保留以用于极少数情况（例如，您知道用户不会观看播放器中的其他视频）。如果您的目的是要暂停视频，那么您应该只调用 <code><a href="#pauseVideo">pauseVideo</a></code> 函数。如果您想改变播放器播放的视频，那么您可以调用某个队列函数，而无需先调用 <code>stopVideo</code>。<br /><br />
+        <strong>重要提示</strong>：与 <code><a href="#pauseVideo">pauseVideo</a></code> 函数（此函数会使播放器处于 <code>paused</code> (<code>2</code>) 状态）不同，<code>stopVideo</code> 函数会使播放器处于任意非播放状态，包括 <code>ended</code> (<code>0</code>)、<code>paused</code> (<code>2</code>)、<code>video cued</code> (<code>5</code>) 或 <code>unstarted</code> (<code>-1</code>)。</dd>
+</dl>
+
+      <dl>
+      <dt id="seekTo"><code>player.<span itemprop="property">seekTo</span>(seconds:Number, allowSeekAhead:Boolean):Void</code></dt>
+      <dd>定位到视频的指定时间。如果调用该函数时播放器已暂停，则播放器会保持暂停状态。如果调用该函数时播放器处于其他状态（<code>playing</code>、<code>video cued</code>等），则播放器会播放视频。
+        <ul>
+          <li>
+            <p>参数<code itemprop="property">seconds</code>用于标识播放器快进的单位时间。</p>
+            <p>除非播放器已经下载了用户正在定位到的视频部分，否则播放器会快进到距离指定时间最近的关键帧。在这种情况下，播放器会快进到距离 Flash 播放器 <code>NetStream</code> 对象的 <code>seek()</code> 方法指示的时间前后最近的关键帧（有关详情，请参阅 <a href="http://livedocs.adobe.com/flash/9.0/ActionScriptLangRefV3/flash/net/NetStream.html#seek()">Adobe 的文档</a>）。</p>
+          </li>
+          <li>
+            <p><code itemprop="property">allowSeekAhead</code> 参数用于确定在 <code>seconds</code> 参数指定的时间超出了当前已缓冲的视频数据对应的播放时间时，播放器是否向服务器发送新的请求。</p>
+            <p>当用户沿视频进度条拖动鼠标时，我们建议您将此参数设置为 <code>false</code>，当用户松开鼠标时，将其设置为 <code>true</code>。此方法可让用户滚动到视频的不同时间点，而无需在滚动过视频中未缓冲的时间点时请求新的视频流。当用户松开鼠标按钮后，播放器会快进到视频中的相应时间点，并在必要时请求新的视频流。</p>
+          </li>
+        </ul>
+      </dd>
+</dl>
+
+  
+      <dl>
+      <dt id="clearVideo"><code>player.<span itemprop="property">clearVideo</span>():Void</code></dt>
+      <dd id="clearVideoDescription">清除视频显示。如果您想在调用 <code>stopVideo()</code> 后清除视频残留，那么此函数非常有用。请注意，<a href="/youtube/flash_api_reference">ActionScript 3.0 Player API</a> 已弃用此函数。</dd>
+</dl>
+
+
+    <h4>播放播放列表中的视频</h4>
+      <dl>
+      <dt id="nextVideo"><code>player.<span itemprop="property">nextVideo</span>():Void</code></dt>
+      <dd>此函数用于加载并播放播放列表中的下一个视频。
+        <ul>
+          <li>
+            <p>如果在观看播放列表中的最后一个视频且将播放列表设置为连续播放 (<code><a href="#setLoop">loop</a></code>) 时调用 <code>player.nextVideo()</code>，则播放器将会加载并播放列表中的第一个视频。</p>
+          </li>
+          <li>
+            <p>如果在观看播放列表中的最后一个视频且未将播放列表设置为连续播放时调用 <code>player.nextVideo()</code>，则播放将会结束。</p>
+          </li>
+        </ul>
+      </dd>
+</dl>
+
+      <dl>
+      <dt id="previousVideo"><code>player.<span itemprop="property">previousVideo</span>():Void</code></dt>
+      <dd>此函数用于加载并播放播放列表中的上一个的视频。
+        <ul>
+          <li>
+            <p>如果在观看播放列表中的第一个视频且将播放列表设置为连续播放 (<code><a href="#setLoop">loop</a></code>) 时调用 <code>player.previousVideo()</code>，则播放器将会加载并播放列表中的最后一个视频。</p>
+          </li>
+          <li>
+            <p>如果在观看播放列表中的第一个视频且未将播放列表设置为连续播放时调用 <code>player.previousVideo()</code>，则播放器将会从开头开始重新播放第一个播放列表。</p>
+          </li>
+        </ul>
+      </dd>
+</dl>
+
+      <dl>
+      <dt id="playVideoAt"><code>player.<span itemprop="property">playVideoAt</span>(index:Number):Void</code></dt>
+      <dd>此函数用于加载并播放播放列表中的指定视频。
+        <ul>
+          <li>
+            <p>必需参数 <code>index</code> 用于指定播放列表中待播放视频的索引。该参数使用从零开始的索引，因此值为<code>0</code>时标识列表中的第一个视频。如果您已<a href="#setShuffle">随机播放</a>播放列表，则此函数将会播放随机播放列表中指定位置的视频。</p>
+          </li>
+        </ul>
+      </dd>
+</dl>
+
+    <h4>更改播放器的音量</h4>
+      <dl>
+      <dt id="mute"><code>player.<span itemprop="property">mute</span>():Void</code></dt>
+      <dd>使播放器静音。</dd>
+</dl>
+
+      <dl>
+      <dt id="unMute"><code>player.<span itemprop="property">unMute</span>():Void</code></dt>
+      <dd>取消播放器静音。</dd>
+</dl>
+
+      <dl>
+      <dt id="isMuted"><code>player.<span itemprop="property">isMuted</span>():Boolean</code></dt>
+      <dd>如果播放器处于静音状态，则返回<code>true</code>；否则返回<code>false</code>。</dd>
+</dl>
+
+      <dl>
+      <dt id="setVolume"><code>player.<span itemprop="property">setVolume</span>(volume:Number):Void</code></dt>
+      <dd>设置音量。接受 <code>0</code> 到 <code>100</code> 之间的整数。</dd>
+</dl>
+
+      <dl>
+      <dt id="getVolume"><code>player.<span itemprop="property">getVolume</span>():Number</code></dt>
+      <dd>返回播放器的当前音量，以 <code>0</code> 到 <code>100</code> 之间的整数值表示。请注意，即使播放器处于静音状态，<code>getVolume()</code> 也会返回音量值。</dd>
+</dl>
+
+  
+    <h4>设置播放器的大小</h4>
+      <dl>
+      
+      
+      <dt id="setSize"><code>player.setSize(width:Number, height:Number):Object</code></dt>
+      <dd>设置包含播放器的<code>&lt;iframe&gt;</code>的大小（以像素为单位）。</dd>
+
+      </dl>
+
+
+
+  <h4 id="Playback_rate">设置播放速率</h4>
+
+      <dl>
+    <dt id="getPlaybackRate"><code>player.<span itemprop="property">getPlaybackRate</span>():Number</code></dt>
+    <dd>此函数用于检索当前正在播放的视频的播放速率。默认播放速率为<code>1</code>，这表明视频以正常速度播放。播放速率的值可以为 <code>0.25</code>、<code>0.5</code>、<code>1</code>、<code>1.5</code> 和 <code>2</code>。</dd>
+</dl>
+
+      <dl>
+    <dt id="setPlaybackRate"><code>player.<span itemprop="property">setPlaybackRate</span>(suggestedRate:Number):Void</code></dt>
+    <dd>此函数用于设置当前视频的建议播放速率。如果播放速率改变，那么此函数将仅改变已插入或正在播放的视频的速率。如果您设置了插入视频的播放速率，则在调用 <code>playVideo</code> 函数或用户直接通过播放器控件启动播放后，该速率仍然有效。此外，调用函数插入或加载视频或播放列表（<code>cueVideoById</code>、<code>loadVideoById</code> 等）会将播放速率重置为 <code>1</code>。<br /><br />
+        调用此函数并不意味着播放速率一定会发生实际变化。但是，如果播放速率确实变化了，那么就会触发 <code><a href="#onPlaybackRateChange">onPlaybackRateChange</a></code> 事件，而您的代码应该响应该事件，而不是调用 <code>setPlaybackRate</code> 函数。<br /><br />
+        <code><a href="#getAvailablePlaybackRates">getAvailablePlaybackRates</a></code> 方法将返回当前正在播放的视频可能的播放速率。但是，如果您将 <code>suggestedRate</code> 参数设置为不支持的整数值或浮点值，则播放器将朝 <code>1</code> 的方向舍入到与支持的值最接近的值。
+    </dd>
+</dl>
+
+
+      <dl>
+    <dt id="getAvailablePlaybackRates"><code>player.<span itemprop="property">getAvailablePlaybackRates</span>():Array</code></dt>
+    <dd>此函数用于返回适合当前视频的播放速率集。默认值为<code>1</code>，该值表明视频正以正常速度播放。<br /><br />
+        此函数用于返回播放速度从最慢到最快排列的数值数组。即使播放器不支持变速播放，该数组也始终应至少包含一个值 (<code>1</code>)。</dd>
+</dl>
+
+    <h4>设置播放列表的播放行为</h4>
+      <dl>
+      <dt id="setLoop"><code>player.<span itemprop="property">setLoop</span>(loopPlaylists:Boolean):Void</code></dt>
+      <dd>
+        <p>此函数用于指明视频播放器应连续播放播放列表，还是应在播放列表中的最后一个视频结束之后停止播放。默认行为是播放列表不循环播放。</p>
+        <p>即使您加载或插入其他播放列表，该设置也会保留，这就意味着，如果您加载一个播放列表，调用值为 <code>true</code> 的 <code>setLoop</code> 函数，然后加载第二个播放列表，那么第二个播放列表也将循环播放。</p>
+
+            <p>必需参数 <code itemprop="property">loopPlaylists</code> 用于标识循环播放行为。</p>
+            <ul>
+              <li>
+                <p>如果参数值为 <code>true</code>，则视频播放器会连续播放播放列表。播放播放列表中的最后一个视频之后，视频播放器将回到播放列表开头，重新播放。</p>
+              </li>
+              <li>
+                <p>如果参数值为 <code>false</code>，则在视频播放器播放完播放列表中的最后一个视频之后，播放就会结束。</p>
+              </li>
+            </ul>
+      </dd>
+</dl>
+
+      <dl>
+      <dt id="setShuffle"><code>player.<span itemprop="property">setShuffle</span>(shufflePlaylist:Boolean):Void</code></dt>
+      <dd>
+        <p>此函数用于指出播放列表中的视频是否应随机播放，以便使这些视频以不同于播放列表创建者指定的顺序播放。如果您在播放列表开始播放之后再将其设置为随机播放，则该列表将会重新排序，而正在播放的视频会继续播放。下一个要播放的视频会基于重新排序后的列表进行选择。</p>
+        <p>如果您加载或插入其他播放列表，则该设置不会保留，这就意味着，如果您加载一个播放列表，调用 <code>setShuffle</code> 函数，然后加载第二个播放列表，那么第二个播放列表不会随机播放。</p>
+            <p>必需参数 <code itemprop="property">shufflePlaylist</code> 用于指示 YouTube 是否应随机播放播放列表。</p>
+            <ul>
+              <li>
+                <p>如果参数值为 <code>true</code>，则 YouTube 会随机调整播放列表顺序。如果您指示此函数随机播放某个已设置为随机播放的播放列表，则 YouTube 将会再次调整随机播放顺序。</p>
+              </li>
+              <li>
+                <p>如果参数值为 <code>false</code>，则 YouTube 会将播放列表更改回原来的顺序。</p>
+              </li>
+            </ul>
+      </dd>
+</dl>
+
+  <h3 id="Playback_status">播放状态</h3>
+      <dl>
+    <dt id="getVideoLoadedFraction"><code>player.<span itemprop="property">getVideoLoadedFraction</span>():Float</code></dt>
+    <dd>返回 <code>0</code> 和 <code>1</code> 之间的数值，用于指定缓冲时播放器显示的视频百分比。与现已弃用的 <code><a href="#getVideoBytesLoaded">getVideoBytesLoaded</a></code> 和 <code><a href="#getVideoBytesTotal">getVideoBytesTotal</a></code> 方法相比，该方法可以返回更可靠的数值。</dd>
+</dl>
+
+      <dl>
+    <dt id="getPlayerState"><code>player.getPlayerState():Number</code></dt>
+    <dd>返回播放器的状态。可用的值为：<br />
+        <ul>
+          <li><code>-1</code> – 未开始</li>
+          <li><code>0</code> – 已结束</li>
+          <li><code>1</code> – 正在播放</li>
+          <li><code>2</code> – 已暂停</li>
+          <li><code>3</code> – 正在缓冲</li>
+          <li><code>5</code> – 已插入视频</li>
+        </ul>
+    </dd>
+</dl>
+
+      <dl>
+    <dt id="getCurrentTime"><code>player.<span itemprop="property">getCurrentTime</span>():Number</code></dt>
+    <dd>返回视频已播放的时长（以秒为单位）。</dd>
+</dl>
+
+      <dl>
+    <dt id="getVideoStartBytes"><code>player.<span itemprop="property">getVideoStartBytes</span>():Number</code></dt>
+    <dd><span style="color:red">已于2012年10月31日弃用。</span> 返回视频文件的加载点前已有的字节数（此方法现在返回的值始终为 <code>0</code>）。示例情况：用户向前定位到一个尚未加载的时间点，于是播放器发起播放视频中尚未加载的片段的新请求。</dd>
+</dl>
+
+    <dl>
+      <dt id="getVideoBytesLoaded"><code>player.<span itemprop="property">getVideoBytesLoaded</span>():Number</code></dt>
+      <dd>
+        <span style="color:red">已于2012年7月18日弃用。</span> 请改为使用<code><a href="#getVideoLoadedFraction">getVideoLoadedFraction</a></code>方法确定已缓冲的视频百分比。<br /><br />
+      
+      
+      此方法用于返回 <code>0</code> 到 <code>1000</code> 之间的值，该值会估算已加载的视频量。您可以用 <code>getVideoBytesLoaded</code> 值除以 <code>getVideoBytesTotal</code> 值计算出视频的已加载部分。
+
+      </dd>
+    </dl>
+
+    <dl>
+      <dt id="getVideoBytesTotal"><code>player.<span itemprop="property">getVideoBytesTotal</span>():Number</code></dt>
+      <dd>
+        <span style="color:red">已于 2012 年 7 月 18 日弃用。</span> 请改为使用 <code><a href="#getVideoLoadedFraction">getVideoLoadedFraction</a></code> 方法确定已缓冲的视频百分比。<br /><br />
+      返回当前已加载/正在播放的视频的大小或视频大小的近似值（以字节为单位）。<br /><br />
+      
+      
+      此方法始终会返回值 <code>1000</code>。您可以用 <code>getVideoBytesLoaded</code> 值除以 <code>getVideoBytesTotal</code> 值计算出视频的已加载部分。
+
+      </dd>
+    </dl>
+
+  <h3 id="Playback_quality">播放质量</h3>
+
+      <dl>
+    <dt id="getPlaybackQuality"><code>player.<span itemprop="property">getPlaybackQuality</span>():String</code></dt>
+    <dd>此函数用于检索当前视频的实际质量。可能的返回值包括<code>highres</code>、<code>hd1080</code>、<code>hd720</code>、<code>large</code>、<code>medium</code> 和 <code>small</code>。如果当前没有视频，则该函数会返回 <code>undefined</code>。</dd>
+</dl>
+
+      <dl>
+    <dt id="setPlaybackQuality"><code>player.<span itemprop="property">setPlaybackQuality</span>(suggestedQuality:String):Void</code></dt>
+    <dd>此函数用于设置当前视频的建议质量。该函数可使视频在当前位置以另一种视频质量重新加载。如果更改了播放质量，则此更改只会影响当前正在播放的视频。调用此函数并不意味着播放质量一定会发生实际变化。但是，如果播放质量确实变化了，那么就会触发<code><a href="#onPlaybackQualityChange">onPlaybackQualityChange</a></code>事件，而您的代码应该响应该事件，而不是调用 <code>setPlaybackQuality</code> 函数。<br /><br />
+        <code itemprop="property">suggestedQuality</code> 参数的值可以为<code>small</code>、<code>medium</code>、<code>large</code>、<code>hd720</code>、<code>hd1080</code>、<code>highres</code> 或 <code>default</code>。我们建议您将参数值设置为 <code>default</code>，这会指示 YouTube 选择最适合的播放质量，具体质量会因不同用户、视频、系统和其他播放条件而异。<br /><br />
+        如果您建议使用特定质量播放某个视频，则只有该视频会采用建议的质量。您选择的播放质量应该适合视频播放器的大小。例如，如果网页上显示的是 1280x720 像素的视频播放器，则<code>hd720</code>级别的视频质量的实际显示效果要优于 <code>hd1080</code> 级别的视频质量。我们建议调用 <code>getAvailableQualityLevels()</code> 函数来确定哪些质量级别适用于某个视频。<br /><br />
+        下面的列表列出了不同标准的播放器大小适合的播放质量级别。我们建议您将视频播放器的高度设置为以下某个值，并将播放器大小调整为使用 16:9 的宽高比。如上所述，即使您选择标准播放器大小，我们也建议您将 <code>suggestedQuality</code> 参数的值设置为 <code>default</code>，以使 YouTube 可以选择最合适的播放质量。
+        <p><ul>
+          <li><code>small</code> 质量级：播放器高度为 240 像素，且播放器尺寸至少为 320x240 像素才能符合 4:3 的宽高比。</li>
+          <li><code>medium</code> 质量级：播放器高度为360像素，且播放器尺寸为 640x360 像素（符合16:9的宽高比）或 480x360 像素（符合 4:3 的宽高比）。</li>
+          <li><code>large</code> 质量级：播放器高度为480像素，且播放器尺寸为 853x480 像素（符合 16:9 的宽高比）或 640x480 像素（符合 4:3 的宽高比）。</li>
+          <li><code>hd720</code> 质量级：播放器高度为 720 像素，且播放器尺寸为 1280x720 像素（符合 16:9 的宽高比）或 960x720像 素（符合 4:3 的宽高比）。</li>
+          <li><code>hd1080</code> 质量级：播放器高度为 1080 像素，且播放器尺寸为 1920x1080 像素（符合 16:9 的宽高比）或 1440x1080 像素（符合 4:3 的宽高比）。</li>
+          <li><code>highres</code> 质量级：播放器高度大于1080像素，这意味着播放器的宽高比大于 1920x1080 像素。</li>
+          <li><code>default</code> 质量级：YouTube 会选择合适的播放质量。此设置会将质量级别有效地恢复到默认状态，并会撤消以前通过使用 <code><a href="#cueVideoById">cueVideoById</a></code>、<code><a href="#loadVideoById">loadVideoById</a></code> 或 <code>setPlaybackQuality</code> 函数设置播放质量的全部操作。</li>
+        </ul></p>
+        如果您在调用 <code>setPlaybackQuality</code> 函数时使用了不适合视频的质量级别 <code>suggestedQuality</code>，则系统会将质量设置为适合视频的下一个最低级别。例如，如果您请求的质量级别为 <code>large</code>，但该级别并不适用，则系统会将播放质量设置为 <code>medium</code>（前提是该质量级别适用）。<br /><br />此外，将 <code>suggestedQuality</code> 设置为一个无法识别的质量级别就相当于将 <code>suggestedQuality</code> 设置为 <code>default</code>。</dd>
+</dl>
+
+
+      <dl>
+    <dt id="getAvailableQualityLevels"><code>player.<span itemprop="property">getAvailableQualityLevels</span>():Array</code></dt>
+    <dd>此函数可返回适合当前视频的一系列质量格式。您可以使用此函数确定是否存在比用户所观看质量更高的视频质量，这样播放器就可以显示按钮或其他元素供用户调整质量。<br /><br />
+        该函数返回的是按质量顺序由高到低排列的字符串数组。可用的数组元素值包括<code>highres</code>、<code>hd1080</code>、<code>hd720</code>、<code>large</code>、<code>medium</code> 和 <code>small</code>。如果当前没有任何视频，则此函数会返回空数组。<br /><br />
+        您的客户端不应自动选择使用质量最高（或最低）的视频，也不应自动选择使用未知的格式名称。YouTube 会扩充质量级别列表，其中包含的某些格式可能不适用于您的播放器环境。同样，YouTube 也会删除影响用户体验的质量选项。您应确保自己的客户端只会选择已知的有效格式，这样在引入新的质量级别或删除不适用于您播放器环境的质量级别时，就可以确保您的客户端效果不会受到这些因素的影响。</dd>
+</dl>
+
+  <h3 id="Retrieving_video_information">检索视频信息</h3>
+
+      <dl>
+    <dt id="getDuration"><code>player.<span itemprop="property">getDuration</span>():Number</code></dt>
+    <dd>返回当前正在播放的视频的时长（以秒为单位）。请注意，如果视频的元数据尚未加载，则 <code>getDuration()</code> 会返回 <code>0</code>，这通常会在视频刚开始播放后发生。<br /><br />
+        如果当前播放的视频是<a href="/youtube/2.0/developers_guide_protocol_retrieving_live_events">直播活动</a>，则 <code>getDuration()</code> 函数将会返回自视频开始直播起已播放的时间。具体而言，这是视频在未重置或中断的情况下直播的时长。此外，此持续时间通常长于实际的活动时间，因为直播可能会在活动开始时间之前开始。</dd>
+</dl>
+
+      <dl>
+    <dt id="getVideoUrl"><code>player.<span itemprop="property">getVideoUrl</span>():String</code></dt>
+    <dd id="getVideoUrlDescription">返回当前已加载/正在播放的视频的 YouTube.com 网址。</dd>
+</dl>
+
+      <dl>
+    <dt id="getVideoEmbedCode"><code>player.<span itemprop="property">getVideoEmbedCode</span>():String</code></dt>
+    <dd id="getVideoEmbedCodeDescription">返回当前已加载/正在播放的视频的嵌入代码。</dd>
+</dl>
+
+
+  <h3 id="Retrieving_playlist_information">检索播放列表信息</h3>
+
+      <dl>
+    <dt id="getPlaylist"><code>player.<span itemprop="property">getPlaylist</span>():Array</code></dt>
+    <dd>此函数用于按当前顺序返回播放列表中视频ID的数组。默认情况下，此函数将以播放列表所有者指定的顺序返回视频 ID。但是，如果您已调用了 <code><a href="#setShuffle">setShuffle</a></code> 函数将播放列表顺序设置为随机播放，则 <code>getPlaylist()</code> 函数的返回值将反映随机播放顺序。</dd>
+</dl>
+
+      <dl>
+    <dt id="getPlaylistIndex"><code>player.<span itemprop="property">getPlaylistIndex</span>():Number</code></dt>
+    <dd>此函数用于返回当前正在播放的播放列表中视频的索引。
+      <ul>
+        <li>
+          <p>如果您尚未随机播放播放列表，则返回值将会标识播放列表创建者放置视频的位置。返回值使用从零开始的索引，因此值为<code>0</code>时标识播放列表中的第一个视频。</p>
+        </li>
+        <li>
+          <p>如果您已随机播放播放列表，则返回值将会确定随机播放的播放列表中视频的顺序。</p>
+        </li>
+      </ul>
+    </dd>
+</dl>
+
+  
+
+  
+  <h3 id="Adding_event_listener">添加或移除事件监听器</h3>
+      <dl>
+    <dt id="addEventListener"><code>player.<span itemprop="property">addEventListener</span>(event:String, listener:String):Void</code></dt>
+    <dd>为指定的 <code>event</code> 添加监听器函数。下文的<a href="#Events">事件</a>部分介绍了播放器可能会触发的不同事件。监听器是一个字符串，用于指定触发指定事件时执行的函数。</dd>
+</dl>
+      <dl>
+    <dt id="removeEventListener"><code>player.<span itemprop="property">removeEventListener</span>(event:String, listener:String):Void</code></dt>
+    <dd>为指定的<code>event</code>移除监听器函数。<code>listener</code> 是一个字符串，用于指定触发指定事件时不再执行的函数。</dd>
+</dl>
+
+
+  
+  <a name="Accessing_and_Modifying_DOM_Nodes"></a>
+  <h3 id="Accessing_and_Modifying_DOM_Nodes">访问和修改 DOM 节点</h3>
+    <dl>
+      <dt id="getIframe"><code>player.<span itemprop="property">getIframe</span>():Object</code></dt>
+      <dd id="getIframeDescription">此方法用于返回嵌入式 <code>&lt;iframe&gt;</code> 的 DOM 节点。</dd>
+    </dl>
+
+    <dl>
+      <dt id="destroy"><code>player.<span itemprop="property">destroy</span>():Void</code></dt>
+      <dd>移除包含播放器的 <code>&lt;iframe&gt;</code>。</dd>
+    </dl>
+
+
+<h2 id="Events">事件</h2>
+
+<p>API会触发事件来向您的应用通知嵌入式播放器发生的变化。如上一部分所述，您可以在<a href="#Loading_a_Video_Player">构造<code>YT.Player</code>对象</a>时添加事件监听器来订阅事件，也可以使用<code><a href="#addEventListener">addEventListener</a></code>函数。</p>
+
+<p>API会将事件对象作为单独的参数传递给每个函数。事件对象具有以下属性：</p>
+<ul>
+  <li>事件的<code>target</code>用于标识与事件相对应的视频播放器。</li>
+  <li>事件的<code>data</code>用于指定与事件相关的值。请注意，<code>onReady</code>事件不会指定<code>data</code>属性。</li>
+</ul>
+
+<p>以下列表定义了API触发的事件：</p>
+
+
+<dl>
+  <dt id="onReady"><code itemprop="property">onReady</code></dt>
+    <dd>此事件在每次播放器完成加载并准备好开始接收API调用时触发。如果您希望在播放器准备就绪时马上自动执行某些操作（例如播放视频或显示视频信息），您的应用就应该实施此函数。<br /><br />下面的示例包含用于处理此事件的函数样本。API传递给函数的事件对象拥有用于标识播放器的<code>target</code>属性。该函数会检索当前所加载视频的嵌入代码，开始播放视频，并在拥有<code>embed-code</code>的<code>id</code>值的页面元素中显示嵌入代码。
+      <pre>
+function onPlayerReady(event) {
+  var embedCode = event.target.<a href="#getVideoEmbedCode">getVideoEmbedCode()</a>;
+  event.target.playVideo();
+  if (document.getElementById('embed-code')) {
+    document.getElementById('embed-code').innerHTML = embedCode;
+  }
+}
+</pre>
+    </dd>
+</dl>
+
+
+<dl>
+  <dt id="onStateChange"><code itemprop="property">onStateChange</code></dt>
+    <dd>此事件在每次播放器的状态改变时触发。
+      
+      
+      API传递给事件监听器函数的事件对象的<code>data</code>属性会指定一个与新播放器状态相对应的整数。
+
+      可能的值包括：
+      <p><ul>
+        <li><code>-1</code>（未开始）</li>
+        <li><code>0</code>（已结束）</li>
+        <li><code>1</code>（正在播放）</li>
+        <li><code>2</code>（已暂停）</li>
+        <li><code>3</code>（正在缓冲）</li>
+        <li><code>5</code>（视频已插入）</li>
+      </ul></p>
+    播放器首次加载视频时会广播<code>unstarted</code> (<code>-1</code>)事件。在视频插入完毕且可供播放时，播放器会广播<code>video cued</code> (<code>5</code>)事件。在代码中，您可以指定整数值或使用下列某个命名空间变量：
+      <p><ul>
+        <li><code>YT.PlayerState.ENDED</code></li>
+        <li><code>YT.PlayerState.PLAYING</code></li>
+        <li><code>YT.PlayerState.PAUSED</code></li>
+        <li><code>YT.PlayerState.BUFFERING</code></li>
+        <li><code>YT.PlayerState.CUED</code></li>
+      </ul></p>
+    </dd>
+</dl>
+
+<dl>
+  <dt id="onPlaybackQualityChange"><code itemprop="property">onPlaybackQualityChange</code></dt>
+    <dd>此事件在每次视频播放质量改变时触发。例如，如果您调用<code><a href="#setPlaybackQuality">setPlaybackQuality(suggestedQuality)</a></code>函数，此事件就会在播放质量实际发生改变时触发。您的应用应对事件进行响应，且不应假设播放质量会自动在系统调用<code><a href="#setPlaybackQuality">setPlaybackQuality(suggestedQuality)</a></code>函数时改变。同样，您的代码也不应假设只有在明确调用<code>setPlaybackQuality</code>或任何其他允许您设置建议的播放质量后才会改变。<br /><br />
+    
+    
+    API传递给事件监听器函数的事件对象的<code>data</code>属性值是一个标识新播放质量的字符串。
+
+      可能的值包括：
+      <p><ul>
+        <li><code>small</code></li>
+        <li><code>medium</code></li>
+        <li><code>large</code></li>
+        <li><code>hd720</code></li>
+        <li><code>hd1080</code></li>
+        <li><code>highres</code></li>
+      </ul></p>
+    </dd>
+</dl>
+
+<dl>
+  <dt id="onPlaybackRateChange"><code itemprop="property">onPlaybackRateChange</code></dt>
+    <dd>此事件在每次视频播放速率改变时触发。例如，如果您调用<code><a href="#setPlaybackRate">setPlaybackRate(suggestedRate)</a></code>函数，此事件就会在播放速率实际发生改变时触发。您的应用应对事件进行响应，且不应假设播放速率会自动在系统调用<code><a href="#setPlaybackRate">setPlaybackRate(suggestedRate)</a></code>函数时改变。同样，您的代码也不应假设只有在明确调用<code>setPlaybackRate</code>后视频播放速率才会改变。<br /><br />
+    
+    
+    API传递给事件监听器函数的事件对象的<code>data</code>属性值会是一个标识新播放速率的数字。
+
+    <code><a href="#getAvailablePlaybackRates">getAvailablePlaybackRates</a></code>方法会针对当前已插入或正在播放的视频返回一个有效播放速率的列表。
+    </dd>
+</dl>
+
+<dl>
+  <dt id="onError"><code itemprop="property">onError</code></dt>
+    <dd>此事件在播放器出错时触发。
+    
+    
+    API将向事件监听器函数传递一个<code>event</code>对象。该对象的<code>data</code>属性将指定一个标识所发生的错误类型的整数。
+
+    可能的值包括：
+      <p><ul>
+        <li><code>2</code> – 请求包含无效的参数值。例如，如果您指定的视频ID不足11个字符，或者如果视频ID包含无效字符（例如感叹号或星号），就会发生此错误。</li>
+
+        <li><code>5</code> – 请求的内容无法在HTML5播放器中播放，或者发生了与HTML5播放器有关的其他错误。</li>
+
+        <li><code>100</code> – 找不到所请求的视频。当视频已被移除（无论是何种原因）或者被标记为私有状态时，就会发生此错误。</li>
+        <li><code>101</code> – 所请求的视频的所有者不允许在嵌入式播放器中播放此视频。</li>
+        <li><code>150</code> – 此错误与<code>101</code>相同，实际就是变相的<code>101</code>错误！</li>
+      </ul>
+    </p></dd>
+</dl>
+
+<dl>
+  <dt id="onApiChange"><code itemprop="property">onApiChange</code></dt>
+    <dd>此事件触发时就表示播放器已利用提供的API方法加载（或已取消加载）模块。您的应用可监听此事件，然后轮询播放器以确定为最近加载的模块指定的选项。然后，您的应用可以检索或更新这些选项的现有设置。<br /><br />
+        以下命令可检索一系列您可为其设置播放器选项的模块名称：<br />
+        <pre>player.getOptions();</pre>
+        目前，您只能为<code>cc</code>模块设置选项，此模块负责处理播放器中的字幕。在收到<code>onApiChange</code>事件时，您的应用可使用以下命令来确定能为<code>cc</code>模块设置哪些选项：<br />
+        <pre>player.getOptions('cc');</pre>
+        通过利用此命令轮询播放器，您可以确认自己想要访问的选项是否真的可以访问。以下命令可检索并更新模块选项：<br />
+        <pre><strong>检索选项：</strong>
+<span class="notranslate">player.getOption(<strong>module</strong>, <strong>option</strong>);</span>
+
+<strong>设置选项：</strong>
+<span class="notranslate">player.setOption(<strong>module</strong>, <strong>option</strong>, <strong>value</strong>);</span></pre>
+
+        以下表格列出了API支持的选项：<br /><br />
+        <table>
+          <tr>
+            <th>模块</th>
+            <th>选项</th>
+            <th>说明</th>
+          </tr>
+          <tr>
+            <td class="notranslate" itemprop="property">cc</td>
+            <td class="notranslate" itemprop="property">fontSize</td>
+            <td>此选项可调整播放器中显示的字幕的字号大小。<br /><br />有效的值为<code>-1</code>、<code>0</code>、<code>1</code>、<code>2</code>和<code>3</code>。默认大小为<code>0</code>，最小为<code>-1</code>。如果将此选项设为小于<code>-1</code>的整数，系统会以最小字号来显示字幕；如果将此选项设为大于<code>3</code>的整数，系统将以最大字号来显示字幕。</td>
+          </tr>
+          <tr>
+            <td class="notranslate">cc</td>
+            <td class="notranslate" itemprop="property">reload</td>
+            <td>此选项会为正在播放的视频重新加载字幕数据。如果检索此选项的值，值将显示为<code>null</code>。将值设为<code>true</code>即可重新加载字幕数据。</td>
+          </tr>
+        </table>
+  </dd>
+</dl>
+
+<h2 id="Mobile_considerations">移动设备注意事项</h2>
+<h3 id="Autoplay_and_scripted_playback">自动播放和按脚本播放</h3>
+<p>在某些移动浏览器（如Chrome和Safari）中，HTML5 <code>&lt;video&gt;</code>元素只允许由用户互动（如点按播放器）发起的播放。以下内容摘录自<a href="https://developer.apple.com/library/safari/#documentation/AudioVideo/Conceptual/Using_HTML5_Audio_Video/AudioandVideoTagBasics/AudioandVideoTagBasics.html">Apple文档</a>：</p>
+
+<p class="special">“警告：为避免在用户未请求的情况下通过移动网络进行下载并向用户扣费，禁止在iOS上的Safari浏览器中自动播放嵌入式媒体 — 播放必须始终由用户发起。”</p>
+
+<p>由于此限制，<code>autoplay</code>、<code>playVideo()</code>及<code>loadVideoById()</code>等函数与参数将无法在某些移动环境中工作。</p>
+
+<h2 id="Examples">示例</h2>
+<h3 id="Example_Video_Player_Constructors">创建<span style="color:green">YT.Player</span>对象</h3>
+
+<ul>
+  <li>
+    <p><strong>示例1：大音量播放</strong></p>
+    <p>此示例将创建1280 x 720像素的视频播放器。然后，<code>onReady</code>事件的事件监听器将调用<code><a href="#setVolume">setVolume</a></code>函数来将音量调整到最高设置。</p>
+    <pre class="prettyprint lang-js">
+function onYouTubeIframeAPIReady() {
+  var player;
+  player = new YT.Player('player', {
+    width: 1280,
+    height: 720,
+    videoId: 'M7lc1UVf-VE',
+    events: {
+      'onReady': onPlayerReady,
+      'onPlaybackQualityChange': onPlayerPlaybackQualityChange,
+      'onStateChange': onPlayerStateChange,
+      'onError': onPlayerError
+    }
+  });
+}
+
+function onPlayerReady(event) {
+  event.target.setVolume(100);
+  event.target.playVideo();
+}
+</pre>
+  </li>
+
+  <li>
+    <p><strong>示例2：</strong>此示例会设置专门的播放器参数，以在视频加载时自动播放视频并隐藏视频播放器的控件。它还会针对API广播的所有事件添加事件监听器。</p>
+    <pre class="prettyprint lang-js">
+function onYouTubeIframeAPIReady() {
+  var player;
+  player = new YT.Player('player', {
+    videoId: 'M7lc1UVf-VE',
+    playerVars: { 'autoplay': 1, 'controls': 0 },
+    events: {
+      'onReady': onPlayerReady,
+      'onPlaybackQualityChange': onPlayerPlaybackQualityChange,
+      'onStateChange': onPlayerStateChange,
+      'onError': onPlayerError
+    }
+  });
+}</pre>
+  </li>
+</ul>
+
+<h2 id="Revision_History">修订历史记录</h2>
+
+<p>本部分列出了YouTube IFrame Player API的变更记录和文档更新记录。<a href="/youtube/feeds/iframe-player-api-revision-history.xml">订阅此变更日志</a>。<a href="/youtube/feeds/iframe-player-api-revision-history.xml"><img alt="订阅" src="/analytics/images/rss-o16.png" /></a></p>
+
+<div class="notranslate">
+
+<a name="release_notes_04_28_2014"></a>
+<h3 class="hide-from-toc">April 28, 2014</h3>
+<p>This update contains the following changes:</p>
+
+<ul>
+  <li>
+    <p>The new <a href="#removeEventListener">removeEventListener</a> function lets you remove a listener for a specified event.</p>
+  </li>
+</ul>
+
+<a name="release_notes_03_25_2014"></a>
+<h3 class="hide-from-toc">March 25, 2014</h3>
+<p>This update contains the following changes:</p>
+
+<ul>
+  <li>
+    <p>The <a href="#Requirements">Requirements</a> section has been updated to note that embedded players must have a viewport that is at least 200px by 200px. If a player displays controls, it must be large enough to fully display the controls without shrinking the viewport below the minimum size. We recommend 16:9 players be at least 480 pixels wide and 270 pixels tall.</p>
+  </li>
+</ul>
+
+<a name="release_notes_07_23_2013"></a>
+<h3 class="hide-from-toc">July 23, 2013</h3>
+<p>This update contains the following changes:</p>
+
+<ul>
+  <li>
+    <p>The <a href="#Overview">Overview</a> now includes a video of a 2011 Google I/O presentation that discusses the iframe player.</p>
+  </li>
+</ul>
+
+<a name="release_notes_10_31_2012"></a>
+<h3 class="hide-from-toc">October 31, 2012</h3>
+<p>This update contains the following changes:</p>
+
+<ul>
+  <li>
+    <p>The <a href="#Queueing_Functions">Queueing functions</a> section has been updated to explain that you can use either argument syntax or object syntax to call all of those functions. Note that the API may support additional functionality in object syntax that the argument syntax does not support.</p>
+    <p>In addition, the descriptions and examples for each of the <a href="#Video_Queueing_Functions">video queueing functions</a> have been updated to reflect the newly added support for object syntax. (The API's <a href="#Playlist_Queueing_Functions">playlist queueing functions</a> already supported object syntax.)</p>
+  </li>
+  <li>
+    <p>When called using object syntax, each of the <a href="#Video_Queueing_Functions">video queueing functions</a> supports an <code>endSeconds</code> property, which accepts a float/integer and specifies the time when the video should stop playing when <code><a href="#playVideo">playVideo()</a></code> is called.</p>
+  </li>
+  <li>
+    <p>The <code><a href="#getVideoStartBytes">getVideoStartBytes</a></code> method has been deprecated. The method now always returns a value of <code>0</code>.</p>
+  </li>
+</ul>
+
+<a name="release_notes_08_22_2012"></a>
+<h3 class="hide-from-toc">August 22, 2012</h3>
+<p>This update contains the following changes:</p>
+
+<ul>
+  <li>
+    <p>The example in the <a href="#Loading_a_Video_Player">Loading a video player</a> section that demonstrates how to manually create the <code>&lt;iframe&gt;</code> tag has been updated to include a closing <code>&lt;/iframe&gt;</code> tag since the <code>onYouTubeIframeAPIReady</code> function is only called if the closing <code>&lt;/iframe&gt;</code> element is present.</p>
+  </li>
+</ul>
+
+<a name="release_notes_08_06_2012"></a>
+<h3 class="hide-from-toc">August 6, 2012</h3>
+<p>This update contains the following changes:</p>
+
+<ul>
+  <li>
+    <p>The <a href="#Operations">Operations</a> section has been expanded to list all of the supported API functions rather than linking to the <a href="/youtube/js_api_reference">JavaScript Player API Reference</a> for that list.</p>
+  </li>
+  <li>
+    <p>The API supports several new functions and one new event that can be used to control the video playback speed:</p>
+    <ul>
+      <li>
+        <p><strong>Functions</strong></p>
+        <p><ul>
+          <li><code><a href="#getAvailablePlaybackRates">getAvailablePlaybackRates</a></code> – Retrieve the supported playback rates for the cued or playing video. Note that variable playback rates are currently only supported in the HTML5 player.</li>
+          <li><code><a href="#getPlaybackRate">getPlaybackRate</a></code> – Retrieve the playback rate for the cued or playing video.</li>
+          <li><code><a href="#setPlaybackRate">setPlaybackRate</a></code> – Set the playback rate for the cued or playing video.</li>
+        </ul></p>
+      </li>
+      <li>
+        <p><strong>Events</strong></p>
+        <p><ul>
+          <li><code><a href="#onPlaybackRateChange">onPlaybackRateChange</a></code> – This event fires when the video's playback rate changes.</li>
+        </ul></p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+<a name="release_notes_07_19_2012"></a>
+<h3 class="hide-from-toc">July 19, 2012</h3>
+<p>This update contains the following changes:</p>
+
+<ul>
+  <li>
+    <p>The new <code><a href="#getVideoLoadedFraction">getVideoLoadedFraction</a></code> method replaces the now-deprecated <code><a href="#getVideoBytesLoaded">getVideoBytesLoaded</a></code> and <code><a href="#getVideoBytesTotal">getVideoBytesTotal</a></code> methods. The new method returns the percentage of the video that the player shows as buffered.</p>
+  </li>
+  <li>
+    <p>The <code><a href="#onError">onError</a></code> event may now return an error code of <code>5</code>, which indicates that the requested content cannot be played in an HTML5 player or another error related to the HTML5 player has occurred.</p>
+  </li>
+  <li>
+    <p>The <a href="#Requirements">Requirements</a> section has been updated to indicate that any web page using the IFrame API must also implement the <code>onYouTubeIframeAPIReady</code> function. Previously, the section indicated that the required function was named <code>onYouTubePlayerAPIReady</code>. Code samples throughout the document have also been updated to use the new name.</p>
+
+    <p><class="note"><strong>Note:</strong> To ensure that this change does not break existing implementations, both names will work. If, for some reason, your page has an <code>onYouTubeIframeAPIReady</code> function and an <code>onYouTubePlayerAPIReady</code> function, both functions will be called, and the <code>onYouTubeIframeAPIReady</code> function will be called first.</class="note"></p>
+  </li>
+  <li>
+    <p>The code sample in the <a href="#Getting_Started">Getting started</a> section has been updated to reflect that the URL for the IFrame Player API code has changed to <code>http://www.youtube.com/iframe_api</code>. To ensure that this change does not affect existing implementations, the old URL (<code>http://www.youtube.com/player_api</code>) will continue to work.</p>
+  </li>
+</ul>
+
+<a name="release_notes_07_16_2012"></a>
+<h3 class="hide-from-toc">July 16, 2012</h3>
+<p>This update contains the following changes:</p>
+
+<ul>
+  <li>
+    <p>The <a href="#Operations">Operations</a> section now explains that the API supports the <code>setSize()</code> and <code>destroy()</code> methods. The <code>setSize()</code> method sets the size in pixels of the <code>&lt;iframe&gt;</code> that contains the player and the <code>destroy()</code> method removes the <code>&lt;iframe&gt;</code>.</p>
+  </li>
+</ul>
+
+<a name="release_notes_06_06_2012"></a>
+<h3 class="hide-from-toc">June 6, 2012</h3>
+<p>This update contains the following changes:</p>
+
+<ul>
+  <li>
+    <p>We have removed the <code>experimental</code> status from the IFrame Player API.</p>
+  </li>
+  <li>
+    <p>The <a href="#Loading_a_Video_Player">Loading a video player</a> section has been updated to point out that when inserting the <code>&lt;iframe&gt;</code> element that will contain the YouTube player, the IFrame API replaces the element specified in the constructor for the YouTube player. This documentation change does not reflect a change in the API and is intended solely to clarify existing behavior.</p>
+    <p>In addition, that section now notes that the insertion of the <code>&lt;iframe&gt;</code> element could affect the layout of your page if the element being replaced has a different display style than the inserted <code>&lt;iframe&gt;</code> element. By default, an <code>&lt;iframe&gt;</code> displays as an <code>inline-block</code> element.</p>
+  </li>
+</ul>
+
+<a name="release_notes_03_30_2012"></a>
+<h3 class="hide-from-toc">March 30, 2012</h3>
+<p>This update contains the following changes:</p>
+
+<ul>
+  <li>
+    <p>The <a href="#Operations">Operations</a> section has been updated to explain that the IFrame API supports a new method, <code>getIframe()</code>, which returns the DOM node for the IFrame embed.</p>
+  </li>
+</ul>
+
+<a name="release_notes_03_26_2012"></a>
+<h3 class="hide-from-toc">March 26, 2012</h3>
+<p>This update contains the following changes:</p>
+
+<ul>
+  <li>
+    <p>The <a href="#Requirements">Requirements</a> section has been updated to note the minimum player size.</p>
+  </li>
+</ul>
+
+</div>
+
+    </div>
+  
+          </div>
+
+    
+                   <devsite-page-rating position="footer" selected-rating="0" hover-rating-star="0">
+         </devsite-page-rating>
+                   
+          </article>
+</article>
+
+<devsite-content-footer class="nocontent">
+  <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.cn/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>  <p>Last updated 2020-01-15.</p></devsite-content-footer>
+
+
+
+                      </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+                      <nav class="devsite-footer-promos nocontent">
+  <ul class="devsite-footer-promos-list">
+        <li class="devsite-footer-promo">
+      <a href="http://apiblog.youtube.com"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+                         data-label="Footer Promo Link (index 1)"
+              >
+                        <img class="devsite-footer-promo-icon"
+             src="https://www.gstatic.cn/images/icons/material/product/2x/blogger_64dp.png"
+             alt="博客">
+                博客
+      </a>
+      <div class="devsite-footer-promo-description">The latest news on the YouTube API blog</div>
+    </li>
+        <li class="devsite-footer-promo">
+      <a href="https://github.com/youtube/api-samples"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+                         data-label="Footer Promo Link (index 2)"
+              >
+                        <img class="devsite-footer-promo-icon"
+             src="/site-assets/logo-github.svg"
+             alt="GitHub">
+                GitHub
+      </a>
+      <div class="devsite-footer-promo-description">Find API code samples and other YouTube open-source projects.</div>
+    </li>
+        <li class="devsite-footer-promo">
+      <a href="https://issuetracker.google.com/issues/new?component=186600&amp;template=874803"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+                         data-label="Footer Promo Link (index 3)"
+              >
+                        <img class="devsite-footer-promo-icon"
+             src="/site-assets/developers_64dp.png"
+             alt="Issue Tracker">
+                Issue Tracker
+      </a>
+      <div class="devsite-footer-promo-description">Something wrong? Send us a bug report!</div>
+    </li>
+        <li class="devsite-footer-promo">
+      <a href="http://stackoverflow.com/questions/ask?tags=youtube-api"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+                         data-label="Footer Promo Link (index 4)"
+              >
+                        <img class="devsite-footer-promo-icon"
+             src="/site-assets/logo-stack-overflow.svg"
+             alt="Stack Overflow">
+                Stack Overflow
+      </a>
+      <div class="devsite-footer-promo-description">Ask a question under the youtube-api tag</div>
+    </li>
+        <li class="devsite-footer-promo">
+      <a href="https://www.youtube.com/user/YouTubeDev"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+                         data-label="Footer Promo Link (index 5)"
+              >
+                        <img class="devsite-footer-promo-icon"
+             src="https://www.gstatic.cn/images/icons/material/product/2x/youtube_64dp.png"
+             alt="Videos">
+                Videos
+      </a>
+      <div class="devsite-footer-promo-description">Check out the YouTube Developer Relations team&#39;s YouTube channel</div>
+    </li>
+      </ul>
+</nav>
+
+                  </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+                      <nav class="devsite-footer-linkboxes nocontent">
+    <ul class="devsite-footer-linkboxes-list">
+        <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading">Tools</h3>      <ul class="devsite-footer-linkbox-list">
+                <li class="devsite-footer-linkbox-item">
+          <a href="https://developers.google.com/apis-explorer/#p/"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 1)"           >
+            Google APIs Explorer
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="/youtube/youtube_player_demo"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 2)"           >
+            YouTube Player Demo
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="/youtube/youtube_subscribe_button"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 3)"           >
+            Configure a Subscribe Button
+          </a>
+        </li>
+              </ul>
+    </li>
+        <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading">Issue Tracker</h3>      <ul class="devsite-footer-linkbox-list">
+                <li class="devsite-footer-linkbox-item">
+          <a href="https://issuetracker.google.com/issues/new?component=186600&amp;template=874803"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 1)"           >
+            提交错误
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="https://issuetracker.google.com/issues/new?component=186600&amp;template=874803"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 2)"           >
+            请求新功能
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="https://issuetracker.google.com/issues?q=componentid:186600"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 3)"           >
+            查看未解决的问题
+          </a>
+        </li>
+              </ul>
+    </li>
+        <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading">Product Info</h3>      <ul class="devsite-footer-linkbox-list">
+                <li class="devsite-footer-linkbox-item">
+          <a href="/youtube/terms"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 1)"           >
+            服务条款
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="/youtube/branding_guidelines"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 2)"           >
+            品牌推广指南
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="/youtube/creating_monetizable_applications"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 3)"           >
+            获利指南
+          </a>
+        </li>
+                <li class="devsite-footer-linkbox-item">
+          <a href="/youtube/youtube-api-list"
+             class="devsite-footer-linkbox-link
+                    gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+                        data-label="Footer Link (index 4)"           >
+            弃用政策规定弃用的API
+          </a>
+        </li>
+              </ul>
+    </li>
+      </ul>
+  </nav>
+                  </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+                      
+<div class="devsite-footer-utility nocontent">
+    <nav class="devsite-footer-sites">
+    <a href="https://developers.google.cn/"
+       class="devsite-footer-sites-logo-link gc-analytics-event"
+       data-category="Site-Wide Custom Events"
+       data-label="Footer Google Developers Link">
+      <img class="devsite-footer-sites-logo"
+           src="/_static/images/lockup-developers.svg"
+           alt="Google Developers">
+    </a>
+    <ul class="devsite-footer-sites-list">
+            <li class="devsite-footer-sites-item">
+        <a href="//developer.android.google.cn"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Android Link"
+                  >
+          Android
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//developer.chrome.com/home"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Chrome Link"
+                  >
+          Chrome
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//firebase.google.cn"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Firebase Link"
+                  >
+          Firebase
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="//cloud.google.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer Google Cloud Platform Link"
+                  >
+          Google Cloud Platform
+        </a>
+      </li>
+            <li class="devsite-footer-sites-item">
+        <a href="/products"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+                    data-label="Footer All products Link"
+                  >
+          所有产品
+        </a>
+      </li>
+          </ul>
+  </nav>
+  
+  <nav class="devsite-footer-utility-links">
+        <ul class="devsite-footer-utility-list">
+            <li class="devsite-footer-utility-item
+                 ">
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="/terms/site-terms"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Terms link"
+         >
+          条款
+        </a>
+              </li>
+            <li class="devsite-footer-utility-item
+                 ">
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.cn/privacy"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+         >
+          隐私权政策
+        </a>
+              </li>
+            <li class="devsite-footer-utility-item
+                 devsite-footer-utility-button">
+                <span class="devsite-footer-utility-description">订阅 Google Developers 简报</span>
+                        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//services.google.com/fb/forms/googledevelopersnewsletter/?utm_medium=referral&amp;utm_source=google-products&amp;utm_team=googledevs&amp;utm_campaign=201611-newsletter-launch"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Subscribe link"
+         >
+          订阅
+        </a>
+              </li>
+          </ul>
+    
+    <devsite-language-selector>
+  <devsite-select class="devsite-language-selector-menu">
+    <select class="devsite-language-selector-select"
+            name="language"
+            track-name="click"
+            track-type="languageSelector">
+                <option>Language</option>
+              <option value="id"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="id"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Bahasa Indonesia
+      </option>
+          <option value="de"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="de"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Deutsch
+      </option>
+          <option value="en"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="en"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        English
+      </option>
+          <option value="es"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español
+      </option>
+          <option value="fr"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="fr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Français
+      </option>
+          <option value="it"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="it"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Italiano
+      </option>
+          <option value="pl"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="pl"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Polski
+      </option>
+          <option value="pt_br"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="pt_br"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Português – Brasil
+      </option>
+          <option value="cs"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="cs"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        česky
+      </option>
+          <option value="ru"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ru"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Русский
+      </option>
+          <option value="zh_cn"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_cn"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 简体
+      </option>
+          <option value="ja"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ja"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        日本語
+      </option>
+          <option value="ko"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ko"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        한국어
+      </option>
+        </select>
+  </devsite-select>
+</devsite-language-selector>
+
+  </nav>
+</div>
+                  </devsite-footer-utility>
+      </section></section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar                   ></devsite-snackbar>    <devsite-tooltip blocked-link></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics>
+              <script type="application/json" analytics>[{"metrics": {}, "dimensions": {"dimension6": "zh-cn", "dimension4": "YouTube IFrame Player API", "dimension5": "zh-cn", "dimension3": false, "dimension1": "Signed out", "dimension8": null}, "gaid": "UA-24532603-11"}]</script>
+<script type="application/json" gtm>{}</script>
+          </devsite-analytics>
+        <script>
+    (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/js/app_loader.js', '[1,"zh_cn",null,"/js/devsite_app.js","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers","https://google-developers.gonglchuangl.net",null,null,["/_pwa/developers/manifest.json","/_static/images/video-placeholder.svg","https://www.gstatic.cn/devrel-devsite/prod/v35095b53655653106712feb44f96c6929ce012ae38486ad7db1de265cbd9b7ec/developers/images/favicon.png","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons"],1]')
+  </script>  </body>
+</html>
